@@ -1,0 +1,412 @@
+.team-page {
+  --team-navy: #254963;
+  --team-muted: #556b7b;
+  background: #fff;
+}
+.team-container {
+  max-width: 1320px;
+  margin: auto;
+  padding: 72px 6%;
+}
+.team-page .team-kicker {
+  font:
+    600 14px/1.5 Inter,
+    sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #53758c;
+  margin-bottom: 20px;
+}
+.team-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5%;
+  align-items: center;
+  padding-top: 65px;
+  padding-bottom: 80px;
+}
+.team-hero h1 {
+  font-size: clamp(42px, 4.65vw, 65px);
+  line-height: 1.13;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  max-width: 650px;
+}
+.team-hero h1 em {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 5px;
+  text-underline-offset: 9px;
+}
+.team-hero-copy > p:not(.team-kicker) {
+  margin-top: 28px;
+  max-width: 550px;
+  color: var(--team-muted);
+  font-size: 16px;
+}
+.team-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 25px;
+  color: var(--team-navy);
+  padding: 8px 0;
+}
+.team-text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.team-graphic {
+  position: relative;
+  aspect-ratio: 520/440;
+}
+.team-graphic svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.team-graphic-label {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--team-navy);
+  text-align: center;
+}
+.team-graphic-label.science {
+  top: 24%;
+  left: 31%;
+  width: 38%;
+}
+.team-graphic-label.leadership {
+  top: 77%;
+  left: 0;
+  width: 38%;
+}
+.team-graphic-label.technology {
+  top: 77%;
+  right: 0;
+  width: 38%;
+}
+.team-orbit {
+  transform-origin: 260px 220px;
+  animation: team-orbit 24s linear infinite;
+}
+.team-node {
+  animation: team-float 4s ease-in-out infinite;
+}
+.team-node-two {
+  animation-delay: -2s;
+}
+.team-node-three {
+  animation-delay: -4s;
+}
+.team-signal {
+  animation: team-flow 4s linear infinite;
+}
+.team-section-top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+.team-page h2 {
+  font-size: clamp(30px, 3.4vw, 45px);
+  color: var(--team-navy);
+}
+.team-leadership {
+  border-top: 1px solid #e7eef3;
+  scroll-margin-top: 30px;
+}
+.team-edit-note {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--team-muted);
+  max-width: 280px;
+}
+.team-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+}
+.team-profile {
+  min-width: 0;
+}
+.team-portrait {
+  position: relative;
+  overflow: hidden;
+  border-radius: 90px 90px 10px 10px;
+  background: #f1f7fa;
+}
+.team-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1.05;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.team-profile:hover .team-portrait img {
+  transform: scale(1.025);
+}
+.team-profile:nth-child(2) .team-portrait {
+  border-radius: 10px 90px 10px 10px;
+}
+.team-profile:nth-child(3) .team-portrait {
+  border-radius: 90px 10px 10px 10px;
+}
+.team-profile-number {
+  position: absolute;
+  top: 25px;
+  left: 22px;
+  font:
+    12px Inter,
+    sans-serif;
+  color: #46657b;
+}
+.team-portrait-label {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: #ffffffed;
+  border: 1px solid #e1eaf0;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 10px;
+  color: #526b7d;
+}
+.team-profile-copy {
+  padding: 24px 0 0;
+}
+.team-page .team-role {
+  font-size: 11px;
+  min-height: 35px;
+  color: #53748c;
+  line-height: 1.5;
+  margin-bottom: 9px;
+}
+.team-profile h3 {
+  font-size: 23px;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  min-height: 63px;
+}
+.team-bio {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #e1eaf0;
+}
+.team-bio p {
+  font-size: 13px;
+  line-height: 1.8;
+  min-height: 48px;
+  color: var(--team-muted);
+}
+.team-bio > span {
+  display: block;
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #667986;
+}
+.team-linkedin {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: #557082;
+}
+.team-linkedin b {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #accbdf;
+  border-radius: 4px;
+}
+.team-linkedin small {
+  font-size: 10px;
+  margin-left: auto;
+}
+.team-network {
+  border-block: 1px solid #e7eef3;
+  background: linear-gradient(115deg, #f5fafd, #fff 65%);
+}
+.team-network-art {
+  width: 190px;
+  flex-shrink: 0;
+}
+.team-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: team-pulse 4s ease-in-out infinite;
+}
+.team-partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.team-partner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 26px;
+  padding: 32px 28px;
+  background: #fff;
+  border: 1px solid #e5edf2;
+  border-radius: 12px;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.team-partner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #2549630d;
+}
+.team-partner img {
+  width: 190px;
+  max-width: 90%;
+  height: 70px;
+  object-fit: contain;
+}
+.team-partner p {
+  font-size: 12px;
+  color: var(--team-muted);
+}
+.team-partner > span {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  color: #7c9bb0;
+}
+.team-cta {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 8%;
+  align-items: center;
+  padding-block: 90px;
+}
+.team-cta > div > p:not(.team-kicker) {
+  color: var(--team-muted);
+  font-size: 15px;
+  margin-top: 22px;
+  max-width: 460px;
+}
+.team-horizon {
+  width: 100%;
+}
+.team-sun {
+  animation: team-sun 5s ease-in-out infinite;
+}
+@keyframes team-flow {
+  to {
+    stroke-dashoffset: -140;
+  }
+}
+@keyframes team-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes team-float {
+  50% {
+    transform: translateY(-7px);
+  }
+}
+@keyframes team-pulse {
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes team-sun {
+  50% {
+    transform: translateY(-14px);
+  }
+}
+@media (max-width: 900px) {
+  .team-profile-grid {
+    gap: 18px;
+  }
+  .team-profile h3 {
+    font-size: 20px;
+    min-height: 81px;
+  }
+  .team-bio p {
+    min-height: 70px;
+  }
+  .team-hero {
+    gap: 2%;
+  }
+}
+@media (max-width: 700px) {
+  .team-container {
+    padding: 48px 6%;
+  }
+  .team-hero,
+  .team-cta {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .team-hero h1 {
+    font-size: 45px;
+  }
+  .team-graphic {
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+  }
+  .team-section-top {
+    align-items: start;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .team-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .team-profile {
+    max-width: 460px;
+    width: 100%;
+    margin: auto;
+  }
+  .team-profile h3 {
+    min-height: 0;
+    font-size: 25px;
+  }
+  .team-page .team-role,
+  .team-bio p {
+    min-height: 0;
+  }
+  .team-partner-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .team-partner {
+    padding: 26px;
+  }
+  .team-network-art {
+    align-self: flex-end;
+    height: 65px;
+    margin-top: -30px;
+  }
+  .team-horizon {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-page *,
+  .team-page *::before {
+    /* Keep the requested ambient diagram motion active; text and layout stay still. */
+    transition: none !important;
+  }
+}
+

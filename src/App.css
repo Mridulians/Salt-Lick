@@ -1,0 +1,47 @@
+/* App shell: all pages share pure-white surfaces and global assets. */
+#root {
+  min-height: 100vh;
+}
+
+main {
+  outline: none;
+}
+
+main > div {
+  background: #fff;
+}
+
+.prose-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.prose-stack p {
+  max-width: 850px;
+}
+
+.source-note {
+  font-size: 11px;
+  color: #4c5963;
+}
+
+.typography-what h1,
+.typography-what h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.typography-how h1,
+.typography-how h2 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.typography-about h1,
+.typography-about h2 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
