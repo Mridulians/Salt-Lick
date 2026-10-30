@@ -354,9 +354,6 @@ button {
     padding: 14px 18px;
   }
 
-  .footer a {
-    overflow-wrap: anywhere;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

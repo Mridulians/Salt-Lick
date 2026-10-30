@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import AWorldWhere from "./components/AWorldWhere/AWorldWhere";
 import Home from "./pages/Home/Home";
 import WhatIsSaltLick from "./pages/WhatIsSaltLick/WhatIsSaltLick";
 import HowItWorks from "./pages/HowItWorks/HowItWorks";
@@ -99,7 +98,6 @@ export default function App() {
             </a>
           </section>
         )}
-        {Page && !["/our-team", "/about-us", "/impact", "/our-centres", "/how-it-works", "/what-is-salt-lick", "/partner-with-us"].includes(path) && <AWorldWhere />}
       </main>
       <Footer />
     </>

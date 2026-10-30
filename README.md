@@ -114,3 +114,16 @@ Two sections: watercolor hospital-campus hero and responsive enquiry/contact lay
 The enquiry form is intentionally a demo. Native required-field and email validation run before a React-only success state. There is no submission endpoint, request, database, local storage, or email integration. The success notice explicitly says that no details were sent or stored and no reply is triggered. Start another enquiry resets the form. Phone and designation are optional. A production implementation still requires a destination, server validation, spam protection and approved privacy handling.
 
 Verified desktop and 390px mobile layouts, empty-submit blocking, valid dummy submission, reset, image loading, and absence of browser errors. Shared header/footer retained, generic final CTA omitted so the page contains exactly two sections.
+
+## Approved MedTech homepage
+
+The `/` route now implements the approved eleven-section visual preview in `src/pages/Home/Home.jsx` and `Home.module.css`. It restores the wireframe order, intervention timeline, Advantage, Partners and Impact sections, six-input assessment diagram, four equipment illustrations and the original final partnership CTA. The generic closing banner is no longer appended to Home.
+
+The previous homepage is preserved in `src/pages/old homepage/Home.jsx` and `Home.css`, with its original images retained. These archived files are not imported by the active application.
+
+Homepage styles use CSS Modules, including interactive state classes and animation names. They apply only within the homepage; shared Header and Footer are outside that scope. Header-specific JSX/CSS stays in `src/components/Header`, and footer-specific JSX/CSS stays in `src/components/Footer`. The three approved new illustrations are stored as optimized `medtech-human.webp`, `medtech-campus.webp` and `medtech-consultation.webp` in `src/assets`. Original logo files are reused without modification. Carousel and signal interactions use React state; all effects respect reduced motion. No dependencies were added.
+
+All supplied medical/product figures remain prototype content requiring client approval. The survival-chart figures require a defined cancer type, population, period and supporting source before public release. The standalone approval preview and detailed content/branding notes remain in the Codex task's `outputs/homepage-medtech-preview` folder.
+
+## Archived homepage hero carousel
+Three slides: original homepage hero preserved, followed by Centres and Impact using client-supplied slide wording. Reuses partner-campus.webp and how-consultation.webp; image imports can be replaced independently for a future shoot. Autoplay interval is 6000ms, looping through all three slides; arrows, dots, and keyboard arrows are provided. Autoplay runs continuously except while hovering over the carousel; there is no autoplay toggle. Slides crossfade over 900ms with delayed visibility hiding to keep the outgoing slide visible throughout the fade. Inactive slides are inert and hidden from assistive technology. Grid overlap reserves consistent height across transitions. No client implementation note appears on the slides.

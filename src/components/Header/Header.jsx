@@ -27,7 +27,7 @@ export default function Header({ path }) {
         aria-controls="main-nav"
         onClick={() => setOpen(!open)}
       >
-        Menu {open ? "−" : "+"}
+        Menu <span>{open ? "−" : "+"}</span>
       </button>
       <nav
         id="main-nav"

@@ -1,21 +1,30 @@
-import { useRef, useState} from "react";
 import logo from "../../assets/saltlick-logo.png";
+import espererLogo from "../../assets/espererGroup_logo.png";
+import healthVoithoLogo from "../../assets/healtLogo.png";
+import eiomsLogo from "../../assets/EIOMS_logo.png";
 import "./Footer.css";
 
-// const careers = "mailto:admin@saltlickhealthcare.com?subject=Careers%20enquiry";
+const exploreLinks = [
+  ["/what-is-salt-lick", "What Is Salt Lick"],
+  ["/how-it-works", "How It Works"],
+  ["/our-centres", "Our Centres"],
+  ["/impact", "Impact"],
+];
+
+const organisationLinks = [
+  ["/about-us", "About Us"],
+  ["/our-team", "Our Team"],
+  ["/about-us", "Esperer Group ↗"],
+  ["/partner-with-us", "Partner With Us"],
+];
+
 export default function Footer() {
-  const dialog = useRef(null);
-  // eslint-disable-next-line no-unused-vars
-  const [policy, setPolicy] = useState("");
-  // function openPolicy(title) {
-  //   setPolicy(title);
-  //   dialog.current.showModal();
-  // }
   return (
     <footer className="footer">
+      <div className="footer-inner">
       <div className="footer-main">
-        <div className="footer-identity">
-          <a href="/" aria-label="Salt Lick Healthcare home">
+        <section className="footer-identity" aria-label="Salt Lick contact">
+          <a className="footer-logo" href="/" aria-label="Salt Lick Healthcare home">
             <img
               src={logo}
               width="1149"
@@ -23,6 +32,7 @@ export default function Footer() {
               alt="Salt Lick — Intelligence to Intercept"
             />
           </a>
+          <p className="footer-tagline">The gap isn&apos;t detection. It&apos;s timing.</p>
           <address>
             Mumbai, India
             <br />
@@ -30,67 +40,76 @@ export default function Footer() {
               admin@saltlickhealthcare.com
             </a>
           </address>
-        </div>
-        <nav aria-label="Explore">
+        </section>
+
+        <nav className="footer-nav" aria-label="Explore">
           <h2>Explore</h2>
-          <a href="/what-is-salt-lick">What Is Salt Lick</a>
-          <a href="/how-it-works">How It Works</a>
-          <a href="/our-centres">Our Centres</a>
-          <a href="/impact">Impact</a>
+          {exploreLinks.map(([url, label]) => (
+            <a href={url} key={url}>
+              {label}
+            </a>
+          ))}
         </nav>
-        <nav aria-label="Organisation">
+
+        <nav className="footer-nav" aria-label="Organisation">
           <h2>Organisation</h2>
-          <a href="/about-us">About Us</a>
-          <a href="/our-team">Our Team</a>
-          <a href="/about-us">Esperer Group</a>
-          {/* <a href={careers} aria-label="Careers — enquire by email">
-            Careers
-          </a> */}
-          <a href="/partner-with-us">Partner With Us</a>
+          {organisationLinks.map(([url, label]) => (
+            <a href={url} key={label}>
+              {label}
+            </a>
+          ))}
         </nav>
-        <div className="footer-partners">
-          <h2>Group and partners</h2>
-          <p>Esperer Group</p>
-          <p>Health Voitho Technologies</p>
-          <p>EIOMS</p>
-        </div>
+
+        <section className="footer-network" aria-label="Group and partners">
+          <div className="footer-network-group">
+            <p className="footer-kicker">A part of</p>
+            <a
+              className="footer-partner-logo footer-partner-logo--group"
+              href="/about-us"
+              aria-label="Esperer Group"
+            >
+              <img src={espererLogo} alt="Esperer Group" width="2078" height="757" />
+            </a>
+          </div>
+          <div className="footer-network-group">
+            <p className="footer-kicker">Our partners</p>
+            <div className="footer-partner-logos">
+              <a
+                className="footer-partner-logo"
+                href="https://www.healthvoitho.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Health Voitho Technologies (opens in a new tab)"
+              >
+                <img
+                  src={healthVoithoLogo}
+                  alt="Health Voitho Technologies"
+                  width="2048"
+                  height="1365"
+                />
+              </a>
+              <a
+                className="footer-partner-logo"
+                href="https://www.espererworld.com/eioms"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="EIOMS (opens in a new tab)"
+              >
+                <img src={eiomsLogo} alt="EIOMS" width="1214" height="552" />
+              </a>
+            </div>
+            <p className="footer-role-note">Technology partner · Knowledge partner</p>
+          </div>
+        </section>
       </div>
+
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Salt Lick Healthcare Pvt. Ltd.</p>
-        {/* <div className="footer-policies">
-          {["Privacy Policy", "Terms of Use", "Medical Disclaimer"].map(
-            (title) => (
-              <button key={title} onClick={() => openPolicy(title)}>
-                {title}
-              </button>
-            ),
-          )}
-        </div> */}
         <p className="footer-disclaimer">
           Salt Lick provides cancer risk assessments, not diagnoses.
         </p>
       </div>
-      {/* <p className="footer-review">
-        Illustrations depict fictional people and conceptual locations.
-      </p> */}
-      <dialog
-        ref={dialog}
-        className="footer-dialog"
-        aria-labelledby="policy-heading"
-        onClick={(event) => {
-          if (event.target === dialog.current) dialog.current.close();
-        }}
-      >
-        {/* <h2 id="policy-heading">{policy}</h2> */}
-        <p>
-          {policy === "Medical Disclaimer"
-            ? "Salt Lick provides cancer risk assessments, not diagnoses."
-            : "Client-approved policy content is pending. This design preview does not yet include the published policy."}
-        </p>
-        <form method="dialog">
-          <button className="button blue">Close</button>
-        </form>
-      </dialog>
+      </div>
     </footer>
   );
 }
