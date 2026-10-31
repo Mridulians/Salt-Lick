@@ -12,7 +12,11 @@ import styles from "./Home.module.css";
 
 // All homepage classes use Vite CSS Module names, including active states.
 function homeClassName(value) {
-  return value.split(/\s+/).filter(Boolean).map(name => styles[name] ?? "home-" + name).join(" ");
+  return value
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((name) => styles[name] ?? "home-" + name)
+    .join(" ");
 }
 
 // The observer starts entrances once. Ambient motion runs independently in CSS.
@@ -22,44 +26,60 @@ function useHomepageMotion(rootRef) {
     const root = rootRef.current;
     if (!root) return;
     const select = (name) => `.${styles[name]}`;
-    const zones = [...root.querySelectorAll(`[data-section], #signals-detail, #timeline-detail, ${select('stage-chart')}`)];
+    const zones = [
+      ...root.querySelectorAll(
+        `[data-section], #signals-detail, #timeline-detail, ${select("stage-chart")}`,
+      ),
+    ];
     const revealGroups = [
-      ['section-heading', 'intro'], ['association-brand', 'intro'],
-      ['association-copy', 'intro'], ['burden-heading', 'intro'],
-      ['advantage-copy', 'intro'], ['signals-heading', 'intro'],
-      ['centres-copy', 'intro'], ['comparison-card', 'card'],
-      ['screening-card', 'card'], ['partner-card', 'card'],
-      ['impact-card', 'card'], ['stat-number', 'number'],
+      ["section-heading", "intro"],
+      ["association-brand", "intro"],
+      ["association-copy", "intro"],
+      ["burden-heading", "intro"],
+      ["advantage-copy", "intro"],
+      ["signals-heading", "intro"],
+      ["centres-copy", "intro"],
+      ["comparison-card", "card"],
+      ["screening-card", "card"],
+      ["partner-card", "card"],
+      ["impact-card", "card"],
+      ["stat-number", "number"],
     ];
     const targets = new Set(zones);
-    zones.forEach(zone => { zone.dataset.motionZone = ''; });
+    zones.forEach((zone) => {
+      zone.dataset.motionZone = "";
+    });
     revealGroups.forEach(([name, kind]) => {
       root.querySelectorAll(select(name)).forEach((element, index) => {
         element.dataset.reveal = kind;
-        element.style.setProperty('--reveal-delay', `${(index % 4) * 120}ms`);
+        element.style.setProperty("--reveal-delay", `${(index % 4) * 120}ms`);
         targets.add(element);
       });
     });
-    const observer = window.IntersectionObserver ? new IntersectionObserver(entries => {
-      entries.forEach(({ target, isIntersecting }) => {
-        target.dataset.motionVisible = String(isIntersecting);
-        if (isIntersecting) target.dataset.entered = 'true';
-      });
-    }, { threshold: 0.12 }) : null;
-    targets.forEach(target => {
+    const observer = window.IntersectionObserver
+      ? new IntersectionObserver(
+          (entries) => {
+            entries.forEach(({ target, isIntersecting }) => {
+              target.dataset.motionVisible = String(isIntersecting);
+              if (isIntersecting) target.dataset.entered = "true";
+            });
+          },
+          { threshold: 0.12 },
+        )
+      : null;
+    targets.forEach((target) => {
       if (observer) observer.observe(target);
-      else target.dataset.entered = 'true';
+      else target.dataset.entered = "true";
     });
 
     // Always on, with no preference-based disable switch or visibility-state gate.
-    root.dataset.motion = 'ready';
+    root.dataset.motion = "ready";
     return () => {
       observer?.disconnect();
       delete root.dataset.motion;
     };
   }, [rootRef]);
 }
-
 
 const signalData = [
   [
@@ -87,7 +107,6 @@ const signalData = [
     "Breast scan findings contribute to the combined assessment and the next step.",
   ],
 ];
-
 
 const signalTracks = [
   "M245 40H350Q385 40 385 195H475",
@@ -195,7 +214,9 @@ function HomeHero() {
     >
       <div className={homeClassName("hero-slides wrap")}>
         <article
-          className={homeClassName("hero-slide" + (slide === 0 ? " active" : ""))}
+          className={homeClassName(
+            "hero-slide" + (slide === 0 ? " active" : ""),
+          )}
           data-slide="0"
           role="group"
           aria-roledescription="slide"
@@ -223,7 +244,10 @@ function HomeHero() {
               <a className={homeClassName("button")} href="/what-is-salt-lick">
                 Discover Salt Lick <span>↗</span>
               </a>
-              <a className={homeClassName("button outline")} href="/partner-with-us">
+              <a
+                className={homeClassName("button outline")}
+                href="/partner-with-us"
+              >
                 Partner With Us <span>↗</span>
               </a>
             </div>
@@ -284,14 +308,16 @@ function HomeHero() {
               </span>
               <b>↗</b>
             </div>
-            <div className={homeClassName("technical-caption")}>
+            {/* <div className={homeClassName("technical-caption")}>
               <span>01 / THE WHOLE PERSON</span>
               <span>INTELLIGENCE TO INTERCEPT</span>
-            </div>
+            </div> */}
           </div>
         </article>
         <article
-          className={homeClassName("hero-slide" + (slide === 1 ? " active" : ""))}
+          className={homeClassName(
+            "hero-slide" + (slide === 1 ? " active" : ""),
+          )}
           data-slide="1"
           role="group"
           aria-roledescription="slide"
@@ -326,16 +352,22 @@ function HomeHero() {
                 height="1024"
                 alt="Illustrated Salt Lick Centre within a hospital campus, with globally diverse visitors and clinicians"
               />
-              <img className={homeClassName("official-art-logo")} src={logo} alt="Salt Lick" />
+              <img
+                className={homeClassName("official-art-logo")}
+                src={logo}
+                alt="Salt Lick"
+              />
             </div>
-            <div className={homeClassName("technical-caption")}>
+            {/* <div className={homeClassName("technical-caption")}>
               <span>02 / CLOSER TO COMMUNITIES</span>
               <span>SALT LICK CENTRES</span>
-            </div>
+            </div> */}
           </div>
         </article>
         <article
-          className={homeClassName("hero-slide" + (slide === 2 ? " active" : ""))}
+          className={homeClassName(
+            "hero-slide" + (slide === 2 ? " active" : ""),
+          )}
           data-slide="2"
           role="group"
           aria-roledescription="slide"
@@ -371,12 +403,16 @@ function HomeHero() {
                 height="1024"
                 alt="Illustration of a clinician explaining a report to an older visitor and his daughter"
               />
-              <img className={homeClassName("official-art-logo")} src={logo} alt="Salt Lick" />
+              <img
+                className={homeClassName("official-art-logo")}
+                src={logo}
+                alt="Salt Lick"
+              />
             </div>
-            <div className={homeClassName("technical-caption")}>
+            {/* <div className={homeClassName("technical-caption")}>
               <span>03 / INTELLIGENCE INTO ACTION</span>
               <span>A CLEAR NEXT STEP</span>
-            </div>
+            </div> */}
           </div>
         </article>
       </div>
@@ -389,7 +425,10 @@ function HomeHero() {
         >
           ←
         </button>
-        <div className={homeClassName("slide-dots")} aria-label="Choose a slide">
+        <div
+          className={homeClassName("slide-dots")}
+          aria-label="Choose a slide"
+        >
           <button
             data-dot="0"
             aria-label="Show slide 1"
@@ -426,9 +465,9 @@ function HomeHero() {
         <span className={homeClassName("slide-counter")} aria-hidden="true">
           0{slide + 1} <i>/ 03</i>
         </span>
-        <p className={homeClassName("hero-bottom-note")}>
+        {/* <p className={homeClassName("hero-bottom-note")}>
           Human insight. Connected intelligence.
-        </p>
+        </p> */}
       </div>
     </section>
   );
@@ -462,9 +501,7 @@ function AdvantageSection() {
           See why timing matters <span>→</span>
         </a>
       </div>
-      <div
-        className={homeClassName("stage-chart")}
-      >
+      <div className={homeClassName("stage-chart")}>
         <div className={homeClassName("chart-top")}>
           <svg className={homeClassName("icon")}>
             <use href="#i-heart" />
@@ -586,8 +623,14 @@ function SignalSection() {
                   />
                 ))}
               </g>
-              <path className={homeClassName("connector-active")} d={signalTracks[active]} />
-              <path className={homeClassName("connector-output")} d="M635 195H910" />
+              <path
+                className={homeClassName("connector-active")}
+                d={signalTracks[active]}
+              />
+              <path
+                className={homeClassName("connector-output")}
+                d="M635 195H910"
+              />
             </svg>
             <div
               className={homeClassName("signal-inputs")}
@@ -595,7 +638,9 @@ function SignalSection() {
               aria-label="Explore the six health signals"
             >
               <button
-                className={homeClassName("signal-input" + (active === 0 ? " selected" : ""))}
+                className={homeClassName(
+                  "signal-input" + (active === 0 ? " selected" : ""),
+                )}
                 data-signal="0"
                 aria-pressed={active === 0}
                 onClick={() => setActive(0)}
@@ -609,7 +654,9 @@ function SignalSection() {
                 <b>01</b>
               </button>
               <button
-                className={homeClassName("signal-input" + (active === 1 ? " selected" : ""))}
+                className={homeClassName(
+                  "signal-input" + (active === 1 ? " selected" : ""),
+                )}
                 data-signal="1"
                 aria-pressed={active === 1}
                 onClick={() => setActive(1)}
@@ -623,7 +670,9 @@ function SignalSection() {
                 <b>02</b>
               </button>
               <button
-                className={homeClassName("signal-input" + (active === 2 ? " selected" : ""))}
+                className={homeClassName(
+                  "signal-input" + (active === 2 ? " selected" : ""),
+                )}
                 data-signal="2"
                 aria-pressed={active === 2}
                 onClick={() => setActive(2)}
@@ -637,7 +686,9 @@ function SignalSection() {
                 <b>03</b>
               </button>
               <button
-                className={homeClassName("signal-input" + (active === 3 ? " selected" : ""))}
+                className={homeClassName(
+                  "signal-input" + (active === 3 ? " selected" : ""),
+                )}
                 data-signal="3"
                 aria-pressed={active === 3}
                 onClick={() => setActive(3)}
@@ -651,7 +702,9 @@ function SignalSection() {
                 <b>04</b>
               </button>
               <button
-                className={homeClassName("signal-input" + (active === 4 ? " selected" : ""))}
+                className={homeClassName(
+                  "signal-input" + (active === 4 ? " selected" : ""),
+                )}
                 data-signal="4"
                 aria-pressed={active === 4}
                 onClick={() => setActive(4)}
@@ -665,7 +718,9 @@ function SignalSection() {
                 <b>05</b>
               </button>
               <button
-                className={homeClassName("signal-input" + (active === 5 ? " selected" : ""))}
+                className={homeClassName(
+                  "signal-input" + (active === 5 ? " selected" : ""),
+                )}
                 data-signal="5"
                 aria-pressed={active === 5}
                 onClick={() => setActive(5)}
@@ -734,18 +789,27 @@ function SignalSection() {
               </div>
             </div>
           </div>
-          <div className={homeClassName("signal-description")} aria-live="polite">
-            <span className={homeClassName("active-signal-label")}>{signalData[active][0]}</span>
-            <p className={homeClassName("active-signal-copy")}>{signalData[active][1]}</p>
-            <span className={homeClassName("signal-detail-hint")}>
-              Select a signal to explore ↗
+          <div
+            className={homeClassName("signal-description")}
+            aria-live="polite"
+          >
+            <span className={homeClassName("active-signal-label")}>
+              {signalData[active][0]}
             </span>
+            <p className={homeClassName("active-signal-copy")}>
+              {signalData[active][1]}
+            </p>
+            {/* <span className={homeClassName("signal-detail-hint")}>
+              Select a signal to explore ↗
+            </span> */}
           </div>
         </div>
       </div>
     </section>
   );
 }
+
+
 export default function Home() {
   const homeRef = useRef(null);
   useHomepageMotion(homeRef);
@@ -775,7 +839,9 @@ export default function Home() {
                 height="757"
               />
             </a>
-            <span className={homeClassName("parent-note")}>Our parent group</span>
+            <span className={homeClassName("parent-note")}>
+              Our parent group
+            </span>
           </div>
           <div className={homeClassName("association-copy")}>
             <h2>
@@ -894,7 +960,12 @@ export default function Home() {
                 strokeWidth="2"
                 strokeDasharray="4 5"
               />
-              <text x="548" y="78" className={homeClassName("svg-boundary")} textAnchor="middle">
+              <text
+                x="548"
+                y="78"
+                className={homeClassName("svg-boundary")}
+                textAnchor="middle"
+              >
                 Cancer becomes detectable
               </text>
               <rect
@@ -905,7 +976,12 @@ export default function Home() {
                 rx="5"
                 fill="#f2c39d"
               />
-              <text x="137" y="40" className={homeClassName("svg-flag")} textAnchor="middle">
+              <text
+                x="137"
+                y="40"
+                className={homeClassName("svg-flag")}
+                textAnchor="middle"
+              >
                 Salt Lick starts here
               </text>
               <path d="M137 52v111" stroke="#d49b71" strokeWidth="2" />
@@ -941,7 +1017,12 @@ export default function Home() {
                 fill="none"
                 markerEnd="url(#timeline-arrow)"
               />
-              <text x="500" y="22" className={homeClassName("svg-shift")} textAnchor="middle">
+              <text
+                x="500"
+                y="22"
+                className={homeClassName("svg-shift")}
+                textAnchor="middle"
+              >
                 SALT LICK SHIFTS THE START LINE
               </text>
               <g className={homeClassName("timeline-node")}>
@@ -983,7 +1064,12 @@ export default function Home() {
               <text x="29" y="291" className={homeClassName("svg-detail")}>
                 ← Earlier
               </text>
-              <text x="973" y="291" textAnchor="end" className={homeClassName("svg-detail")}>
+              <text
+                x="973"
+                y="291"
+                textAnchor="end"
+                className={homeClassName("svg-detail")}
+              >
                 Later →
               </text>
             </svg>
@@ -1007,7 +1093,9 @@ export default function Home() {
                 <span>Signals remain fragmented</span>
               </div>
             </div>
-            <p className={homeClassName("mobile-boundary")}>Cancer becomes detectable</p>
+            <p className={homeClassName("mobile-boundary")}>
+              Cancer becomes detectable
+            </p>
             <div className={homeClassName("mobile-window later")}>
               <h3>Disease and treatment window</h3>
               <div className={homeClassName("mobile-stop")}>
@@ -1043,7 +1131,6 @@ export default function Home() {
           </article>
         </div>
       </section>
-
 
       <section
         className={homeClassName("burden")}
@@ -1119,7 +1206,6 @@ export default function Home() {
       <AdvantageSection />
       <SignalSection />
 
-
       <section
         className={homeClassName("screening section wrap")}
         id="screening"
@@ -1186,7 +1272,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>01 / CONTACTLESS</span>
+              <span className={homeClassName("card-index")}>
+                01 / CONTACTLESS
+              </span>
               <h3>Contactless face scan</h3>
               <p>20+ vital signs from a 60-second scan.</p>
             </div>
@@ -1241,7 +1329,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>02 / BIOCHEMISTRY</span>
+              <span className={homeClassName("card-index")}>
+                02 / BIOCHEMISTRY
+              </span>
               <h3>Biochemical panel</h3>
               <p>Metabolic and cancer markers from a minimal sample.</p>
             </div>
@@ -1302,7 +1392,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>03 / LIGHT-BASED</span>
+              <span className={homeClassName("card-index")}>
+                03 / LIGHT-BASED
+              </span>
               <h3>Oral and breast scans</h3>
               <p>Light-based imaging. No radiation, no discomfort.</p>
             </div>
@@ -1342,7 +1434,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>04 / CONNECTED INSIGHT</span>
+              <span className={homeClassName("card-index")}>
+                04 / CONNECTED INSIGHT
+              </span>
               <h3>AI risk report</h3>
               <p>A clear score and next step, in minutes.</p>
             </div>
@@ -1355,7 +1449,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
 
       <section
         className={homeClassName("centres-section")}
@@ -1389,11 +1482,14 @@ export default function Home() {
               height="1024"
               loading="lazy"
             />
-            <img className={homeClassName("official-art-logo")} src={logo} alt="Salt Lick" />
+            <img
+              className={homeClassName("official-art-logo")}
+              src={logo}
+              alt="Salt Lick"
+            />
           </div>
         </div>
       </section>
-
 
       <section
         className={homeClassName("partners section wrap")}
@@ -1470,8 +1566,11 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section className={homeClassName("impact-section")} id="impact" data-section="Impact">
+      <section
+        className={homeClassName("impact-section")}
+        id="impact"
+        data-section="Impact"
+      >
         <div className={homeClassName("section wrap")}>
           <div className={homeClassName("section-heading")}>
             <p className={homeClassName("eyebrow")}>

@@ -64,7 +64,7 @@
   letter-spacing: -0.025em;
 }
 .home-medtech p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
 }
 .home-medtech em {
@@ -128,7 +128,7 @@
   align-items: center;
   gap: 10px;
   font:
-    600 10px/1.6 Inter,
+    600 14px/1.6 Inter,
     sans-serif;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -198,7 +198,7 @@
   display: inline-flex;
   align-items: center;
   gap: 28px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   min-height: 38px;
   color: #244866;
@@ -221,7 +221,7 @@
 }
 .home-medtech .card-index {
   font:
-    600 9px/1.5 Inter,
+    600 12px/1.5 Inter,
     sans-serif;
   letter-spacing: 0.15em;
   color: #6a8295;
@@ -236,7 +236,7 @@
   gap: 24px;
 }
 .home-medtech .section-bottom > p {
-  font-size: 13px;
+  font-size: 14px;
   color: #637689;
 }
 /* 01 — Human-centred intelligence, shown rather than implied. */
@@ -573,7 +573,7 @@
   border-radius: 3px;
 }
 .home-medtech .association-brand .eyebrow {
-  font-size: 9px;
+  font-size: 14px;
   color: #435d73;
 }
 .home-medtech .association-brand img {
@@ -582,7 +582,7 @@
   margin-block: 24px 15px;
 }
 .home-medtech .parent-note {
-  font-size: 10px;
+  font-size: 12px;
   color: #748696;
 }
 .home-medtech .association-copy h2 {
@@ -647,7 +647,7 @@
 }
 .home-medtech .timeline-node .svg-detail,
 .home-medtech .svg-detail {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
   fill: #687b8f;
 }
@@ -685,7 +685,7 @@
   font-size: 19px;
 }
 .home-medtech .comparison-card p {
-  font-size: 13px;
+  font-size: 16px;
   margin-top: 12px;
   line-height: 1.8;
 }
@@ -734,7 +734,7 @@
   margin-top: 16px;
 }
 .home-medtech .burden-heading > p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.85;
   color: #c4d3e1;
   max-width: 460px;
@@ -765,7 +765,7 @@
   color: var(--apricot);
 }
 .home-medtech .stats p {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.65;
   margin-top: 12px;
   color: #c4d3e1;
@@ -796,7 +796,7 @@
 .home-medtech .advantage-copy .emphasis {
   font-weight: 600;
   color: #244866;
-  font-size: 13px;
+  font-size: 14px;
 }
 .home-medtech .advantage-copy .text-link {
   margin-top: 21px;
@@ -822,7 +822,7 @@
 }
 .home-medtech .chart-top > span {
   font:
-    700 13px Manrope,
+    700 16px Manrope,
     sans-serif;
 }
 .home-medtech .bar-row + .bar-row {
@@ -837,7 +837,7 @@
 }
 .home-medtech .bar-row strong {
   font:
-    600 11px Inter,
+    600 14px Inter,
     sans-serif;
 }
 .home-medtech .bar-row > div:first-child > span {
@@ -865,7 +865,7 @@
   animation-play-state: running;
 }
 .home-medtech .stage-chart > .source-note {
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 24px;
 }
 /* 06 — Information architecture becomes the visual centrepiece. */
@@ -892,7 +892,7 @@
   padding-top: 27px;
 }
 .home-medtech .signals-heading > div:last-child p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.85;
 }
 .home-medtech .signals-heading .text-link {
@@ -912,7 +912,7 @@
   gap: 30px;
   border-bottom: 1px solid #dde7ef;
   padding-bottom: 17px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.13em;
   color: #6e8496;
 }
@@ -968,7 +968,7 @@
   border: 1px solid #d8e4ed;
   border-radius: 5px;
   min-height: 49px;
-  font-size: 11px;
+  font-size: 14px;
   text-align: left;
   transition:
     background 0.25s,
@@ -1089,7 +1089,7 @@
   animation-delay: 0.6s;
 }
 .home-medtech .processor-area > p {
-  font-size: 9px;
+  font-size: 12px;
   color: #74899c;
   margin-top: 22px;
 }
@@ -1163,7 +1163,7 @@
   align-items: center;
   gap: 8px;
   color: #48647a;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.5;
   margin-top: 23px;
 }
@@ -1186,13 +1186,13 @@
   padding-block: 13px;
 }
 .home-medtech .active-signal-label {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   min-width: 86px;
   color: #345671;
 }
 .home-medtech .active-signal-copy {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
   color: #667c8f;
   max-width: 590px;
@@ -1245,17 +1245,18 @@
   padding: 23px 20px 25px;
 }
 .home-medtech .screening-card .card-index {
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.12em;
 }
 .home-medtech .screening-card h3 {
-  font-size: 16px;
+  font-size: 21px;
   margin-top: 11px;
   line-height: 1.4;
   min-height: 44px;
+  font-weight: 700;
 }
 .home-medtech .screening-card p {
-  font-size: 11px;
+  font-size: 14px;
   margin-top: 11px;
   line-height: 1.8;
 }
@@ -1296,7 +1297,7 @@
 }
 .home-medtech .centres-copy > p:not(.eyebrow) {
   margin-top: 22px;
-  font-size: 14px;
+  font-size: 16px;
   max-width: 420px;
 }
 .home-medtech .centres-copy > .button {
@@ -1357,25 +1358,25 @@
   max-width: 150px;
 }
 .home-medtech .partner-top > .icon {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   color: #98b2c6;
 }
 .home-medtech .partner-card > .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
 }
 .home-medtech .partner-card > h3 {
-  font-size: 19px;
+  font-size: 21px;
   margin-top: 12px;
 }
 .home-medtech .partner-card > p:not(.eyebrow) {
   margin-top: 16px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.9;
   margin-bottom: 23px;
 }
 .home-medtech .partner-card > .text-link {
-  font-size: 10px;
+  font-size: 14px;
   margin-top: auto;
 }
 /* 10 — Two audiences, different visual stories. */
@@ -1425,7 +1426,7 @@
   margin-top: 11px;
 }
 .home-medtech .impact-card p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.85;
   margin-top: 14px;
 }
@@ -1470,13 +1471,11 @@
 .home-medtech .final-cta > p {
   max-width: 570px;
   margin: 23px auto 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 .home-medtech .final-cta .button {
   margin-top: 29px;
 }
-
-
 
 @keyframes mt-hero-scan {
   0%,
@@ -2008,7 +2007,7 @@
     display: none;
   }
   .home-medtech .campus-visual,
-.home-medtech .consultation-visual {
+  .home-medtech .consultation-visual {
     align-self: start;
   }
   .home-medtech .association-inner {
@@ -2569,7 +2568,7 @@
     margin-top: 28px;
   }
   .home-medtech .network-art,
-.home-medtech .people-art {
+  .home-medtech .people-art {
     height: 195px;
   }
   .home-medtech .network-art {
@@ -2678,32 +2677,53 @@
   translate: 0 14px;
 }
 .home-medtech [data-reveal][data-entered="true"] {
-  animation: motion-enter 600ms cubic-bezier(.22, 1, .36, 1) var(--reveal-delay, 0ms) both;
+  animation: motion-enter 600ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--reveal-delay, 0ms) both;
 }
 .home-medtech [data-reveal="number"][data-entered="true"] {
-  animation: motion-number 800ms cubic-bezier(.22, 1, .36, 1) var(--reveal-delay, 0ms) both;
+  animation: motion-number 800ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--reveal-delay, 0ms) both;
 }
 .home-medtech .hero-slide.active .hero-copy > * {
-  animation: motion-enter 600ms cubic-bezier(.22, 1, .36, 1) both;
+  animation: motion-enter 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-play-state: var(--ambient-state);
 }
-.home-medtech .hero-copy > :nth-child(2) { animation-delay: 100ms !important; }
-.home-medtech .hero-copy > :nth-child(3) { animation-delay: 200ms !important; }
-.home-medtech .hero-copy > :nth-child(4) { animation-delay: 300ms !important; }
-.home-medtech .hero-slide[aria-hidden="true"] * { animation-play-state: paused; }
+.home-medtech .hero-copy > :nth-child(2) {
+  animation-delay: 100ms !important;
+}
+.home-medtech .hero-copy > :nth-child(3) {
+  animation-delay: 200ms !important;
+}
+.home-medtech .hero-copy > :nth-child(4) {
+  animation-delay: 300ms !important;
+}
+.home-medtech .hero-slide[aria-hidden="true"] * {
+  animation-play-state: paused;
+}
 /* Automatic full-motion transitions remain scoped to the homepage. */
 .home-medtech .hero-slide {
-  transition: opacity .9s cubic-bezier(.4,0,.2,1), visibility 0s linear .9s !important;
+  transition:
+    opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.9s !important;
 }
-.home-medtech .hero-slide.active { transition-delay: 0s !important; }
+.home-medtech .hero-slide.active {
+  transition-delay: 0s !important;
+}
 .home-medtech .button,
 .home-medtech .screening-card,
 .home-medtech .partner-card,
 .home-medtech .signal-input,
 .home-medtech .text-link > span {
-  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease, background 240ms ease !important;
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    background 240ms ease !important;
 }
-.home-medtech .hero-connections .scan-sweep { animation: none; opacity: 0; }
+.home-medtech .hero-connections .scan-sweep {
+  animation: none;
+  opacity: 0;
+}
 .home-medtech .hero-flow {
   stroke: var(--signal-cyan);
   stroke-width: 1.7;
@@ -2716,7 +2736,9 @@
   animation-play-state: var(--ambient-state);
 }
 .home-medtech .signal-label,
-.home-medtech .risk-report { background: #fff; }
+.home-medtech .risk-report {
+  background: #fff;
+}
 @supports (backdrop-filter: blur(6px)) {
   .home-medtech .signal-label,
   .home-medtech .risk-report {
@@ -2730,7 +2752,9 @@
 @supports (animation-timeline: view()) {
   /* Clip preserves the composition without creating a stationary scroll container. */
   .home-medtech .hero-section,
-  .home-medtech .centres-section { overflow: clip; }
+  .home-medtech .centres-section {
+    overflow: clip;
+  }
   @media (min-width: 721px) {
     .home-medtech .hero-visual,
     .home-medtech .centres-art {
@@ -2746,30 +2770,49 @@
   stroke-dashoffset: 0;
 }
 .home-medtech .timeline-panel[data-entered="true"] line[x1="60"] {
-  animation: motion-draw 1.2s cubic-bezier(.2,.7,.3,1) both;
+  animation: motion-draw 1.2s cubic-bezier(0.2, 0.7, 0.3, 1) both;
 }
 .home-medtech .timeline-panel[data-entered="true"] .timeline-node > circle {
   animation: motion-milestone 750ms ease both;
   animation-delay: 400ms;
 }
-.home-medtech .timeline-panel .timeline-node:nth-of-type(2) > circle { animation-delay: 650ms; }
-.home-medtech .timeline-panel .timeline-node:nth-of-type(3) > circle { animation-delay: 900ms; }
-.home-medtech .timeline-panel .timeline-node:nth-of-type(4) > circle { animation-delay: 1150ms; }
-.home-medtech .start-line-motion { animation: none; opacity: 0; }
+.home-medtech .timeline-panel .timeline-node:nth-of-type(2) > circle {
+  animation-delay: 650ms;
+}
+.home-medtech .timeline-panel .timeline-node:nth-of-type(3) > circle {
+  animation-delay: 900ms;
+}
+.home-medtech .timeline-panel .timeline-node:nth-of-type(4) > circle {
+  animation-delay: 1150ms;
+}
+.home-medtech .start-line-motion {
+  animation: none;
+  opacity: 0;
+}
 .home-medtech .timeline-panel[data-entered="true"] .start-line-motion {
   animation: mt-shift-earlier 7s 800ms ease-in-out infinite both;
 }
 .home-medtech .stage-chart .bar-track > span {
-  animation: mt-chart-grow 1.1s cubic-bezier(.22,1,.36,1) both;
+  animation: mt-chart-grow 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
   animation-play-state: paused;
 }
-.home-medtech .stage-chart[data-entered="true"] .bar-track > span { animation-play-state: running; }
-.home-medtech .bar-row:nth-child(3) .bar-track > span { animation-delay: 120ms; }
-.home-medtech .bar-row:nth-child(4) .bar-track > span { animation-delay: 240ms; }
+.home-medtech .stage-chart[data-entered="true"] .bar-track > span {
+  animation-play-state: running;
+}
+.home-medtech .bar-row:nth-child(3) .bar-track > span {
+  animation-delay: 120ms;
+}
+.home-medtech .bar-row:nth-child(4) .bar-track > span {
+  animation-delay: 240ms;
+}
 
 /* The 10-second diagram explains information flow, never simulated patient results. */
-.home-medtech .signal-board { --ai-state: var(--ambient-state); }
-.home-medtech .signal-input { position: relative; }
+.home-medtech .signal-board {
+  --ai-state: var(--ambient-state);
+}
+.home-medtech .signal-input {
+  position: relative;
+}
 .home-medtech .signal-input::after {
   content: "";
   position: absolute;
@@ -2782,12 +2825,24 @@
   animation: motion-input-light 10s linear infinite;
   animation-play-state: var(--ai-state);
 }
-.home-medtech .signal-input:nth-child(2)::after { animation-delay: .75s; }
-.home-medtech .signal-input:nth-child(3)::after { animation-delay: 1.5s; }
-.home-medtech .signal-input:nth-child(4)::after { animation-delay: 2.25s; }
-.home-medtech .signal-input:nth-child(5)::after { animation-delay: 3s; }
-.home-medtech .signal-input:nth-child(6)::after { animation-delay: 3.75s; }
-.home-medtech .motion-input-tracks { pointer-events: none; }
+.home-medtech .signal-input:nth-child(2)::after {
+  animation-delay: 0.75s;
+}
+.home-medtech .signal-input:nth-child(3)::after {
+  animation-delay: 1.5s;
+}
+.home-medtech .signal-input:nth-child(4)::after {
+  animation-delay: 2.25s;
+}
+.home-medtech .signal-input:nth-child(5)::after {
+  animation-delay: 3s;
+}
+.home-medtech .signal-input:nth-child(6)::after {
+  animation-delay: 3.75s;
+}
+.home-medtech .motion-input-tracks {
+  pointer-events: none;
+}
 .home-medtech .motion-input-tracks > path {
   stroke: var(--signal-cyan);
   stroke-width: 2.2;
@@ -2797,10 +2852,12 @@
   animation: motion-ai-path 10s linear var(--signal-delay) infinite;
   animation-play-state: var(--ai-state);
 }
-.home-medtech .connector-active { opacity: 0; }
+.home-medtech .connector-active {
+  opacity: 0;
+}
 .home-medtech .signal-board:hover .connector-active,
 .home-medtech .signal-board:focus-within .connector-active {
-  opacity: .85;
+  opacity: 0.85;
   animation-play-state: var(--ambient-state);
 }
 .home-medtech .connector-output {
@@ -2823,8 +2880,12 @@
   animation: motion-processor-breathe 10s ease-in-out infinite;
   animation-play-state: var(--ai-state);
 }
-.home-medtech .processor-bars i { animation-play-state: var(--ai-state); }
-.home-medtech .risk-report { position: relative; }
+.home-medtech .processor-bars i {
+  animation-play-state: var(--ai-state);
+}
+.home-medtech .risk-report {
+  position: relative;
+}
 .home-medtech .risk-report::after {
   content: "";
   position: absolute;
@@ -2842,11 +2903,18 @@
   animation-play-state: var(--ai-state);
 }
 
-.home-medtech .screening-card:hover { transform: translateY(-4px); }
-.home-medtech .screening-card {
-  transition: transform 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+.home-medtech .screening-card:hover {
+  transform: translateY(-4px);
 }
-.home-medtech .screening-card:hover { border-color: #adcbd6; }
+.home-medtech .screening-card {
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+.home-medtech .screening-card:hover {
+  border-color: #adcbd6;
+}
 .home-medtech .screening .device-scan {
   stroke: var(--signal-cyan);
   animation: motion-device-pass 7s 350ms ease-in-out infinite both;
@@ -2865,7 +2933,9 @@
   animation-play-state: var(--ambient-state);
 }
 .home-medtech .partner-card {
-  transition: border-color 240ms ease, box-shadow 240ms ease;
+  transition:
+    border-color 240ms ease,
+    box-shadow 240ms ease;
 }
 .home-medtech .partner-card:hover,
 .home-medtech .partner-card:focus-within {
@@ -2877,7 +2947,9 @@
   animation-duration: 5s;
   animation-play-state: var(--ambient-state);
 }
-.home-medtech .final-cta { isolation: isolate; }
+.home-medtech .final-cta {
+  isolation: isolate;
+}
 .home-medtech .final-cta::before {
   content: "";
   position: absolute;
@@ -2885,108 +2957,302 @@
   z-index: -1;
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(ellipse at 35% 45%, #accbdf2b, transparent 58%),
-              radial-gradient(ellipse at 70% 65%, #f2c39d22, transparent 48%);
-  opacity: .5;
+  background:
+    radial-gradient(ellipse at 35% 45%, #accbdf2b, transparent 58%),
+    radial-gradient(ellipse at 70% 65%, #f2c39d22, transparent 48%);
+  opacity: 0.5;
   animation: motion-cta-wash 22s ease-in-out infinite alternate;
   animation-play-state: var(--ambient-state);
 }
 
 @keyframes motion-enter {
-  from { opacity: 0; translate: 0 14px; }
-  to { opacity: 1; translate: 0 0; }
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
 @keyframes motion-number {
-  from { opacity: .4; clip-path: inset(100% 0 0); translate: 0 10px; }
-  to { opacity: 1; clip-path: inset(0); translate: 0 0; }
+  from {
+    opacity: 0.4;
+    clip-path: inset(100% 0 0);
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+    translate: 0 0;
+  }
 }
 @keyframes motion-hero-flow {
-  from { stroke-dashoffset: 100; opacity: .25; }
-  50% { opacity: .8; }
-  to { stroke-dashoffset: 0; opacity: .25; }
+  from {
+    stroke-dashoffset: 100;
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.25;
+  }
 }
 @keyframes motion-chip-light {
-  0%, 100% { opacity: .65; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
 }
-@keyframes motion-depth { from { translate: 0 8px; } to { translate: 0 -8px; } }
-@keyframes motion-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@keyframes motion-depth {
+  from {
+    translate: 0 8px;
+  }
+  to {
+    translate: 0 -8px;
+  }
+}
+@keyframes motion-draw {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 @keyframes motion-milestone {
-  0% { stroke: #f2c39d00; stroke-width: 0; }
-  45% { stroke: #f2c39d66; stroke-width: 8; }
-  100% { stroke: #f2c39d00; stroke-width: 0; }
+  0% {
+    stroke: #f2c39d00;
+    stroke-width: 0;
+  }
+  45% {
+    stroke: #f2c39d66;
+    stroke-width: 8;
+  }
+  100% {
+    stroke: #f2c39d00;
+    stroke-width: 0;
+  }
 }
 @keyframes motion-input-light {
-  0%, 2% { opacity: 0; }
-  4%, 12% { opacity: 1; }
-  18%, 100% { opacity: 0; }
+  0%,
+  2% {
+    opacity: 0;
+  }
+  4%,
+  12% {
+    opacity: 1;
+  }
+  18%,
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes motion-ai-path {
-  0% { stroke-dashoffset: 112; opacity: 0; }
-  2% { opacity: .9; }
-  15% { stroke-dashoffset: 0; opacity: .9; }
-  17%, 100% { stroke-dashoffset: 0; opacity: 0; }
+  0% {
+    stroke-dashoffset: 112;
+    opacity: 0;
+  }
+  2% {
+    opacity: 0.9;
+  }
+  15% {
+    stroke-dashoffset: 0;
+    opacity: 0.9;
+  }
+  17%,
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
 }
 @keyframes motion-processor-breathe {
-  0%, 4%, 82%, 100% { opacity: 0; }
-  16%, 35%, 55% { opacity: .8; }
-  25%, 45%, 67% { opacity: .35; }
+  0%,
+  4%,
+  82%,
+  100% {
+    opacity: 0;
+  }
+  16%,
+  35%,
+  55% {
+    opacity: 0.8;
+  }
+  25%,
+  45%,
+  67% {
+    opacity: 0.35;
+  }
 }
 @keyframes motion-ai-output {
-  0%, 54% { stroke-dashoffset: 314; opacity: 0; }
-  56% { opacity: .9; }
-  66% { stroke-dashoffset: 0; opacity: .9; }
-  69%, 100% { stroke-dashoffset: 0; opacity: 0; }
+  0%,
+  54% {
+    stroke-dashoffset: 314;
+    opacity: 0;
+  }
+  56% {
+    opacity: 0.9;
+  }
+  66% {
+    stroke-dashoffset: 0;
+    opacity: 0.9;
+  }
+  69%,
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
 }
 @keyframes motion-report-light {
-  0%, 59%, 85%, 100% { opacity: 0; }
-  66%, 77% { opacity: .85; }
+  0%,
+  59%,
+  85%,
+  100% {
+    opacity: 0;
+  }
+  66%,
+  77% {
+    opacity: 0.85;
+  }
 }
 @keyframes motion-next-light {
-  0%, 65%, 90%, 100% { background: #f7e0cc; translate: 0 0; }
-  72%, 80% { background: #d9eef0; translate: 2px -2px; }
+  0%,
+  65%,
+  90%,
+  100% {
+    background: #f7e0cc;
+    translate: 0 0;
+  }
+  72%,
+  80% {
+    background: #d9eef0;
+    translate: 2px -2px;
+  }
 }
-@keyframes motion-cta-wash { from { translate: -4px 2px; opacity: .35; } to { translate: 4px -2px; opacity: .65; } }
+@keyframes motion-cta-wash {
+  from {
+    translate: -4px 2px;
+    opacity: 0.35;
+  }
+  to {
+    translate: 4px -2px;
+    opacity: 0.65;
+  }
+}
 
 @media (max-width: 720px) {
-  .home-medtech .hero-flow { opacity: .35; animation-duration: 8s; }
+  .home-medtech .hero-flow {
+    opacity: 0.35;
+    animation-duration: 8s;
+  }
   .home-medtech .hero-visual,
-  .home-medtech .centres-art { animation: none; translate: none; }
+  .home-medtech .centres-art {
+    animation: none;
+    translate: none;
+  }
   .home-medtech .timeline-panel[data-entered="true"] .mobile-stop::before {
     animation: motion-mobile-node 900ms ease both;
     animation-play-state: var(--ambient-state);
   }
-  .home-medtech .mobile-stop:nth-child(3)::before { animation-delay: 500ms; }
+  .home-medtech .mobile-stop:nth-child(3)::before {
+    animation-delay: 500ms;
+  }
   .home-medtech .processor-area::before,
   .home-medtech .report-area::before {
-    background: linear-gradient(to bottom, #bfd2db, var(--signal-cyan), #bfd2db);
+    background: linear-gradient(
+      to bottom,
+      #bfd2db,
+      var(--signal-cyan),
+      #bfd2db
+    );
     background-size: 100% 200%;
     animation: motion-mobile-flow 10s ease infinite;
     animation-play-state: var(--ai-state);
   }
-  .home-medtech .signal-input::after { box-shadow: none; }
-  .home-medtech .processor-layers::after { box-shadow: 0 0 15px #3f9eab22; }
-  .home-medtech .final-cta::before { animation: none; opacity: .4; }
+  .home-medtech .signal-input::after {
+    box-shadow: none;
+  }
+  .home-medtech .processor-layers::after {
+    box-shadow: 0 0 15px #3f9eab22;
+  }
+  .home-medtech .final-cta::before {
+    animation: none;
+    opacity: 0.4;
+  }
 }
-@keyframes motion-mobile-node { from { opacity: .3; } to { opacity: 1; } }
-@keyframes motion-mobile-flow { 0%, 100% { background-position: 0 0; } 65% { background-position: 0 100%; } }
+@keyframes motion-mobile-node {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes motion-mobile-flow {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  65% {
+    background-position: 0 100%;
+  }
+}
 
 /* Quiet rests between repeating technical movements; no invented device results. */
 @keyframes motion-device-pass {
-  0%, 15%, 70%, 100% { transform: translateY(-13px); opacity: .2; }
-  35%, 45% { transform: translateY(20px); opacity: .75; }
+  0%,
+  15%,
+  70%,
+  100% {
+    transform: translateY(-13px);
+    opacity: 0.2;
+  }
+  35%,
+  45% {
+    transform: translateY(20px);
+    opacity: 0.75;
+  }
 }
 @keyframes motion-sample-cycle {
-  0%, 15%, 65%, 100% { transform: translateY(0); }
-  35%, 45% { transform: translateY(4px); }
+  0%,
+  15%,
+  65%,
+  100% {
+    transform: translateY(0);
+  }
+  35%,
+  45% {
+    transform: translateY(4px);
+  }
 }
 @keyframes motion-light-cycle {
-  0%, 10%, 65%, 100% { opacity: .2; }
-  30%, 40% { opacity: .8; }
+  0%,
+  10%,
+  65%,
+  100% {
+    opacity: 0.2;
+  }
+  30%,
+  40% {
+    opacity: 0.8;
+  }
 }
 @keyframes motion-report-cycle {
-  0%, 15%, 65%, 100% { transform: translateY(0); }
-  35%, 45% { transform: translateY(-4px); }
+  0%,
+  15%,
+  65%,
+  100% {
+    transform: translateY(0);
+  }
+  35%,
+  45% {
+    transform: translateY(-4px);
+  }
 }
 /* Visible at rest as well as on scroll; artwork and signage move as a unit. */
 .home-medtech .human-portrait,
@@ -2998,34 +3264,68 @@
   animation: motion-label-float 6s ease-in-out infinite;
   animation-play-state: running;
 }
-.home-medtech .label-bio { animation-delay: -2s; }
-.home-medtech .hero-flow { stroke-width: 2; }
-.home-medtech .motion-input-tracks > path { stroke-width: 2.5; }
+.home-medtech .label-bio {
+  animation-delay: -2s;
+}
+.home-medtech .hero-flow {
+  stroke-width: 2;
+}
+.home-medtech .motion-input-tracks > path {
+  stroke-width: 2.5;
+}
 @keyframes motion-illustration-float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 @keyframes motion-label-float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(3px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
 }
-@media(max-width:720px) {
+@media (max-width: 720px) {
   .home-medtech .human-portrait,
-  .home-medtech .hero-slide .branded-art { animation-name: motion-illustration-mobile; }
+  .home-medtech .hero-slide .branded-art {
+    animation-name: motion-illustration-mobile;
+  }
   .home-medtech .processor-area::before,
-  .home-medtech .report-area::before { width: 2px; }
+  .home-medtech .report-area::before {
+    width: 2px;
+  }
   .home-medtech .processor-area::after,
   .home-medtech .report-area::after {
     animation: motion-mobile-arrow 2.8s ease-in-out infinite;
     color: var(--signal-cyan);
   }
-  .home-medtech .report-area::after { animation-delay: -.8s; }
+  .home-medtech .report-area::after {
+    animation-delay: -0.8s;
+  }
 }
 @keyframes motion-illustration-mobile {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }
 @keyframes motion-mobile-arrow {
-  0%,100% { transform: translateY(0); opacity: .5; }
-  50% { transform: translateY(5px); opacity: 1; }
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
 }
