@@ -14,21 +14,25 @@
 
 .header .logo img {
   /* width: 86px; */
-  width: 110px;
+  /* width: 110px; */
+  width: 150px;
   /* height: 103px; */
-  height: 120px;
+  /* height: 120px; */
+  height: 150px;
   object-fit: contain;
 }
 
 .header nav {
   display: flex;
   align-items: center;
-  gap: 23px;
+  /* gap: 23px; */
+  gap: 50px;
 }
 
 .header nav > a:not(.button) {
   /* font-size: 12px; */
   font-size: 16px;
+  font-weight: 600;
   padding: 12px 0;
 }
 

@@ -11,7 +11,7 @@
 }
 .about-story .about-label {
   font:
-    600 14px/1.6 Inter,
+    600 16px/1.6 Inter,
     sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -23,6 +23,7 @@
   line-height: 1.16;
   letter-spacing: -0.045em;
   color: var(--about-ink);
+  font-weight: 600;
 }
 .about-story p {
   font-size: 16px;
@@ -69,6 +70,7 @@
   font-size: clamp(44px, 4.8vw, 68px);
   letter-spacing: -0.055em;
   line-height: 1.1;
+  font-weight: 700;
 }
 .about-origin h1 em {
   font-style: normal;
@@ -304,21 +306,40 @@
   overflow: hidden;
 }
 .about-mission {
-  background: #edf5fa;
+  background: #101d32;
   border-radius: 4px 4px 90px 4px;
 }
 .about-vision {
-  background: #fcf2e9;
+  background: #f2c39d;
   border-radius: 4px 4px 4px 90px;
 }
+
+.about-mission .about-purpose-index {
+  font:
+    14px Inter,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
 .about-purpose-index {
   font:
     14px Inter,
     sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #5e7a8e;
+  color: #101d32;
 }
+
+.about-mission > h2 {
+  font-size: clamp(27px, 2.7vw, 37px);
+  margin-top: 28px;
+  max-width: 440px;
+  color: #fff;
+  font-weight: 500;
+}
+
 .about-purpose-grid h2 {
   font-size: clamp(27px, 2.7vw, 37px);
   margin-top: 28px;
@@ -405,12 +426,13 @@
 .about-value-number {
   /* font-size: 10px; */
   font-size: 14px;
-  color: #68889b;
+  color: #000;
+  font-weight: 600;
 }
 .about-values-list svg {
   width: 48px;
   height: 48px;
-  stroke: #89abc3;
+  stroke: #101d32;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -465,9 +487,10 @@
 }
 .about-milestone button > span {
   font:
-    10px Inter,
+    14px Inter,
     sans-serif;
-  color: #6a879a;
+  color: #000;
+  font-weight: 600;
 }
 .about-milestone button > b {
   font-size: 21px;
@@ -560,7 +583,7 @@
 .about-closing-mark span {
   width: 14px;
   height: 25px;
-  background: #bdd6e6;
+  background: #101d32;
   animation: about-bar 3s ease-in-out infinite alternate;
 }
 .about-closing-mark span:nth-child(2) {
@@ -572,6 +595,11 @@
   height: 48px;
   animation-delay: -2s;
 }
+
+ .button.aboutBtn {
+   color: #fff;
+ }
+
 @keyframes about-enter {
   from {
     opacity: 0.3;

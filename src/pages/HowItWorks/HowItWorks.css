@@ -62,6 +62,7 @@
 .how-hero h1 {
   font-size: clamp(43px, 4.4vw, 63px);
   line-height: 1.12;
+  font-weight: 700;
 }
 .how-hero h1 em {
   color: #42718e;
@@ -73,6 +74,7 @@
 }
 .how-hero .button {
   margin-top: 30px;
+  color: #fff;
 }
 .how-hero-note {
   margin-top: 18px;
@@ -205,7 +207,7 @@
   font:
     500 56px Manrope,
     sans-serif;
-  color: #c0d8e8;
+  color: #101d32;
   display: block;
   margin-bottom: 20px;
 }
@@ -232,6 +234,11 @@
   gap: 12px;
   margin-top: 28px;
 }
+
+.button.howItWorks {
+  color: #fff;
+}
+
 .how-stage-controls button {
   width: 42px;
   height: 38px;
@@ -934,9 +941,9 @@
   padding: 23px 0;
   cursor: pointer;
   font:
-    500 18px/1.5 Manrope,
+    700 18px/1.5 Manrope,
     sans-serif;
-  color: #365d77;
+  color: #101d32;
   list-style: none;
 }
 .how-faq-list summary::-webkit-details-marker {
@@ -944,9 +951,9 @@
 }
 .how-faq-list summary > span {
   font:
-    10px/2.6 Inter,
+    14px/2.6 Inter,
     sans-serif;
-  color: #a88467;
+  color: #101d32;
 }
 .how-faq-list summary > b {
   margin-left: auto;
@@ -972,10 +979,10 @@
   justify-content: center;
   gap: 24px;
   margin-bottom: 38px;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #6c8fa5;
+  color: #101d32;
 }
 .how-final-ribbon i {
   font-size: 22px;

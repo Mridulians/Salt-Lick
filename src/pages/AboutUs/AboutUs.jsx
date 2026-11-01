@@ -4,14 +4,8 @@ import science from "../../assets/about-science.webp";
 import centre from "../../assets/about-centre.webp";
 import portrait from "../../assets/team-portrait-placeholder.svg";
 import "./AboutUs.css";
+import AboutEcosystem from "./AboutEcosystem";
 
-const organisations = [
-  ["Salt Lick", "AI cancer risk assessment", "01"],
-  ["Health Voitho Technologies", "Medtech and development", "02"],
-  ["EIOMS", "Knowledge institute", "03"],
-  ["Esperer Nutrition", "Cancer nutrition", "04"],
-  ["Esperer BioResearch", "Cancer formulations and research", "05"],
-];
 const values = [
   ["Science first", "Evidence and clinical oversight.", "science"],
   [
@@ -218,45 +212,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="about-ecosystem" aria-labelledby="ecosystem-title">
-        <div className="about-wrap">
-          <div className="about-section-heading" data-about-reveal>
-            <div>
-              <p className="about-label">02 / Connected expertise</p>
-              <h2 id="ecosystem-title">
-                The Esperer Group
-                <br />
-                ecosystem.
-              </h2>
-            </div>
-            {/* <p>
-              Specialised group companies in cancer care and metabolic sciences
-              support one another.
-            </p> */}
-          </div>
-          <div className="about-ecosystem-grid">
-            {organisations.map(([name, role, number], i) => (
-              <article
-                className={"about-org about-org-" + i}
-                key={name}
-                data-about-reveal
-              >
-                <span className="about-org-number">{number}</span>
-                <div className="about-bookmark" aria-hidden="true">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-                <h3>{name}</h3>
-                <p>{role}</p>
-                {i === 0 && (
-                  <span className="about-org-tag">Our place in the group</span>
-                )}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AboutEcosystem />
 
       <section
         className="about-purpose about-wrap"
@@ -428,7 +384,7 @@ export default function AboutUs() {
           the world's cancer burden.
         </h2>
         <div className="actions">
-          <a className="button blue" href="/partner-with-us">
+          <a className="button aboutBtn blue" href="/partner-with-us">
             Partner With Us <span aria-hidden="true">↗</span>
           </a>
           <a

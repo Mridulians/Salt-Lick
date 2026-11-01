@@ -73,23 +73,25 @@
   position: absolute;
   font-size: 11px;
   font-weight: 600;
-  color: var(--team-navy);
   text-align: center;
 }
 .team-graphic-label.science {
   top: 24%;
   left: 31%;
   width: 38%;
+   color: #fff;
 }
 .team-graphic-label.leadership {
   top: 77%;
   left: 0;
   width: 38%;
+   color: #000;
 }
 .team-graphic-label.technology {
   top: 77%;
   right: 0;
   width: 38%;
+  color: #fff;
 }
 .team-orbit {
   transform-origin: 260px 220px;
@@ -116,7 +118,8 @@
 }
 .team-page h2 {
   font-size: clamp(30px, 3.4vw, 45px);
-  color: var(--team-navy);
+  color: #000;
+  font-weight: 700;
 }
 .team-leadership {
   border-top: 1px solid #e7eef3;
@@ -184,7 +187,7 @@
   padding: 24px 0 0;
 }
 .team-page .team-role {
-  font-size: 11px;
+  font-size: 14px;
   min-height: 35px;
   color: #53748c;
   line-height: 1.5;
@@ -202,7 +205,7 @@
   border-top: 1px solid #e1eaf0;
 }
 .team-bio p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
   min-height: 48px;
   color: var(--team-muted);
@@ -279,7 +282,7 @@
   object-fit: contain;
 }
 .team-partner p {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--team-muted);
 }
 .team-partner > span {
@@ -297,10 +300,15 @@
 }
 .team-cta > div > p:not(.team-kicker) {
   color: var(--team-muted);
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 22px;
   max-width: 460px;
 }
+
+.button.teamPage {
+  color: #fff;
+}
+
 .team-horizon {
   width: 100%;
 }
@@ -401,6 +409,10 @@
   .team-horizon {
     max-width: 400px;
     margin: auto;
+  }
+
+  .actions {
+    gap: 5px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

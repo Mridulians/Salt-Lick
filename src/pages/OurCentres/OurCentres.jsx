@@ -3,6 +3,7 @@ import arrival from "../../assets/centres-arrival.webp";
 import report from "../../assets/centres-report.webp";
 import partnership from "../../assets/centres-partnership.webp";
 import "./OurCentres.css";
+import CentreInterior from "./CentreInterior";
 
 const facilities = [
   [
@@ -168,7 +169,6 @@ function PlaceDrawing({ type }) {
 
 export default function OurCentres() {
   const root = useRef(null);
-  const [room, setRoom] = useState(0);
   const [step, setStep] = useState(0);
   useEffect(() => {
     const page = root.current;
@@ -227,7 +227,7 @@ export default function OurCentres() {
             Salt Lick Centres are positioned within hospitals communities
             already trust, making early risk assessment more accessible.
           </p>
-          <a className="button blue" href="/partner-with-us">
+          <a className="button centrepage blue" href="/partner-with-us">
             Bring a Centre to Your Region <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -242,92 +242,14 @@ export default function OurCentres() {
           </div>
           <div className="centres-paper-back" aria-hidden="true" />
         </div>
-        <div className="centres-hero-foot">
+        {/* <div className="centres-hero-foot">
           <span>Familiar hospitals</span>
           <span>Private spaces</span>
           <span>A clear next step</span>
-        </div>
+        </div> */}
       </section>
 
-      <section className="centres-inside" aria-labelledby="inside-title">
-        <div className="centres-wrap">
-          <div className="centres-heading" data-centre-reveal>
-            <div>
-              <p className="centres-label">01 / Inside the centre</p>
-              <h2 id="inside-title">
-                Designed around people,
-                <br />
-                not procedures.
-              </h2>
-            </div>
-            <p>
-              A calm, private experience, from the waiting area to a report
-              explained in person, in about 30 minutes.
-            </p>
-          </div>
-          <div className="centres-tour-layout">
-            <div className="centres-plan-shell" data-centre-reveal>
-              <div className="centres-plan-top">
-                <span>Salt Lick</span>
-                <span>Conceptual floor plan</span>
-              </div>
-              <p className="centres-plan-hint">
-                Select a room to explore the experience.
-              </p>
-              <div className="centres-floorplan">
-                <div className="centres-plan-rooms">
-                  {facilities.map(([name, , short], i) => (
-                    <button
-                      key={name}
-                      className={"centres-plan-room room-" + i}
-                      aria-pressed={room === i}
-                      aria-label={"Explore " + name}
-                      onClick={() => setRoom(i)}
-                    >
-                      <span>0{i + 1}</span>
-                      <i
-                        className="centres-room-furniture"
-                        aria-hidden="true"
-                      />
-                      <strong>{short}</strong>
-                    </button>
-                  ))}
-                </div>
-                <div className="centres-plan-corridor" aria-hidden="true">
-                  <span>Visitor route</span>
-                  <i>→</i>
-                </div>
-              </div>
-              <div className="centres-plan-entry">
-                <span>Entry →</span>
-                <span>→ Next steps</span>
-              </div>
-              <div className="centres-room-detail" aria-live="polite">
-                <span>0{room + 1} / Your visit</span>
-                <h3>{facilities[room][0]}</h3>
-                <p>{facilities[room][1]}</p>
-              </div>
-            </div>
-            <div className="centres-facility-list">
-              {facilities.map(([name, copy], i) => (
-                <button
-                  className="centres-facility"
-                  key={name}
-                  aria-pressed={room === i}
-                  onClick={() => setRoom(i)}
-                >
-                  <span className="centres-facility-number">0{i + 1}</span>
-                  <span>
-                    <strong>{name}</strong>
-                    <span>{copy}</span>
-                  </span>
-                  <b aria-hidden="true">↗</b>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <CentreInterior facilities={facilities} />
 
       <section
         className="centres-locations centres-wrap"
@@ -530,9 +452,10 @@ export default function OurCentres() {
               </article>
             ))}
           </div>
+          
           <div className="centres-pilot-action">
             <p>Build the next chapter of accessible care.</p>
-            <a className="button blue" href="/partner-with-us">
+            <a className="button centrepage blue" href="/partner-with-us">
               Start a Pilot <span aria-hidden="true">↗</span>
             </a>
           </div>

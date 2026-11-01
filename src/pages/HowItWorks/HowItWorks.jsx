@@ -640,7 +640,7 @@ export default function HowItWorks() {
             <br />
             to your communities.
           </h2>
-          <a className="button blue" href="/partner-with-us">
+          <a className="button howItWorks blue" href="/partner-with-us">
             Partner With Us <span aria-hidden="true">↗</span>
           </a>
           <p className="how-disclaimer">

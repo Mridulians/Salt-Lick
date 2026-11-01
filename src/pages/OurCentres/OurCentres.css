@@ -40,6 +40,7 @@
 .centres-hero h1 {
   font-size: clamp(43px, 4.4vw, 63px);
   line-height: 1.12;
+  font-weight: 700;
 }
 .centres-hero h1 em {
   font-style: normal;
@@ -78,6 +79,11 @@
   transform: rotate(4deg);
   border-radius: 5px;
 }
+
+.button.centrepage {
+ color: #fff;
+}
+
 .centres-hero-foot {
   grid-column: 1/-1;
   display: flex;
@@ -646,16 +652,17 @@
   padding: 30px;
   border: 1px solid #dfe9f1;
   background: #fff;
-  border-top: 4px solid #b8d2e4;
+  border-top: 4px solid #101d32;
 }
 .centres-rollout article:nth-child(2) {
-  border-top-color: #efc9aa;
+  border-top-color: #101d32;
 }
 .centres-rollout-index {
   font:
     500 40px Manrope,
     sans-serif;
-  color: #c4d9e6;
+  color: #101d32;
+  font-weight: 600;
   display: block;
 }
 .centres-rollout-label {
@@ -668,8 +675,9 @@
 }
 .centres-rollout h3 {
   font-size: 25px;
-  color: #345a74;
+  color: #000;
   margin-top: 12px;
+  font-weight: 600;
 }
 .centres-rollout p {
   font-size: 14px;

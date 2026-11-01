@@ -54,6 +54,7 @@ function LeadershipGraphic() {
     >
       <svg viewBox="0 0 520 440" aria-hidden="true">
         <circle cx="260" cy="220" r="180" fill="#f8fbfd" />
+
         <g className="team-orbit">
           <ellipse
             cx="260"
@@ -61,7 +62,7 @@ function LeadershipGraphic() {
             rx="200"
             ry="143"
             fill="none"
-            stroke="#accbdf"
+            stroke="#101d32"
           />
           <circle cx="460" cy="220" r="7" fill="#eac09c" />
           <circle cx="60" cy="220" r="5" fill="#8dafc7" />
@@ -70,7 +71,7 @@ function LeadershipGraphic() {
           className="team-signal"
           d="M260 80L100 300H420Z"
           fill="none"
-          stroke="#b6cddb"
+          stroke="#101d32"
           strokeWidth="2"
           strokeDasharray="5 9"
         />
@@ -84,10 +85,11 @@ function LeadershipGraphic() {
         />
         <path
           d="M230 220h60m-30-30v60"
-          stroke="#789fb9"
+          stroke="#f2c39d"
           strokeWidth="7"
           strokeLinecap="round"
         />
+
         <g className="team-node team-node-one">
           <rect
             x="202"
@@ -95,16 +97,17 @@ function LeadershipGraphic() {
             width="116"
             height="104"
             rx="26"
-            fill="#e6f0f7"
-            stroke="#c9dee9"
+            fill="#101d32"
+            stroke="#101d32"
           />
           <path
             d="M240 48c0 22 40 22 40 44m0-44c0 22-40 22-40 44m4-35h32m-32 25h32"
             fill="none"
-            stroke="#668ba5"
+            stroke="#fff"
             strokeWidth="2.5"
           />
         </g>
+
         <g className="team-node team-node-two">
           <rect
             x="38"
@@ -112,24 +115,25 @@ function LeadershipGraphic() {
             width="124"
             height="104"
             rx="26"
-            fill="#fbeddf"
-            stroke="#efd4bd"
+            fill="#f2c39d"
+            stroke="#f2c39d"
           />
           <circle
             cx="100"
             cy="280"
             r="12"
             fill="none"
-            stroke="#b78c69"
+            stroke="#000"
             strokeWidth="2.5"
           />
           <path
             d="M75 322v-9c0-23 50-23 50 0v9"
             fill="none"
-            stroke="#b78c69"
+            stroke="#000"
             strokeWidth="2.5"
           />
         </g>
+
         <g className="team-node team-node-three">
           <rect
             x="358"
@@ -137,8 +141,8 @@ function LeadershipGraphic() {
             width="124"
             height="104"
             rx="26"
-            fill="#e6f0f7"
-            stroke="#c9dee9"
+            fill="#101d32"
+            stroke="#101d32"
           />
           <rect
             x="401"
@@ -147,15 +151,16 @@ function LeadershipGraphic() {
             height="38"
             rx="7"
             fill="none"
-            stroke="#668ba5"
+            stroke="#fff"
             strokeWidth="2.5"
           />
           <path
             d="M411 267v10m18-10v10m-18 38v10m18-10v10m-38-38h10m-10 18h10m38-18h10m-10 18h10"
-            stroke="#668ba5"
+            stroke="#fff"
             strokeWidth="2.5"
           />
         </g>
+
       </svg>
       <span className="team-graphic-label science">Oncology science</span>
       <span className="team-graphic-label leadership">
@@ -270,11 +275,11 @@ export default function OurTeam() {
                 className="team-signal"
                 d="M25 65Q110-35 195 65M25 65H195"
                 fill="none"
-                stroke="#9ebed3"
+                stroke="#101d32"
                 strokeWidth="2"
                 strokeDasharray="5 7"
               />
-              <circle cx="25" cy="65" r="12" fill="#accbdf" />
+              <circle cx="25" cy="65" r="12" fill="#101d32" />
               <circle
                 className="team-pulse"
                 cx="110"
@@ -282,7 +287,7 @@ export default function OurTeam() {
                 r="12"
                 fill="#f2c39d"
               />
-              <circle cx="195" cy="65" r="12" fill="#accbdf" />
+              <circle cx="195" cy="65" r="12" fill="#101d32" />
             </svg>
           </div>
           <div className="team-partner-grid">
@@ -329,7 +334,7 @@ export default function OurTeam() {
           </p>
           <div className="actions">
             <a
-              className="button blue"
+              className="button teamPage blue"
               href="/about-us"
               aria-label="Careers — enquire by email"
             >
@@ -349,14 +354,14 @@ export default function OurTeam() {
           <path
             d="M30 260A210 210 0 0 1 450 260"
             fill="none"
-            stroke="#deebf3"
+            stroke="#101d32"
             strokeWidth="38"
           />
           <path
             className="team-signal"
             d="M30 260A210 210 0 0 1 450 260"
             fill="none"
-            stroke="#8bafc7"
+            stroke="#fff"
             strokeWidth="2"
             strokeDasharray="4 10"
           />
@@ -370,13 +375,13 @@ export default function OurTeam() {
           <path
             d="M0 260Q120 220 240 260T480 260"
             fill="none"
-            stroke="#accbdf"
+            stroke="#101d32"
             strokeWidth="3"
           />
           <path
             d="M0 282Q120 242 240 282T480 282"
             fill="none"
-            stroke="#edcfb6"
+            stroke="#f2c39d"
             strokeWidth="2"
           />
         </svg>

@@ -1,0 +1,135 @@
+/* Only the About Us ecosystem. No shared or neighbouring section overrides. */
+.ecosystem{--eco-navy:#101d32;--eco-blue:#accbdf;--eco-orange:#f2c39d;--eco-drift:1;--eco-angle:1;background:#fff;border-block:1px solid #e5edf3;isolation:isolate;scroll-margin-top:30px}
+.wrap{max-width:1400px;margin:auto;padding:80px 6% 90px}
+.heading{display:flex;justify-content:space-between;align-items:flex-end;gap:50px;margin-bottom:38px}
+.ecosystem .title{color:#23465f}
+.groupIntro{max-width:340px;padding-left:25px;border-left:1px solid #dce7ef}
+.parentLink{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-bottom:14px}
+.parentLink img{width:130px;height:57px;object-fit:contain;object-position:left center}
+.parentLink svg{width:22px;height:22px;color:#426782;transition:transform .25s!important}
+.parentLink:hover svg{transform:translate(3px,-3px)}
+.ecosystem .groupIntro p{font-size:13px;line-height:1.8;color:#526b7d}
+.grid{display:grid;grid-template-columns:1.04fr 1fr 1fr;gap:18px;align-items:stretch}
+.feature,.card{border-radius:14px;min-width:0;position:relative;overflow:hidden}
+.feature{grid-row:span 2;background:var(--eco-navy);display:flex;flex-direction:column;box-shadow:0 15px 35px #101d3210}
+.feature:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 55% 33%,#accbdf24,transparent 65%)}
+.featureTop{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:26px 26px 0;position:relative}
+.number{font:600 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.12em;color:#607e93}
+.featureTop .number{color:#accbdf}
+.featureTop>span:last-child{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#c8d9e6;border:1px solid #accbdf38;border-radius:25px;padding:8px 10px}
+.featureScene{margin:auto 0;position:relative;pointer-events:none}
+.featureArtwork{width:100%;height:auto;display:block;overflow:visible}
+.featureCopy{position:relative;padding:0 28px 27px}
+.ecosystem .feature h3{color:#fff;font-size:30px;line-height:1.2;letter-spacing:-.035em;font-weight:700;margin:0}
+.ecosystem .feature p{color:#c5d9e8;font-size:14px;margin-top:12px;line-height:1.6}
+.featureLink{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid #accbdf38;padding-top:20px;margin-top:30px;color:#f2c39d;font-size:12px;font-weight:600}
+.featureLink svg{width:21px;height:21px;transition:transform .25s!important}
+.featureLink:hover svg{transform:translate(3px,-3px)}
+.card{display:flex;flex-direction:column;border:1px solid #dce7ef;background:#fff;padding:20px 24px 22px;transition:transform .3s,border-color .3s,box-shadow .3s!important}
+.card:before{content:"";position:absolute;inset:0 0 auto;height:150px;background:linear-gradient(165deg,#edf5fa8c,transparent 85%);pointer-events:none}
+.knowledge:before,.nutrition:before{background:linear-gradient(165deg,#fcf1e78c,transparent 85%)}
+.card:hover,.card:focus-visible{transform:translateY(-4px);border-color:#b6cedf;box-shadow:0 14px 35px #101d3210}
+.knowledge:hover,.nutrition:hover{border-color:#e6bb98}
+.cardTop{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.arrow{display:grid;place-items:center;border:1px solid #dce7ef;border-radius:50%;width:28px;height:28px;color:#426782;transition:background .25s,transform .25s!important}
+.arrow svg{width:14px;height:14px}
+.card:hover .arrow{background:#eaf3f9;transform:rotate(5deg)}
+.scene{width:100%;height:118px;margin:-5px 0 6px;pointer-events:none}
+.artwork{width:100%;height:100%;display:block;overflow:visible}
+.cardCopy{position:relative;margin-top:4px}
+.ecosystem .card h3{font-size:20px;line-height:1.25;font-weight:600;letter-spacing:-.03em;color:var(--eco-navy);margin:0}
+.ecosystem .card p{font-size:13px;line-height:1.65;color:#526b7d;margin-top:9px}
+.visit{display:flex;align-items:center;gap:9px;font-size:10px;font-weight:600;color:#426782;margin-top:auto;padding-top:17px}
+.visit>span{font-size:15px;transition:translate .25s!important}
+.card:hover .visit>span{translate:2px -2px}
+.ecosystem a:focus-visible{outline:3px solid #d99968;outline-offset:5px}
+
+/* Automatic, independent conceptual motion; no fabricated measurements. */
+.report{animation:eco-report-depth 6s ease-in-out infinite alternate;transform-origin:center;transform-box:fill-box}
+.featureSheet{animation:eco-sheet-drift 5s ease-in-out infinite alternate}
+.featureTag{animation:eco-sheet-drift 5s ease-in-out -2.5s infinite alternate-reverse}
+.reportAccent{stroke-dasharray:1;animation:eco-line-reveal 6s ease-in-out infinite}
+.featurePath{animation:eco-path-flow 6s linear infinite}
+.device{animation:eco-device-depth 5.5s ease-in-out infinite alternate;transform-origin:center;transform-box:fill-box}
+.trace{stroke-dasharray:1;animation:eco-line-reveal 5s ease-in-out infinite}
+.signal{animation:eco-signal 5s ease-in-out infinite}
+.book{animation:eco-book-depth 6s ease-in-out infinite alternate;transform-origin:center;transform-box:fill-box}
+.page{transform-origin:157px 80px;animation:eco-page-turn 6s ease-in-out infinite}
+.underline{stroke-dasharray:1;animation:eco-line-reveal 6s ease-in-out -2s infinite}
+.nutrients{animation:eco-nutrients 5.5s ease-in-out infinite alternate}
+.spoon{transform-origin:210px 52px;animation:eco-spoon 5.5s ease-in-out infinite alternate}
+.vial{translate:0 0;animation:eco-vial-lift 4.5s ease-in-out var(--vial-delay,0s) infinite}
+.molecule{animation:eco-molecule 4s ease-in-out infinite alternate}
+@keyframes eco-report-depth{to{translate:0 calc(-7px * var(--eco-drift));rotate:calc(-2deg * var(--eco-angle))}}
+@keyframes eco-sheet-drift{to{translate:calc(4px * var(--eco-drift)) calc(-6px * var(--eco-drift))}}
+@keyframes eco-path-flow{to{stroke-dashoffset:-224}}
+@keyframes eco-line-reveal{0%,12%{stroke-dashoffset:1;opacity:.35}55%,85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:.35}}
+@keyframes eco-device-depth{to{translate:0 calc(-4px * var(--eco-drift));rotate:calc(1.5deg * var(--eco-angle))}}
+@keyframes eco-signal{0%,15%{translate:0 0;opacity:0}25%{opacity:1}65%,100%{translate:calc(35px * var(--eco-drift)) 0;opacity:0}}
+@keyframes eco-book-depth{to{translate:0 calc(-4px * var(--eco-drift));rotate:calc(-1deg * var(--eco-angle))}}
+@keyframes eco-page-turn{0%,20%,100%{transform:skewY(0deg) scaleX(1)}60%{transform:skewY(calc(-9deg * var(--eco-angle))) scaleX(calc(1 - .32 * var(--eco-drift)))}}
+@keyframes eco-nutrients{to{translate:0 calc(-4px * var(--eco-drift))}}
+@keyframes eco-spoon{from{rotate:calc(-4deg * var(--eco-angle))}to{rotate:calc(4deg * var(--eco-angle));translate:0 calc(-3px * var(--eco-drift))}}
+@keyframes eco-vial-lift{0%,100%{translate:0 0}50%{translate:0 calc(-6px * var(--eco-drift))}}
+@keyframes eco-molecule{to{translate:calc(3px * var(--eco-drift)) calc(-4px * var(--eco-drift))}}
+
+@media(max-width:1050px){
+  .grid{grid-template-columns:.95fr 1fr 1fr;gap:13px}
+  .card{padding:18px}
+  .ecosystem .card h3{font-size:18px}
+  .featureTop{padding:22px 20px 0;align-items:flex-start}
+  .featureTop>span:last-child{font-size:8px;padding:6px 8px;max-width:135px;text-align:right}
+  .featureCopy{padding:0 22px 24px}
+}
+@media(max-width:800px){
+  .wrap{padding-block:60px}
+  .heading{align-items:flex-start;gap:30px}
+  .groupIntro{max-width:270px}
+  .grid{grid-template-columns:1fr 1fr;gap:15px}
+  .feature{grid-column:1/-1;grid-row:auto;min-height:270px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr}
+  .featureTop{grid-column:1;align-items:center;z-index:1}
+  .featureScene{grid-column:2;grid-row:1/3;align-self:center}
+  .featureArtwork{max-height:270px}
+  .featureCopy{grid-column:1;align-self:end;padding-top:22px}
+  .featureLink{margin-top:24px}
+  .scene{height:130px}
+  .ecosystem .card h3{font-size:20px}
+}
+@media(max-width:560px){
+  .heading{flex-direction:column;gap:25px;margin-bottom:28px}
+  .ecosystem .title{font-size:36px}
+  .groupIntro{border:0;border-top:1px solid #e0e9f0;padding:18px 0 0;max-width:none;display:flex;gap:22px;align-items:center}
+  .parentLink{flex-shrink:0;padding:0;gap:10px}
+  .parentLink img{width:90px;height:44px}
+  .parentLink svg{width:15px;height:15px}
+  .ecosystem .groupIntro p{font-size:11px;line-height:1.75}
+  .feature{display:flex;min-height:440px}
+  .featureTop{padding:22px 22px 0}
+  .featureTop>span:last-child{font-size:8px;max-width:none}
+  .featureScene{width:100%;margin:-2px 0 -8px}
+  .featureArtwork{height:240px}
+  .featureCopy{width:100%;padding:0 24px 25px}
+  .featureLink{margin-top:20px;padding-top:17px}
+  .grid{gap:14px}
+  .card{padding:16px 15px 19px}
+  .scene{height:104px;margin-top:3px}
+  .ecosystem .card h3{font-size:18px}
+  .ecosystem .card p{font-size:12px}
+  .arrow{width:25px;height:25px}
+}
+@media(max-width:390px){
+  .grid{grid-template-columns:1fr}
+  .card{display:grid;grid-template-columns:1fr 110px;padding:18px;column-gap:5px}
+  .cardTop{grid-column:1/-1;margin-bottom:10px}
+  .scene{grid-column:2;grid-row:2/4;height:100px;margin:0}
+  .cardCopy{grid-column:1;align-self:center}
+  .visit{grid-column:1;align-self:end;padding-top:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ecosystem{--eco-drift:.35;--eco-angle:0}
+  .ecosystem svg *{animation-duration:12s!important}
+  .ecosystem a,.ecosystem a *{transition:none!important}
+  .page,.featurePath,.signal{animation:none!important}
+  .featurePath,.signal{opacity:0}
+  .card:hover,.card:focus-visible{transform:none}
+}

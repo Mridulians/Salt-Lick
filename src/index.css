@@ -30,7 +30,7 @@
   font-family: Inter, Arial, sans-serif;
   color: #17232c;
   background: #fff;
-  --blue: #accbdf;
+  --blue: #101d32;
   --orange: #f2c39d;
   --ink: #17232c;
   --line: #dce5eb;
@@ -164,7 +164,7 @@ button {
 
 .button.outline {
   background: #fff;
-  border-color: #a9bdca;
+  border-color: #101d32;
 }
 
 .actions {

@@ -409,6 +409,7 @@
 }
 .partner-success .button {
   margin-top: 28px;
+  color: #fff;
 }
 .partner-page .button:focus-visible,
 .partner-email:focus-visible {
