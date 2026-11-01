@@ -7,7 +7,7 @@ import human from "../../assets/medtech-human.webp";
 import campus from "../../assets/medtech-campus.webp";
 import consultation from "../../assets/medtech-consultation.webp";
 import centres from "../../assets/illustrated-centres.webp";
-import screening from "../../assets/illustrated-screening.webp";
+import screening from "../../assets/illustrated-screening-official-logo.webp";
 import styles from "./Home.module.css";
 
 // All homepage classes use Vite CSS Module names, including active states.

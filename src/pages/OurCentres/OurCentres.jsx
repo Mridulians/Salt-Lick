@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import arrival from "../../assets/centres-arrival.webp";
-import report from "../../assets/centres-report.webp";
-import partnership from "../../assets/centres-partnership.webp";
+import arrival from "../../assets/centres-arrival-official-logo.webp";
+import report from "../../assets/centres-report-official-logo.webp";
+import partnership from "../../assets/centres-partnership-official-logo.webp";
 import "./OurCentres.css";
 import CentreInterior from "./CentreInterior";
 

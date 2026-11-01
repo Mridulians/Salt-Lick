@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import campus from "../../assets/partner-campus.webp";
+import campus from "../../assets/partner-campus-official-logo.webp";
 import "./PartnerWithUs.css";
 
 const interests = [

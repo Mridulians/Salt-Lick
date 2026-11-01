@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import world from "../../assets/impact-world.webp";
-import people from "../../assets/impact-people.webp";
-import community from "../../assets/impact-community.webp";
+import world from "../../assets/impact-world-official-logo.webp";
+import people from "../../assets/impact-people-official-logo.webp";
+import community from "../../assets/impact-community-official-logo.webp";
 import { burden, benefits, progress } from "./content.js";
 import {
   ImpactIcon,

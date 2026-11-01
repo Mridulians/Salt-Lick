@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import origin from "../../assets/about-human-hero.webp";
-import science from "../../assets/about-science.webp";
-import centre from "../../assets/about-centre.webp";
+import origin from "../../assets/about-human-hero-official-logo.webp";
+import science from "../../assets/about-science-official-logo.webp";
+import centre from "../../assets/about-centre-official-logo.webp";
 import portrait from "../../assets/team-portrait-placeholder.svg";
 import "./AboutUs.css";
 import AboutEcosystem from "./AboutEcosystem";

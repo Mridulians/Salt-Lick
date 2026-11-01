@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import consultation from "../../assets/how-consultation.webp";
-import faceScan from "../../assets/how-face-scan.webp";
-import laboratory from "../../assets/how-laboratory.webp";
+import consultation from "../../assets/how-consultation-official-logo.webp";
+import faceScan from "../../assets/how-face-scan-official-logo.webp";
+import laboratory from "../../assets/how-laboratory-official-logo.webp";
 import "./HowItWorks.css";
 
 const stages = [
