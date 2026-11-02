@@ -27,7 +27,7 @@ export default function PartnerWithUs() {
         aria-labelledby="partner-title"
       >
         <div className="partner-hero-copy">
-          <p className="partner-label">Partner with us / A shared purpose</p>
+          <p className="partner-label">Partner with us</p>
           <h1 id="partner-title">
             Let's reduce the
             <br />
@@ -36,10 +36,9 @@ export default function PartnerWithUs() {
             <em>together.</em>
           </h1>
           <p>
-            Salt Lick works with governments, health ministries, and healthcare
-            institutions worldwide.
+            We work with governments, health ministries and healthcare institutions worldwide. Tell us about your goals and our team will respond within two working days.
           </p>
-          <a className="button blue" href="#partnership-enquiry">
+          {/* <a className="button blue" href="#partnership-enquiry">
             Start a conversation <span aria-hidden="true">↓</span>
           </a>
           <div className="partner-response">
@@ -49,7 +48,7 @@ export default function PartnerWithUs() {
               <br />
               <strong>within two working days.</strong>
             </span>
-          </div>
+          </div> */}
         </div>
         <div className="partner-campus">
           <img

@@ -2,41 +2,38 @@ export const burden = [
   [
     "1 in 5",
     "Lifetime risk",
-    "People expected to develop cancer during their lifetime.",
+    "People will develop cancer in their lifetime",
     "01",
   ],
-  ["20M", "New cases", "Estimated new cases worldwide in 2022.", "02"],
-  ["9.7M", "Lives lost", "Estimated cancer deaths worldwide in 2022.", "03"],
+  ["20M", "New cases", "New cases worldwide each year", "02"],
+
+  ["9.7M", "Lives lost", "Deaths each year", "03"],
   [
-    "INT $25.2T",
+    "$25.2T",
     "Economic cost",
-    "Modeled cumulative global cost, 2020–2050; 2017 international dollars.",
+    "Economic cost, 2020–2050",
     "04",
   ],
 ];
 export const benefits = {
-  people: [
-    ["Time for clarity", "A personal risk assessment in under 30 minutes."],
-    [
-      "Comfort matters",
-      "Radiation-free screening with minimal discomfort, as described in the wireframe.",
-    ],
-    ["A next step", "A defined next step for each result."],
-    ["Close to home", "Screening in trusted local hospitals."],
-  ],
   nations: [
+    ["Late-stage cancer costs three to five times more to treat"],
     [
-      "Treatment costs",
-      "Late-stage treatment costs three to five times more. Source and applicability require confirmation.",
+      "Fewer late cases ease pressure on specialist hospitals"
+    ],
+    ["Real-time data shows where risk is rising"],
+    ["Works through existing health workers and infrastructure"],
+  ],
+  people: [
+    [
+      "A personal picture of cancer risk in under 30 minutes"
     ],
     [
-      "Capacity for care",
-      "Fewer late-stage cases may reduce pressure on specialist hospitals.",
+      "No radiation and minimal discomfort",
     ],
-    ["Population insight", "Population data can show where risk is rising."],
+    ["A defined next step for every result"],
     [
-      "Built around existing care",
-      "The approach is designed to use existing health workers and infrastructure.",
+      "Screening within trusted local hospitals",
     ],
   ],
 };

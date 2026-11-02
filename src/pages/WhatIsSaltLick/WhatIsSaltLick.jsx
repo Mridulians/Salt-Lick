@@ -40,18 +40,16 @@ export default function WhatIsSaltLick() {
     <div className={c("page")} ref={root}>
       <section className={c("hero wrap")} aria-labelledby="what-title">
         <div className={c("hero-copy")}>
-          <p className={c("label")}>
-            What is Salt Lick / A different starting point
-          </p>
+          <p className={c("label")}>What is Salt Lick</p>
           <h1 id="what-title">
             Salt Lick shifts
             <br />
             <em>the start line.</em>
           </h1>
           <p className={c("hero-intro")}>
-            Salt Lick is an AI-enabled cancer risk assessment designed to
-            identify risk before cancer becomes detectable — reading the whole
-            person rather than one organ at a time.
+            A first-of-its-kind, AI-enabled cancer risk assessment that
+            identifies risk before cancer becomes detectable, by reading the
+            whole person rather than one organ at a time.
           </p>
           <a className={c("button")} href="/how-it-works">
             See How It Works <span aria-hidden="true">↗</span>
@@ -78,15 +76,15 @@ export default function WhatIsSaltLick() {
           <div className={c("hero-corner corner-two")} aria-hidden="true" />
           <div className={c("hero-note")}>
             <Icon type="chip" />
-            <div>
+            {/* <div>
               <span>THE WHOLE PERSON</span>
               <strong>
                 More context.
                 <br />
                 An earlier conversation.
               </strong>
-            </div>
-            <i aria-hidden="true" />
+            </div> */}
+            {/* <i aria-hidden="true" /> */}
           </div>
           {/* <div className={c("hero-evidence")} aria-hidden="true">
             <Icon type="heart" />
@@ -105,7 +103,7 @@ export default function WhatIsSaltLick() {
         <div className={c("wrap")}>
           <div className={c("heading split-heading")} data-reveal>
             <div>
-              <p className={c("label")}>01 / The intervention gap</p>
+              <p className={c("label")}>The intervention gap</p>
               <h2 id="gap-title">
                 The gap isn't detection.
                 <br />
@@ -132,7 +130,7 @@ export default function WhatIsSaltLick() {
           <GapDiagram early={early} />
           <div className={c("comparison-cards")}>
             <article data-reveal data-active={!early}>
-              <span className={c("index")}>Today</span>
+              {/* <span className={c("index")}>Today</span> */}
               <h3>Where care starts today.</h3>
               <p>
                 Risk signals build up quietly. Routine care sees them in
@@ -141,7 +139,7 @@ export default function WhatIsSaltLick() {
               </p>
             </article>
             <article data-reveal data-active={early}>
-              <span className={c("index")}>Earlier</span>
+              {/* <span className={c("index")}>Earlier</span> */}
               <h3>Where Salt Lick starts.</h3>
               <p>
                 Salt Lick identifies risk before cancer becomes detectable. AI
@@ -157,7 +155,7 @@ export default function WhatIsSaltLick() {
         <div className={c("wrap")}>
           <div className={c("signals-heading")}>
             <div data-reveal>
-              <p className={c("label")}>02 / Connecting the signals</p>
+              <p className={c("label")}>Connecting the signals</p>
               <h2 id="signals-title">
                 Risk signals exist early.
                 <br />
@@ -166,15 +164,16 @@ export default function WhatIsSaltLick() {
             </div>
             <div className={c("signals-copy")} data-reveal>
               <p>
-                Lifestyle, family history, vital signs, blood chemistry, and
-                tissue changes each tell part of the story. Routine care may see
-                these signals separately, and a single test may look normal
-                while a broader pattern exists across results.
+                Lifestyle, family history, vital signs, blood chemistry and
+                tissue changes each tell part of the story, often years before
+                symptoms. In routine care they are seen separately, if at all. A
+                single test can look normal while the real pattern sits across
+                several results.
               </p>
               <p>
-                Salt Lick's proprietary AI is designed to read signals together,
-                cross-check them, and highlight people who may need attention
-                first.
+                Salt Lick's proprietary AI reads every signal together,
+                cross-checks them and highlights the people who need attention
+                first, so fewer people at risk are missed.
               </p>
             </div>
           </div>
@@ -193,34 +192,35 @@ export default function WhatIsSaltLick() {
         <div className={c("wrap")}>
           <div className={c("heading split-heading")} data-reveal>
             <div>
-              <p className={c("label")}>03 / Four layers of evidence</p>
+              <p className={c("label")}>What a Salt Lick screening includes</p>
               <h2 id="evidence-title">
                 Four layers of evidence
                 <br />
                 <em>in a single visit.</em>
               </h2>
             </div>
-            <p>
+            {/* <p>
               Explore the four assessments that contribute to the whole-person
               picture.
-            </p>
+            </p> */}
           </div>
           <div className={c("evidence-grid")}>
-            {layers.map(([name, sub, copy], i) => (
+            {layers.map(([name, desc], i) => (
               <article key={name} className={c("evidence-card")} data-reveal>
                 <div className={c("device-frame")}>
-                  <span className={c("device-number")}>0{i + 1}</span>
+                  {/* <span className={c("device-number")}>0{i + 1}</span> */}
                   <Device type={i} />
-                  <span className={c("device-cross")} aria-hidden="true">
+                  {/* <span className={c("device-cross")} aria-hidden="true">
                     +
-                  </span>
+                  </span> */}
                 </div>
                 <div className={c("evidence-copy")}>
-                  <span className={c("index")}>
+                  {/* <span className={c("index")}>
                     0{i + 1} / {sub}
-                  </span>
+                  </span> */}
                   <h3>{name}</h3>
-                  <p>{copy}</p>
+                  {/* <p>{copy}</p> */}
+                  <p>{desc}</p>
                 </div>
               </article>
             ))}
@@ -230,7 +230,7 @@ export default function WhatIsSaltLick() {
 
       <section className={c("section wrap")} aria-labelledby="different-title">
         <div className={c("heading")} data-reveal>
-          <p className={c("label")}>04 / Why Salt Lick is different</p>
+          <p className={c("label")}>Why Salt Lick is different</p>
           <h2 id="different-title">
             Built from the ground up
             <br />
@@ -246,7 +246,7 @@ export default function WhatIsSaltLick() {
                     ["chip", "light", "clock", "network", "doctor", "shield"][i]
                   }
                 />
-                <span className={c("index")}>0{i + 1}</span>
+                {/* <span className={c("index")}>0{i + 1}</span> */}
               </div>
               <h3>{name}</h3>
               <p>{copy}</p>
@@ -285,39 +285,48 @@ export default function WhatIsSaltLick() {
               </div> */}
             </div>
             <div data-reveal>
-              <p className={c("label")}>05 / Supporting clinicians</p>
+              <p className={c("label")}>Supporting clinicians</p>
               <h2 id="clinicians-title">
                 Salt Lick does the sorting.
                 <br />
                 <em>Doctors do the healing.</em>
               </h2>
               <p>
-                Salt Lick supports risk sorting and triage so clinicians can
-                focus on diagnosis and treatment.
+                Specialists are scarce in every health system. Salt Lick takes
+                on risk sorting and triage, so clinicians can focus on diagnosis
+                and treatment.
               </p>
             </div>
           </div>
-          <div
-            className={c("table-scroll")}
-            tabIndex="0"
-            role="region"
-            aria-label="Comparison of conventional workflows and Salt Lick"
-          >
-            <table>
-              <caption>Supporting the care team</caption>
+          <div className={c("table-scroll")}>
+            <table aria-label="Traditional approach compared with Salt Lick">
               <thead>
                 <tr>
-                  <th scope="col">Area</th>
-                  <th scope="col">Traditional approach</th>
-                  <th scope="col">With Salt Lick</th>
+                  <th id="comparison-traditional" scope="col">Traditional approach</th>
+                  <th id="comparison-saltlick" scope="col">With Salt Lick</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisons.map(([name, before, after]) => (
                   <tr key={name}>
-                    <th scope="row">{name}</th>
-                    <td>{before}</td>
-                    <td>{after}</td>
+                    <td headers="comparison-traditional">
+                      <span className={c("comparison-mobile-heading")} aria-hidden="true">
+                        Traditional approach
+                      </span>
+                      <div className={c("comparison-cell")}>
+                        <h4>{name}</h4>
+                        <div>{before}</div>
+                      </div>
+                    </td>
+                    <td headers="comparison-saltlick">
+                      <span className={c("comparison-mobile-heading")} aria-hidden="true">
+                        With Salt Lick
+                      </span>
+                      <div className={c("comparison-cell")}>
+                        <h4>{name}</h4>
+                        <div>{after}</div>
+                      </div>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -335,15 +344,15 @@ export default function WhatIsSaltLick() {
         aria-labelledby="focus-title"
       >
         <div data-reveal>
-          <p className={c("label")}>06 / Cancers assessed</p>
+          <p className={c("label")}>Cancers assessed</p>
           <h2 id="focus-title">
             Focused on the cancers
             <br />
             <em>that affect the most lives.</em>
           </h2>
           <p>
-            The screening also reads diabetes and cardiovascular markers and may
-            extend to other lifestyle diseases.
+            The same screening already reads diabetes and cardiovascular
+            markers, and will extend to other lifestyle diseases.
           </p>
           {/* <p className={c("approval")}>
             Categories listed in the wireframe. Assessment scope and performance
@@ -365,7 +374,7 @@ export default function WhatIsSaltLick() {
                   ["oral", "breast", "cervical", "lung", "prostate", "gut"][i]
                 }
               />
-              <span className={c("index")}>0{i + 1}</span>
+              {/* <span className={c("index")}>0{i + 1}</span> */}
               <h3>{name}</h3>
             </div>
           ))}
@@ -384,21 +393,22 @@ export default function WhatIsSaltLick() {
         </div>
         <div className={c("wrap")}>
           <div className={c("nature-copy")} data-reveal>
-            <p className={c("label")}>07 / The meaning of the name</p>
+            <p className={c("label")}>The name</p>
             <h2 id="nature-title">
               Inspired by nature's
               <br />
               <em>instinct to stay well.</em>
             </h2>
             <p>
-              Animals visit natural salt licks for nutrients. Salt Lick takes
-              inspiration from this instinct: an accessible place where
-              communities can understand their health and act early.
+              In the wild, animals travel to salt licks for the nutrients that
+              keep them healthy. Salt Lick gives communities the same: an
+              accessible place to understand their health and act early, long
+              before illness takes hold.
             </p>
-            <div className={c("nature-note")}>
+            {/* <div className={c("nature-note")}>
               A name rooted in nature.
               <br />A purpose centred on people.
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -409,7 +419,7 @@ export default function WhatIsSaltLick() {
       >
         <div className={c("wrap final-inner")}>
           <div data-reveal>
-            <p className={c("label")}>08 / From understanding to action</p>
+            {/* <p className={c("label")}>08 / From understanding to action</p> */}
             <h2 id="what-final-title">
               See how a Salt Lick
               <br />
@@ -425,14 +435,15 @@ export default function WhatIsSaltLick() {
                 Partner With Us <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <p>
+            {/* <p>
               Salt Lick provides cancer risk assessments, not diagnoses.
               <br />
               Diagnosis is made by a qualified clinician.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
+
     </div>
   );
 }

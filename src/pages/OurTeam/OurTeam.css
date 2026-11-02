@@ -423,3 +423,143 @@
   }
 }
 
+
+/* Wireframe leadership profiles. Every selector is local to this section. */
+@font-face {
+  font-family: "Team Profile Body";
+  src: url("../../assets/source-sans-3-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Team Profile Display";
+  src: url("../../assets/zilla-slab-latin-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Team Profile Mono";
+  src: url("../../assets/jetbrains-mono-latin-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+.team-page .team-leadership {
+  padding: 76px 40px;
+  border-top: 0;
+  background: #fff;
+  color: #15171c;
+}
+.team-leadership .team-leaders {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.team-leadership .team-leader-row {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+  padding-block: 36px;
+  border-bottom: 1px solid #d5d9e0;
+}
+.team-leadership .team-leader-row:last-child { border-bottom: 0; }
+.team-leadership .team-leader-row:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) 340px;
+}
+.team-leadership .team-leader-row:nth-child(even) .team-leader-portrait { order: 2; }
+.team-leadership .team-leader-portrait {
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 16px;
+  background: linear-gradient(150deg, #123f8f, #0f2a5c);
+  color: #fff;
+}
+.team-leadership .team-leader-portrait::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  aspect-ratio: 1;
+  border: 2px solid rgb(255 194 122 / 35%);
+  border-radius: 50%;
+  right: -20%;
+  bottom: -20%;
+  pointer-events: none;
+}
+.team-leadership .team-leader-row:nth-child(2) .team-leader-portrait {
+  background: linear-gradient(150deg, #0f7a74, #0b4f4b);
+}
+.team-leadership .team-leader-row:nth-child(3) .team-leader-portrait {
+  background: linear-gradient(150deg, #3b4f78, #1d2433);
+}
+.team-leadership .team-leader-initials {
+  font: 700 84px/1 "Team Profile Display", Rockwell, Georgia, serif;
+}
+.team-leadership .team-leader-portrait-label {
+  color: #aab8d6;
+  font: 500 12px/1 "Team Profile Mono", ui-monospace, Menlo, monospace;
+  letter-spacing: .06em;
+}
+.team-leadership .team-leader-copy { min-width: 0; }
+.team-leadership .team-leader-eyebrow {
+  margin: 0;
+  color: #0f7a74;
+  font: 600 12.5px/1 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.team-page .team-leadership .team-leader-name {
+  max-width: 22ch;
+  margin: 10px 0 14px;
+  color: #15171c;
+  font: 700 clamp(30px, 3.6vw, 44px)/1.1 "Team Profile Display", Rockwell, Georgia, serif;
+  letter-spacing: normal;
+  text-wrap: balance;
+}
+.team-leadership .team-leader-role {
+  margin: 0 0 14px;
+  color: #5d6472;
+  font: 400 18px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+}
+.team-leadership .team-leader-bio {
+  max-width: 66ch;
+  margin: 0 0 12px;
+  padding: 14px 16px;
+  border: 1px dashed #c3c8d1;
+  border-radius: 8px;
+  background: #f6f7f9;
+  color: #8a909c;
+  font: 400 15px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+}
+.team-leadership .team-leader-link {
+  display: inline-block;
+  margin: 14px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #123f8f;
+  font: 600 15px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+  opacity: 1;
+  cursor: default;
+  text-align: left;
+}
+@media (max-width: 760px) {
+  .team-page .team-leadership { padding: 48px 20px; }
+  .team-leadership .team-leader-row,
+  .team-leadership .team-leader-row:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .team-leadership .team-leader-row:nth-child(even) .team-leader-portrait { order: 0; }
+  .team-leadership .team-leader-portrait { max-width: 340px; }
+}

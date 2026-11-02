@@ -489,7 +489,7 @@
 .how-wave-bars i {
   height: 80%;
   flex: 1;
-  background: #b8d4e6;
+  background: #101d32;
   transform: scaleY(0.35);
   animation: how-wave 1.8s ease-in-out infinite alternate;
   animation-delay: calc(var(--bar) * -0.15s);
@@ -553,289 +553,402 @@
   font-size: 16px;
   margin-top: 10px;
 }
+/* Radiation-free scans: all styling and motion stay inside this section. */
+.how-light > .how-heading h2 {
+  color: #101d32;
+  font-weight: 700;
+}
+.how-light > .how-heading .how-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #355878;
+}
+.how-light > .how-heading .how-label::before {
+  content: "";
+  width: 25px;
+  height: 3px;
+  border-radius: 3px;
+  background: #e5ac7b;
+}
 .how-light-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 30px;
+  align-items: stretch;
 }
-.how-light-grid article > .how-label {
-  display: block;
-  margin: 25px 0 10px;
+.how-light-grid .how-scan-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #cbdce9;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 38px #101d320a;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
-.how-light-grid article > p {
-  font-size: 14px;
-  max-width: 440px;
-  margin-top: 15px;
+.how-light-grid .how-scan-card--breast {
+  border-color: #e7c5a9;
 }
-.how-optical-art,
-.how-private-art {
-  height: 240px;
-  background: #f4f9fc;
+.how-light .how-scan-art {
   position: relative;
   overflow: hidden;
-  border: 1px solid #e1ebf1;
-  border-radius: 6px;
+  background: #101d32;
+  border-bottom: 4px solid #accbdf;
 }
-.how-optical-device {
-  position: absolute;
-  left: 15%;
-  top: 100px;
-  width: 100px;
-  height: 40px;
-  border: 2px solid #aac8dc;
-  border-radius: 15px 6px 6px 15px;
-  background: #fff;
-  transform: rotate(-12deg);
-  box-shadow: 0 12px 15px #244b6610;
+.how-light .how-scan-card--breast .how-scan-art {
+  border-bottom-color: #f2c39d;
 }
-.how-optical-device:after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: -8px;
-  width: 12px;
-  height: 20px;
-  background: #edc5a4;
-  border: 1px solid #dcb18d;
-}
-.how-light-rays {
-  position: absolute;
-  left: 40%;
-  top: 60px;
-  width: 32%;
-  height: 130px;
-  overflow: hidden;
-}
-.how-light-rays i {
-  position: absolute;
-  left: -30px;
-  top: 0;
-  width: 22px;
-  height: 100%;
-  background: #c9e3f175;
-  transform: skewY(-15deg);
-  animation: how-light-pass 3s linear infinite;
-}
-.how-light-rays i:nth-child(2) {
-  animation-delay: -1s;
-}
-.how-light-rays i:nth-child(3) {
-  animation-delay: -2s;
-}
-.how-optical-screen {
-  position: absolute;
-  right: 12%;
-  top: 50px;
-  height: 140px;
-  width: 90px;
-  background: #fff;
-  border: 4px solid #c3d9e6;
-  border-radius: 8px;
-  padding: 14px 8px;
-  transform: rotateY(-20deg);
-}
-.how-optical-screen span {
-  font-size: 8px;
-  color: #7996a8;
-}
-.how-optical-screen i {
+.how-light .how-scan-art svg {
   display: block;
   width: 100%;
-  height: 55px;
-  margin-top: 15px;
-  background: linear-gradient(135deg, #f5d6bb, #d6e9f4);
-  animation: how-line 3s infinite alternate;
+  height: auto;
 }
-.how-private-art {
-  background: #fcf4ed;
+.how-light .how-scan-copy {
+  position: relative;
+  padding: 27px 30px 31px;
 }
-.how-private-art > span {
-  position: absolute;
-  left: 13%;
-  top: 35px;
-  font:
-    500 18px Manrope,
-    sans-serif;
-  color: #648498;
+.how-light .how-scan-copy h3 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 13px;
+  color: #101d32;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
-.how-private-door {
-  position: absolute;
-  top: 75px;
-  bottom: 0;
-  left: 15%;
-  width: 105px;
-  background: #fff;
-  border: 6px solid #d8e6ee;
+.how-light .how-scan-copy h3::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #91b5d1;
+  flex: 0 0 auto;
 }
-.how-private-door i {
-  display: block;
-  position: absolute;
-  right: 8px;
-  top: 60px;
-  width: 5px;
-  height: 20px;
-  background: #c3d6e3;
+.how-light .how-scan-card--breast h3::before {
+  background: #e6b085;
 }
-.how-curtain {
-  position: absolute;
-  right: 12%;
-  top: 28px;
-  bottom: 0;
-  width: 125px;
-  background: repeating-linear-gradient(
-    90deg,
-    #c8ddea,
-    #e6f0f6 16px,
-    #c8ddea 30px
-  );
-  border-top: 5px solid #adc7d9;
-  transform-origin: top;
-  animation: how-curtain 6s ease-in-out infinite alternate;
-  border-radius: 0 0 10px 5px;
+.how-light .how-scan-copy p {
+  margin: 0;
+  max-width: none;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #40576c;
 }
-.how-private-art small {
-  position: absolute;
-  bottom: 18px;
-  left: 19%;
-  font-size: 8px;
-  width: 60px;
-  color: #718b9c;
+.how-light .how-scan-light-cone {
+  animation: how-radiation-light 3.8s ease-in-out infinite;
+}
+.how-light .how-scan-light-flow {
+  animation: how-radiation-travel 3.8s linear infinite;
+}
+.how-light .how-scan-instrument {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: how-radiation-instrument 5s ease-in-out infinite alternate;
+}
+.how-light .how-scan-display-light {
+  animation: how-radiation-display 3.8s ease-in-out infinite;
+}
+.how-light .how-scan-privacy-curtain {
+  transform-box: fill-box;
+  transform-origin: top center;
+  animation: how-radiation-curtain 5s ease-in-out infinite alternate;
+}
+.how-light .how-scan-room-light {
+  animation: how-radiation-room 5s ease-in-out infinite alternate;
+}
+.how-light .how-scan-clinician-note {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: how-radiation-note 5s ease-in-out infinite alternate;
+}
+@keyframes how-radiation-light {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  45%,
+  65% {
+    opacity: 1;
+  }
+}
+@keyframes how-radiation-travel {
+  0% {
+    transform: translateX(8px);
+    opacity: 0;
+  }
+  20%,
+  72% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(-29px);
+    opacity: 0;
+  }
+}
+@keyframes how-radiation-instrument {
+  from {
+    transform: translate(0, 1px) rotate(-1deg);
+  }
+  to {
+    transform: translate(-3px, -3px) rotate(1deg);
+  }
+}
+@keyframes how-radiation-display {
+  0% {
+    transform: translateY(-22px);
+    opacity: 0;
+  }
+  15%,
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(101px);
+    opacity: 0;
+  }
+}
+@keyframes how-radiation-curtain {
+  from {
+    transform: skewX(-1deg) scaleX(0.98);
+  }
+  to {
+    transform: skewX(1deg) scaleX(1.02);
+  }
+}
+@keyframes how-radiation-room {
+  from {
+    opacity: 0.18;
+    transform: translateX(-5px);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateX(9px);
+  }
+}
+@keyframes how-radiation-note {
+  from {
+    transform: rotate(-3deg) translateY(1px);
+  }
+  to {
+    transform: rotate(3deg) translateY(-3px);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .how-light .how-scan-card:hover {
+    transform: translateY(-4px);
+    border-color: #8aaac4;
+    box-shadow: 0 20px 48px #101d3214;
+  }
+  .how-light .how-scan-card--breast:hover {
+    border-color: #d49e72;
+  }
+}
+@media (max-width: 720px) {
+  .how-light .how-scan-copy {
+    padding: 23px 23px 26px;
+  }
+  .how-light .how-scan-copy h3 {
+    font-size: 23px;
+  }
+  .how-light .how-scan-copy p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .how-light .how-scan-card {
+    border-radius: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* .how-light .how-scan-art svg * {
+    animation: none;
+    transform: none;
+  } */
+  .how-light .how-scan-card {
+    transition: none;
+  }
+  .how-light .how-scan-card:hover {
+    transform: none;
+  }
+  .how-light .how-scan-light-flow {
+    opacity: 0.6;
+  }
+  .how-light .how-scan-display-light {
+    opacity: 0.25;
+  }
+}
+
+/* Wireframe result pathways. Scoped to this section, including its original fonts. */
+@font-face {
+  font-family: "How Pathway Body";
+  src: url("../../assets/source-sans-3-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "How Pathway Display";
+  src: url("../../assets/zilla-slab-latin-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "How Pathway Display";
+  src: url("../../assets/zilla-slab-latin-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 .how-pathways {
-  background: #f5f9fc;
-  border-block: 1px solid #dfeaf2;
-}
-.how-path-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 12%;
-  align-items: center;
-}
-.how-path-choices button {
-  position: relative;
-  padding: 24px 45px 24px 24px;
-  border-left: 3px solid #d9e7f0;
-  border-bottom: 1px solid #e0eaf1;
-  background: transparent;
-  width: 100%;
-  text-align: left;
-  transition: background 0.3s;
-}
-.how-path-choices button[aria-pressed="true"] {
   background: #fff;
-  border-left-color: #e6b78f;
+  border-bottom: 1px solid #d5d9e0;
 }
-.how-path-choices button > span {
-  display: block;
-  font-size: 14px;
-  color: #8b725d;
+.how-pathways > .how-wrap {
+  /* max-width: 1160px;
+  padding: 76px 40px; */
+
+  max-width: 1400px;
+  margin: auto;
+  padding: 80px 6%;
 }
-.how-path-choices strong {
-  display: block;
+.how-pathways .how-risk-label {
+  margin: 0;
+  color: #0f7a74;
   font:
-    500 21px Manrope,
+    600 14px/1 "How Pathway Body",
+    "Segoe UI",
+    system-ui,
     sans-serif;
-  color: #345b76;
-  margin: 12px 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
-.how-path-choices p {
-  font-size: 14px;
+.how-pathways h2 {
+  max-width: 22ch;
+  margin: 12px 0 14px;
+  color: #15171c;
+  font:
+    700 clamp(30px, 3.6vw, 44px)/1.1 "How Pathway Display",
+    Rockwell,
+    Georgia,
+    serif;
+  letter-spacing: normal;
+  text-wrap: balance;
 }
-.how-path-choices b {
-  position: absolute;
-  top: 23px;
-  right: 20px;
-  color: #93adbe;
-  font-weight: 400;
+.how-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 36px;
 }
-.how-report-folder {
+.how-risk-card {
+  --risk-colour: #23883f;
   position: relative;
-  max-width: 340px;
-  width: 100%;
-  height: 390px;
-  margin: 30px auto;
-  perspective: 900px;
+  isolation: isolate;
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--risk-colour);
+  border-radius: 8px;
+  background: #fff;
 }
-.how-folder-tab {
-  position: absolute;
-  inset: 45px 0 0;
+.how-risk-card--moderate {
+  --risk-colour: #ee8a1f;
+}
+.how-risk-card--high {
+  --risk-colour: #c23b2a;
+}
+.how-pathways .how-risk-card h3 {
+  margin: 0 0 8px;
+  color: #15171c;
+  font:
+    600 24px/1.2 "How Pathway Display",
+    Rockwell,
+    Georgia,
+    serif;
+  letter-spacing: normal;
+  text-wrap: balance;
+}
+.how-pathways .how-risk-card p {
+  margin: 0;
+  max-width: 66ch;
+  color: #5d6472;
+  font:
+    400 16px/1.55 "How Pathway Body",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
+.how-risk-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 14px;
   border-radius: 12px;
-  padding: 18px;
-  background: #eac5a7;
-  color: #a47c5b;
-  font-size: 10px;
+  background: #e7f3f2;
+  color: #0f7a74;
 }
-.how-report-paper {
+.how-risk-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.how-risk-border {
   position: absolute;
-  inset: 15px 20px 12px;
-  border: 1px solid #cbdce7;
-  background: #fff;
-  border-radius: 3px;
-  padding: 25px;
-  box-shadow: 0 5px 18px #244b6615;
-  animation: how-report-lift 6s ease-in-out infinite alternate;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  border-radius: 8px;
 }
-.how-report-brand {
-  display: block;
-  font:
-    700 17px Manrope,
-    sans-serif;
-  color: #547c96;
+.how-risk-border rect {
+  fill: none;
+  stroke: var(--risk-colour);
+  vector-effect: non-scaling-stroke;
 }
-.how-report-paper > small {
-  display: block;
-  font-size: 8px;
-  color: #849eaf;
-  margin-top: 6px;
+.how-risk-border-base {
+  stroke-width: 1;
 }
-.how-report-paper h3 {
-  margin-top: 28px;
-  font-size: 29px;
+.how-risk-border-run {
+  stroke-width: 3;
+  stroke-dasharray: 18 82;
+  stroke-linecap: round;
+  animation: how-risk-border-travel 5s linear infinite;
 }
-.how-paper-rule {
-  height: 3px;
-  width: 45%;
-  background: #efcfb5;
-  margin: 17px 0;
+.how-risk-card--moderate .how-risk-border-run {
+  animation-delay: -1.65s;
 }
-.how-report-paper p {
-  font-size: 12px;
+.how-risk-card--high .how-risk-border-run {
+  animation-delay: -3.3s;
 }
-.how-report-actions {
-  display: grid;
-  gap: 14px;
-  margin-top: 20px;
+@keyframes how-risk-border-travel {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -100;
+  }
 }
-.how-report-actions span {
-  display: flex;
-  gap: 15px;
-  padding: 9px;
-  background: #edf5fa;
-  font-size: 10px;
-  color: #6b8da3;
+@media (max-width: 760px) {
+  .how-pathways > .how-wrap {
+    padding: 48px 20px;
+  }
+  .how-risk-grid {
+    grid-template-columns: 1fr;
+  }
 }
-.how-report-actions strong {
-  font-weight: 400;
-  color: #4c7189;
+@media (prefers-reduced-motion: reduce) {
+  /* Slower perimeter movement; the requested border never becomes static. */
+  .how-risk-border-run {
+    animation-duration: 12s;
+  }
 }
-.how-paper-sign {
-  font-size: 10px;
-  color: #ac8667;
-  margin-top: 20px;
-}
-.how-folder-front {
-  position: absolute;
-  inset: auto -8px -10px;
-  height: 77px;
-  padding: 29px;
-  background: #f2d4bc;
-  border: 1px solid #e5bfa0;
-  border-radius: 5px 5px 12px 12px;
-  color: #8f6d52;
-  font-size: 11px;
-  transform: rotateX(-8deg);
-  box-shadow: 0 14px 25px #244b6610;
-}
+
 .how-tech-intro {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -1230,4 +1343,460 @@
     gap: 12px;
     font-size: 8px;
   }
+}
+
+/* Original wireframe fonts and tokens, scoped to the two restored sections. */
+@font-face {
+  font-family: "How Wireframe Body";
+  src: url("../../assets/source-sans-3-latin-variable.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "How Wireframe Display";
+  src: url("../../assets/zilla-slab-latin-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "How Wireframe Display";
+  src: url("../../assets/zilla-slab-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "How Journey Mono";
+  src: url("../../assets/jetbrains-mono-latin-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.how-wireframe-section .how-wireframe-wrap {
+  /* max-width: 1160px; */
+  max-width: 1400px;
+  /* margin-inline: auto; */
+  /* padding: 76px 40px; */
+
+  margin: auto;
+  padding: 80px 6%;
+}
+.how-screening.how-wireframe-section {
+  background: #fff;
+  border-block: 1px solid #d5d9e0;
+  scroll-margin-top: 20px;
+}
+.how-wireframe-section .how-wireframe-label {
+  margin: 0;
+  color: #0f7a74;
+  font:
+    600 14px/1 "How Wireframe Body",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.how-wireframe-section h2 {
+  max-width: 22ch;
+  margin: 12px 0 14px;
+  color: #15171c;
+  font:
+    700 clamp(30px, 3.6vw, 44px)/1.1 "How Wireframe Display",
+    Rockwell,
+    Georgia,
+    serif;
+  letter-spacing: normal;
+  text-wrap: balance;
+}
+.how-wireframe-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #e7f3f2;
+  color: #0f7a74;
+}
+.how-wireframe-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.how-journey-scroller {
+  margin-top: 36px;
+  padding-bottom: 6px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: auto;
+  scrollbar-color: #8a909c #f4f5f7;
+}
+.how-journey-scroller::-webkit-scrollbar {
+  height: 10px;
+}
+.how-journey-scroller::-webkit-scrollbar-track {
+  background: #f4f5f7;
+  border-radius: 10px;
+}
+.how-journey-scroller::-webkit-scrollbar-thumb {
+  background: #8a909c;
+  border: 1px solid #f4f5f7;
+  border-radius: 10px;
+}
+.how-journey-steps {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 25px;
+}
+.how-journey-steps > li {
+  position: relative;
+  flex: 0 0 180px;
+  width: 180px;
+}
+.how-journey-steps > li::before {
+  content: "";
+  position: absolute;
+  top: 41px;
+  left: 52px;
+  right: 0;
+  height: 2px;
+  background: #d5d9e0;
+}
+.how-journey-steps > li:last-child::before {
+  display: none;
+}
+.how-journey-steps button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 18px 18px 18px 0;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: #15171c;
+  font-family: "How Wireframe Body", "Segoe UI", system-ui, sans-serif;
+  transition: background 0.18s ease;
+}
+.how-journey-steps button:hover,
+.how-journey-steps button[aria-expanded="true"] {
+  background: #e7f3f23d;
+}
+.how-journey-steps button:focus-visible {
+  outline: 2px solid #0f7a74;
+  outline-offset: -2px;
+}
+.how-journey-steps strong {
+  display: block;
+  margin: 0 0 4px;
+  color: #15171c;
+  font:
+    600 16px/1.25 "How Wireframe Body",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
+.how-journey-description {
+  display: block;
+  color: #5d6472;
+  font:
+    400 14px/1.55 "How Wireframe Body",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
+.how-journey-steps em,
+.how-journey-preview-copy em {
+  display: block;
+  margin-top: 8px;
+  color: #0f7a74;
+  font:
+    500 14px/1 "How Journey Mono",
+    Consolas,
+    ui-monospace,
+    monospace;
+  font-style: normal;
+}
+.how-journey-preview {
+  position: fixed;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 23px;
+  align-items: center;
+  min-height: min(300px, calc(100svh - 32px));
+  max-height: calc(100svh - 32px);
+  overflow: auto;
+  padding: 20px;
+  border: 1px solid #d5d9e0;
+  border-top: 3px solid #0f7a74;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 18px 50px #0f2a5c24;
+  color: #15171c;
+  font-family: "How Wireframe Body", "Segoe UI", system-ui, sans-serif;
+  animation: how-journey-preview-enter 0.18s ease-out;
+}
+.how-journey-preview-close {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #d5d9e0;
+  border-radius: 50%;
+  background: #fff;
+  color: #0f2a5c;
+  cursor: pointer;
+}
+.how-journey-preview-close svg {
+  width: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.how-journey-preview-close:focus-visible {
+  outline: 3px solid #0f7a74;
+  outline-offset: 3px;
+}
+.how-journey-preview-copy {
+  padding-right: 12px;
+}
+.how-journey-preview-copy h3 {
+  margin: 0 0 12px;
+  color: #15171c;
+  font:
+    600 24px/1.2 "How Wireframe Display",
+    Rockwell,
+    Georgia,
+    serif;
+}
+.how-journey-preview-copy p {
+  margin: 0;
+  color: #5d6472;
+  font:
+    400 16px/1.55 "How Wireframe Body",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
+.how-journey-preview-copy em {
+  margin-top: 17px;
+}
+.how-journey-art-box {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eaf2f8;
+}
+.how-journey-preview .how-stage-art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 340px;
+  transform: translate(-50%, -50%) scale(0.76);
+  transform-origin: center;
+}
+.how-journey-preview .how-art-sheet,
+.how-journey-preview .how-art-back {
+  width: 235px;
+  height: 280px;
+}
+@keyframes how-journey-preview-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.how-technology.how-wireframe-section {
+  background: #f6f7f9;
+  border-bottom: 1px solid #d5d9e0;
+}
+.how-technology-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 52px;
+  align-items: center;
+}
+.how-technology-partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 40px;
+  margin-top: 8px;
+}
+.how-technology-partner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.how-technology-partner span {
+  max-width: 12ch;
+  color: #5d6472;
+  font:
+    600 11.5px/1.3 "How Wireframe Body",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.how-technology-partner img {
+  display: block;
+  width: auto;
+  height: 56px;
+  object-fit: contain;
+}
+.how-technology-features {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+.how-technology-features h3 {
+  margin: 0 0 8px;
+  color: #15171c;
+  font:
+    600 18px/1.2 "How Wireframe Display",
+    Rockwell,
+    Georgia,
+    serif;
+}
+.how-technology-features p {
+  margin: 0;
+  color: #5d6472;
+  font:
+    400 15px/1.55 "How Wireframe Body",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
+.how-technology-diagram {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 12px;
+  background: #eaf2f8;
+}
+.how-technology-diagram > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.how-technology-links {
+  animation: how-technology-connect 4.5s linear infinite;
+}
+.how-technology-pin {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  animation: how-technology-pin-drift 5s ease-in-out infinite alternate;
+}
+.how-technology-status {
+  animation: how-technology-status-light 4s ease-in-out infinite alternate;
+}
+@keyframes how-technology-connect {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+@keyframes how-technology-pin-drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--how-tech-pin-lift, -4px));
+  }
+}
+@keyframes how-technology-status-light {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 760px) {
+  .how-wireframe-section .how-wireframe-wrap {
+    padding: 48px 20px;
+  }
+  .how-technology-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .how-journey-preview {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+    min-height: 0;
+    max-height: min(75svh, 520px);
+  }
+  .how-journey-art-box {
+    height: 185px;
+  }
+  .how-journey-preview .how-stage-art {
+    transform: translate(-50%, -50%) scale(0.61);
+  }
+  .how-journey-preview-copy {
+    padding: 0 6px 8px;
+  }
+  .how-technology-partners {
+    gap: 16px 24px;
+  }
+  .how-technology-partner {
+    gap: 10px;
+  }
+  .how-technology-partner img {
+    height: 48px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .how-journey-preview {
+    animation-duration: 0.01ms;
+  }
+  .how-technology-pin {
+    --how-tech-pin-lift: -1px;
+    animation-duration: 8s;
+  }
+  .how-technology-links {
+    animation-duration: 8s;
+  }
+  .how-technology-status {
+    animation-duration: 8s;
+  }
+}
+
+.how-technology-pin-1 {
+  animation-delay: -0.7s;
+}
+.how-technology-pin-2 {
+  animation-delay: -1.4s;
+}
+.how-technology-pin-3 {
+  animation-delay: -2.1s;
+}
+.how-technology-pin-4 {
+  animation-delay: -2.8s;
 }

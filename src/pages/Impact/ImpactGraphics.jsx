@@ -117,7 +117,7 @@ const stageColors = [
 export function StageComparison() {
   return (
     <figure className={c("stage-chart")} data-impact-zone>
-      <p className={c("chart-title")}>Time changes the picture</p>
+      {/* <p className={c("chart-title")}>Time changes the picture</p> */}
       <figcaption>
         Approximate five-year survival by stage at diagnosis
       </figcaption>

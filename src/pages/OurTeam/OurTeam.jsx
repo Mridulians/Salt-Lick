@@ -1,4 +1,3 @@
-import portrait from "../../assets/team-portrait-placeholder.svg";
 import esperer from "../../assets/espererGroup_logo.png";
 import health from "../../assets/healtLogo.png";
 import eioms from "../../assets/EIOMS_logo.png";
@@ -7,20 +6,26 @@ import "./OurTeam.css";
 const leaders = [
   {
     name: "Dr. Raktim Chattopadhyay",
+    title: "Founder",
     role: "Founder, Salt Lick Healthcare",
-    focus: "Professional background, expertise, and vision for Salt Lick",
+    biography:
+      "Biography: professional background, expertise and vision for Salt Lick (to be supplied).",
     initials: "RC",
   },
   {
     name: "Mr. Himanshu Dave",
+    title: "CEO and Co-Founder",
     role: "Chief Executive Officer and Co-Founder",
-    focus: "Professional background and role in leading Salt Lick",
+    biography:
+      "Biography: professional background, expertise and role in leading Salt Lick (to be supplied).",
     initials: "HD",
   },
   {
     name: "Mr. Rupam Chattopadhyay",
+    title: "Chief Technical Officer",
     role: "Chief Technical Officer",
-    focus: "Technology background and leadership of the platform",
+    biography:
+      "Biography: technology background and leadership of the Salt Lick platform (to be supplied).",
     initials: "RC",
   },
 ];
@@ -160,12 +165,9 @@ function LeadershipGraphic() {
             strokeWidth="2.5"
           />
         </g>
-
       </svg>
       <span className="team-graphic-label science">Oncology science</span>
-      <span className="team-graphic-label leadership">
-        Healthcare 
-      </span>
+      <span className="team-graphic-label leadership">Healthcare</span>
       <span className="team-graphic-label technology">Technology</span>
     </div>
   );
@@ -179,7 +181,7 @@ export default function OurTeam() {
         aria-labelledby="team-title"
       >
         <div className="team-hero-copy">
-          <p className="team-kicker">Our team / Shared purpose</p>
+          <p className="team-kicker">Our team</p>
           <h1 id="team-title">
             The people shifting the <em>start line</em> of cancer care.
           </h1>
@@ -188,66 +190,53 @@ export default function OurTeam() {
             leadership, and technology around the belief that cancer care must
             begin before cancer does.
           </p>
-          <a className="team-text-link" href="#leadership">
+          {/* <a className="team-text-link" href="#leadership">
             Meet our leadership <span aria-hidden="true">↓</span>
-          </a>
+          </a> */}
         </div>
         <LeadershipGraphic />
       </section>
 
       <section
-        className="team-leadership team-container"
+        className="team-leadership"
         id="leadership"
-        aria-labelledby="leadership-heading"
+        aria-label="Leadership profiles"
       >
-        <div className="team-section-top">
-          <div>
-            <p className="team-kicker">01 / Leadership</p>
-            <h2 id="leadership-heading">
-              One belief.
-              <br />
-              Different perspectives.
-            </h2>
-          </div>
-          {/* <p className="team-edit-note">
-            Meet the people leading Salt Lick.
-            <br />
-            Approved portraits and biographies coming soon.
-          </p> */}
-        </div>
-        <div className="team-profile-grid">
-          {leaders.map((leader, i) => (
-            <article className="team-profile" key={leader.name}>
-              <div className="team-portrait">
-                <img
-                  src={portrait}
-                  width="400"
-                  height="440"
-                  alt={
-                    "Illustrated placeholder, not a portrait of " + leader.name
-                  }
-                />
-                <span className="team-profile-number">0{i + 1}</span>
-                <span className="team-portrait-label">
-                  Portrait placeholder
+        <div className="team-leaders">
+          {leaders.map((leader, index) => (
+            <article
+              className="team-leader-row"
+              key={leader.name}
+              aria-labelledby={`team-leader-${index}`}
+            >
+              <div
+                className="team-leader-portrait"
+                role="img"
+                aria-label={`Portrait placeholder for ${leader.name}`}
+              >
+                <span className="team-leader-initials" aria-hidden="true">
+                  {leader.initials}
+                </span>
+                <span className="team-leader-portrait-label" aria-hidden="true">
+                  Portrait photo
                 </span>
               </div>
-              <div className="team-profile-copy">
-                <p className="team-role">{leader.role}</p>
-                <h3>{leader.name}</h3>
-                <div className="team-bio">
-                  <p>{leader.focus}.</p>
-                  {/* <span>
-                    Client-approved biography to be supplied · 60–80 words.
-                  </span> */}
-                </div>
-                <span
-                  className="team-linkedin"
-                  aria-label={leader.name + " LinkedIn profile link pending"}
+              <div className="team-leader-copy">
+                <p className="team-leader-eyebrow">{leader.title}</p>
+                <h2 className="team-leader-name" id={`team-leader-${index}`}>
+                  {leader.name}
+                </h2>
+                <p className="team-leader-role">{leader.role}</p>
+                <p className="team-leader-bio">{leader.biography}</p>
+                <button
+                  className="team-leader-link"
+                  type="button"
+                  disabled
+                  title="LinkedIn profile link to be supplied"
+                  aria-label={`${leader.name} — LinkedIn profile link to be supplied`}
                 >
-                  <b aria-hidden="true">in</b> LinkedIn{" "}
-                  <small>Link to be supplied</small>
-                </span>
+                  View LinkedIn profile <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
           ))}
@@ -258,7 +247,7 @@ export default function OurTeam() {
         <div className="team-container">
           <div className="team-section-top">
             <div>
-              <p className="team-kicker">02 / Our wider network</p>
+              <p className="team-kicker">Supported by</p>
               <h2 id="network-title">
                 Backed by Esperer Group
                 <br />
@@ -322,7 +311,7 @@ export default function OurTeam() {
         aria-labelledby="team-cta-title"
       >
         <div>
-          <p className="team-kicker">03 / Build what comes next</p>
+          {/* <p className="team-kicker">03 / Build what comes next</p> */}
           <h2 id="team-cta-title">
             Join the team
             <br />

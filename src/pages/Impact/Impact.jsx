@@ -67,16 +67,17 @@ export default function Impact() {
         </div>
         <div className={c("wrap hero-content")}>
           <div className={c("hero-copy")}>
-            <p className={c("label")}>Our impact / Why earlier matters</p>
+            <p className={c("label")}>Impact</p>
             <h1 id="impact-title">
               When care starts
               <br />
               <em>changes everything.</em>
             </h1>
             <p className={c("hero-intro")}>
-              New cancer cases are projected to rise by 77% by 2050 compared
-              with 2022. Health systems need to shift attention towards earlier
-              risk assessment.
+              New cancer cases are expected to rise by 77% by 2050. Health
+              systems cannot treat their way out of that curve. Shifting the
+              start line, from treatment to early risk assessment, can help bend
+              it.
             </p>
             <a className={c("button")} href="#global-burden">
               Understand the challenge <span aria-hidden="true">↓</span>
@@ -98,24 +99,24 @@ export default function Impact() {
         <div className={c("wrap")}>
           <div className={c("section-heading split-heading")} data-reveal>
             <div>
-              <p className={c("label")}>01 / The global cancer burden</p>
+              <p className={c("label")}>The global cancer burden</p>
               <h2 id="burden-title">
                 The scale of
                 <br />
                 <em>the challenge.</em>
               </h2>
             </div>
-            <p>
+            {/* <p>
               Behind every number is a person.
               <br />
               And a health system working to respond.
-            </p>
+            </p> */}
           </div>
           <div className={c("stat-grid")}>
-            {burden.map(([number, label, copy, index], i) => (
+            {burden.map(([number, label, copy], i) => (
               <article className={c("stat")} key={label}>
                 <div className={c("stat-top")}>
-                  <span className={c("index")}>{index}</span>
+                  {/* <span className={c("index")}>{index}</span> */}
                   <ImpactIcon type={["person", "case", "ribbon", "globe"][i]} />
                 </div>
                 <div
@@ -124,17 +125,20 @@ export default function Impact() {
                   style={{ "--reveal-delay": `${i * 120}ms` }}
                 >
                   <strong className={c("stat-value")} aria-label={number}>
-                    {number.startsWith("INT ") ? (
-                      <>
-                        <small>INT</small>
-                        <span>{number.slice(4)}</span>
-                      </>
-                    ) : (
+                    {
                       number
-                    )}
+                      // .startsWith("INT ") ? (
+                      //   <>
+                      //     <small>INT</small>
+                      //     <span>{number.slice(4)}</span>
+                      //   </>
+                      // ) : (
+                      //   number
+                      // )
+                    }
                   </strong>
                 </div>
-                <h3>{label}</h3>
+                {/* <h3>{label}</h3> */}
                 <p>{copy}</p>
               </article>
             ))}
@@ -148,7 +152,7 @@ export default function Impact() {
       <section className={c("timing section")} aria-labelledby="timing-title">
         <div className={c("wrap timing-layout")}>
           <div className={c("timing-copy")} data-reveal>
-            <p className={c("label")}>02 / Time changes the picture</p>
+            <p className={c("label")}>Time changes outcomes</p>
             <h2 id="timing-title">
               The same disease.
               <br />A different moment.
@@ -156,9 +160,9 @@ export default function Impact() {
               <em>A different ending.</em>
             </h2>
             <p>
-              Survival can differ substantially by stage at diagnosis. Earlier
-              risk assessment and a cancer diagnosis are different steps in
-              care.
+              When cancer is found while it is still in one place, more than
+              nine in ten people survive five years. Once it has spread widely,
+              barely one in ten do.
             </p>
             {/* <div className={c("timing-note")}>
               <i aria-hidden="true" />
@@ -175,12 +179,12 @@ export default function Impact() {
       >
         <div className={c("wrap")}>
           <div className={c("section-heading")} data-reveal>
-            <p className={c("label")}>03 / The intended difference</p>
-            <h2 id="benefits-title">
+            {/* <p className={c("label")}>03 / The intended difference</p> */}
+            {/* <h2 id="benefits-title">
               For health systems.
               <br />
               <em>For everyday lives.</em>
-            </h2>
+            </h2> */}
           </div>
           <div className={c("benefit-grid")}>
             {["nations", "people"].map((audience, i) => (
@@ -238,14 +242,24 @@ export default function Impact() {
         <div className={c("wrap")}>
           <div className={c("section-heading split-heading")} data-reveal>
             <div>
-              <p className={c("label")}>04 / The value of earlier attention</p>
+              <p className={c("label")}>The value of earlier detection</p>
               <h2 id="value-title">
                 Acting earlier saves
                 <br />
                 <em>lives and resources.</em>
               </h2>
+              <p className="impact-copy-projection" style={{ marginTop: "20px" }}>
+                In India, treating cancer found early costs around INR 0.75 lakh
+                per patient, compared with up to INR 10 lakh when found late.
+              </p>
+              <p className="impact-copy-projection" style={{ marginTop: "20px" }}>
+                Reducing new cancer cases by just 10% would spare around 160,000
+                people a year and save an estimated INR 4,800 crore (about USD
+                550 million) in treatment costs annually. Across the world, the
+                opportunity is many times larger.
+              </p>
             </div>
-            <p className={c("scenario-kicker")}>India / Proposed scenario</p>
+            {/* <p className={c("scenario-kicker")}>India / Proposed scenario</p> */}
           </div>
           <div className={c("cost-board")} data-impact-zone>
             {[
@@ -316,7 +330,7 @@ export default function Impact() {
       <section className={c("section")} aria-labelledby="progress-title">
         <div className={c("wrap progress-layout")}>
           <div className={c("progress-intro")} data-reveal>
-            <p className={c("label")}>05 / Evidence, as it develops</p>
+            <p className={c("label")}>Our progress</p>
             <h2 id="progress-title">
               Results from
               <br />
@@ -366,7 +380,7 @@ export default function Impact() {
           </svg>
         </div>
         <div className={c("wrap closing-content")}>
-          <p className={c("label")}>06 / A shared ambition</p>
+          {/* <p className={c("label")}>06 / A shared ambition</p> */}
           <h2 id="impact-closing-title">
             A world where cancer risk
             <br className={c("desktop-break")} /> is checked as routinely

@@ -406,7 +406,7 @@
 }
 .evidence-copy > p {
   margin-top: 14px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.85;
   color: #617386;
 }
@@ -523,53 +523,64 @@
   color: #b38e70;
   animation: handoff-arrow 4s ease-in-out infinite;
 }
+/* This table intentionally matches the supplied wireframe, including its font. */
+@font-face {
+  font-family: "Salt Lick Wireframe Table";
+  src: url("../../assets/source-sans-3-latin-variable.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
 .table-scroll {
-  margin-top: 45px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  overflow: auto;
+  margin-top: 32px;
+  border: 1px solid #d5d9e0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .table-scroll table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   text-align: left;
-  font-size: 14px;
-  line-height: 1.7;
-}
-.table-scroll caption {
-  text-align: left;
-  padding: 20px 24px;
-  font:
-    600 14px Manrope,
-    sans-serif;
-  color: #426782;
-  border-bottom: 1px solid var(--line);
+  font: 400 16px/1.55 "Salt Lick Wireframe Table", "Segoe UI", system-ui, sans-serif;
+  color: #15171c;
 }
 .table-scroll th,
 .table-scroll td {
-  padding: 18px 24px;
-  border-bottom: 1px solid #e9eff4;
+  width: 50%;
+  padding: 0;
+  border-bottom: 1px solid #d5d9e0;
   vertical-align: top;
 }
-.table-scroll thead {
-  color: #fff;
-  background: #101d32;
-}
 .table-scroll thead th {
-  font-size: 14px;
-  font-weight: 600;
+  padding: 20px 24px;
+  background: #0f2a5c;
+  color: #fff;
+  font: 600 15px/1.2 "Salt Lick Wireframe Table", "Segoe UI", system-ui, sans-serif;
 }
-.table-scroll tbody th {
-  font-weight: 600;
-  width: 21%;
-  color: #426782;
+.table-scroll thead th:last-child {
+  background: #0f7a74;
 }
-.table-scroll tbody td {
-  color: #617386;
+.table-scroll tbody td:first-child {
+  background: #f3f5f8;
+  color: #000;
 }
 .table-scroll tbody td:last-child {
-  background: #f2f7fa;
-  color: #355b77;
+  background: #fff;
+  color: #000;
+}
+.comparison-cell {
+  padding: 20px 24px;
+}
+.comparison-cell h4 {
+  margin: 0 0 6px;
+  color: #0f7a74;
+  font: 600 12.5px/1 "Salt Lick Wireframe Table", "Segoe UI", system-ui, sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.comparison-mobile-heading {
+  display: none;
 }
 .table-scroll tbody tr:last-child > * {
   border-bottom: 0;
@@ -1289,19 +1300,44 @@
     margin-top: 29px;
   }
   .table-scroll table {
-    min-width: 650px;
-    font-size: 11px;
+    min-width: 0;
+    font-size: 15px;
   }
-  .table-scroll caption {
+  .table-scroll thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .table-scroll tbody,
+  .table-scroll tbody tr,
+  .table-scroll tbody td {
+    display: block;
+    width: 100%;
+  }
+  .table-scroll tbody tr:last-child > td:first-child {
+    border-bottom: 1px solid #d5d9e0;
+  }
+  .comparison-mobile-heading {
+    display: block;
+    padding: 13px 18px;
+    background: #0f2a5c;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .table-scroll tbody td:last-child .comparison-mobile-heading {
+    background: #0f7a74;
+  }
+  .comparison-cell {
+    padding: 18px;
+    overflow-wrap: break-word;
+  }
+  .comparison-cell h4 {
     font-size: 12px;
-    padding: 17px;
-  }
-  .table-scroll th,
-  .table-scroll td {
-    padding: 17px 19px;
-  }
-  .table-scroll thead th {
-    font-size: 10px;
+    line-height: 1.2;
   }
   .clinicians .approval {
     font-size: 9px;
@@ -1440,7 +1476,7 @@
 .gap {
   background: #101d32;
   color: #d2dfeb;
-  border-block: 1px solid #25384f;
+  /* border-block: 1px solid #25384f; */
 }
 .gap h2,
 .gap h3 {
@@ -1748,7 +1784,7 @@
 .signals {
   background: #101d32;
   color: #c5d5e4;
-  border-top: 1px solid #34465c;
+  /* border-top: 1px solid #34465c; */
   position: relative;
 }
 .signals-heading {

@@ -382,7 +382,7 @@ function HomeHero() {
             <h2>
               Act earlier.
               <br />
-              <em>Change the course of cancer.</em>
+              <em>Before risk becomes cancer.</em>
             </h2>
             <p className={homeClassName("lead")}>
               With 20 million new cancer cases a year, the world cannot wait for
@@ -1113,7 +1113,7 @@ export default function Home() {
         </div>
         <div className={homeClassName("comparison-grid")}>
           <article className={homeClassName("comparison-card")}>
-            <span className={homeClassName("card-index")}>01 / TODAY</span>
+            {/* <span className={homeClassName("card-index")}>01 / TODAY</span> */}
             <h3>Where care starts today</h3>
             <p>
               Risk signals build up quietly. Routine care sees them in
@@ -1122,7 +1122,7 @@ export default function Home() {
             </p>
           </article>
           <article className={homeClassName("comparison-card early-card")}>
-            <span className={homeClassName("card-index")}>02 / EARLIER</span>
+            {/* <span className={homeClassName("card-index")}>02 / EARLIER</span> */}
             <h3>Where Salt Lick starts</h3>
             <p>
               Salt Lick identifies risk before cancer becomes detectable. AI
@@ -1272,9 +1272,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>
+              {/* <span className={homeClassName("card-index")}>
                 01 / CONTACTLESS
-              </span>
+              </span> */}
               <h3>Contactless face scan</h3>
               <p>20+ vital signs from a 60-second scan.</p>
             </div>
@@ -1329,9 +1329,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>
+              {/* <span className={homeClassName("card-index")}>
                 02 / BIOCHEMISTRY
-              </span>
+              </span> */}
               <h3>Biochemical panel</h3>
               <p>Metabolic and cancer markers from a minimal sample.</p>
             </div>
@@ -1392,9 +1392,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>
+              {/* <span className={homeClassName("card-index")}>
                 03 / LIGHT-BASED
-              </span>
+              </span> */}
               <h3>Oral and breast scans</h3>
               <p>Light-based imaging. No radiation, no discomfort.</p>
             </div>
@@ -1434,9 +1434,9 @@ export default function Home() {
               </svg>
             </div>
             <div className={homeClassName("screening-card-copy")}>
-              <span className={homeClassName("card-index")}>
+              {/* <span className={homeClassName("card-index")}>
                 04 / CONNECTED INSIGHT
-              </span>
+              </span> */}
               <h3>AI risk report</h3>
               <p>A clear score and next step, in minutes.</p>
             </div>
@@ -1657,8 +1657,8 @@ export default function Home() {
                 </svg>
               </div>
               <div className={homeClassName("impact-card-copy")}>
-                <span className={homeClassName("card-index")}>FOR NATIONS</span>
-                <h3>A lighter burden on health systems.</h3>
+                <h3>For Nations</h3>
+                {/* <h3>A lighter burden on health systems.</h3> */}
                 <p>
                   Fewer late-stage cases, lower treatment costs, less pressure
                   on hospitals, and a live picture of cancer risk across the
@@ -1677,8 +1677,8 @@ export default function Home() {
                 />
               </div>
               <div className={homeClassName("impact-card-copy")}>
-                <span className={homeClassName("card-index")}>FOR PEOPLE</span>
-                <h3>Clarity, comfort and a plan.</h3>
+                <h3>For People</h3>
+                {/* <h3>Clarity, comfort and a plan.</h3> */}
                 <p>
                   A clear understanding of personal risk in under 30 minutes,
                   without radiation, and a plan for what to do next.

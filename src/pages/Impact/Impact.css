@@ -63,6 +63,7 @@
   object-position: center 52%;
   animation: impact-hero-pan 9s ease-in-out infinite alternate;
 }
+
 .impact-hero-shade {
   position: absolute;
   inset: 0;

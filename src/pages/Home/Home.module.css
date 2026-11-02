@@ -301,7 +301,7 @@
   color: #426782;
 }
 .home-medtech .hero-copy .lead {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
   max-width: 460px;
   margin-top: 25px;
@@ -589,7 +589,7 @@
   font-size: clamp(27px, 2.65vw, 35px);
 }
 .home-medtech .association-copy > p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.8;
   margin-top: 17px;
   max-width: 600px;
@@ -765,7 +765,7 @@
   color: var(--apricot);
 }
 .home-medtech .stats p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   margin-top: 12px;
   color: #c4d3e1;
@@ -775,7 +775,7 @@
   padding-top: 18px;
   margin-top: 31px;
   color: #91a7bc;
-  font-size: 9px;
+  font-size: 14px;
 }
 /* 05 — Evidence presentation with a purposeful, restrained chart entrance. */
 .home-medtech .advantage {
@@ -837,7 +837,7 @@
 }
 .home-medtech .bar-row strong {
   font:
-    600 14px Inter,
+    600 16px Inter,
     sans-serif;
 }
 .home-medtech .bar-row > div:first-child > span {
@@ -1186,13 +1186,13 @@
   padding-block: 13px;
 }
 .home-medtech .active-signal-label {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   min-width: 86px;
   color: #345671;
 }
 .home-medtech .active-signal-copy {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
   color: #667c8f;
   max-width: 590px;
@@ -1256,7 +1256,7 @@
   font-weight: 700;
 }
 .home-medtech .screening-card p {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 11px;
   line-height: 1.8;
 }
@@ -1426,7 +1426,7 @@
   margin-top: 11px;
 }
 .home-medtech .impact-card p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.85;
   margin-top: 14px;
 }

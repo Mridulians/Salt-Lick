@@ -7,34 +7,34 @@ import "./AboutUs.css";
 import AboutEcosystem from "./AboutEcosystem";
 
 const values = [
-  ["Science first", "Evidence and clinical oversight.", "science"],
+  ["Science first", "Every step is grounded in evidence and clinical oversight.", "science"],
   [
     "Access for all",
-    "Screening that reaches people wherever they live.",
+    "Screening that reaches people, wherever they live.",
     "access",
   ],
-  ["Care without fear", "A gentle and respectful experience.", "care"],
-  ["Trust", "Consent, privacy, and transparency in data handling.", "trust"],
+  ["Care without fear", "A gentle, respectful experience for every person.", "care"],
+  ["Trust", "Data handled with consent, privacy and transparency.", "trust"],
 ];
 const roadmap = [
   [
     "Foundation",
-    "Platform built and first centre launched.",
+    "Platform built and the first Salt Lick Centre launched.",
     "Completion status to be confirmed",
   ],
   [
     "National scale",
-    "A network of 50 centres across India.",
+    " A network of 50 Salt Lick Centres across India.",
     "Proposed target · not an achieved total",
   ],
   [
     "Global reach",
-    "Expansion across the Middle East, Africa, Southeast Asia, and Australia.",
+    "Expansion across the Middle East, Africa, Southeast Asia and Australia.",
     "Expansion ambition · availability not confirmed",
   ],
   [
     "Beyond cancer",
-    "Potential risk assessment for diabetes, heart disease, and other lifestyle diseases.",
+    "Risk assessment for diabetes, heart disease and other lifestyle diseases.",
     "Future possibility · not a current capability",
   ],
 ];
@@ -126,13 +126,13 @@ export default function AboutUs() {
         aria-labelledby="about-title"
       >
         <div className="about-origin-copy">
-          <p className="about-label">About Salt Lick / Our purpose</p>
+          <p className="about-label">About us</p>
           <h1 id="about-title">
             Our purpose is to shift the <em>start line</em> of cancer care.
           </h1>
           <p>
-            Headquartered in Mumbai and built for the world, Salt Lick
-            Healthcare aims to help people and nations act on cancer risk before
+            Salt Lick Healthcare is headquartered in Mumbai and built for the
+            world. We exist to help people and nations act on cancer risk before
             cancer becomes detectable.
           </p>
           <a href="#about-continuum" className="about-link">
@@ -153,15 +153,37 @@ export default function AboutUs() {
         </figure>
         <div className="about-origin-bottom">
           <div className="about-journey-track" aria-hidden="true">
-            <svg className="about-journey-arrow" viewBox="0 0 88 28" fill="none">
+            <svg
+              className="about-journey-arrow"
+              viewBox="0 0 88 28"
+              fill="none"
+            >
               <defs>
-                <linearGradient id="about-arrow-tail" x1="0" y1="14" x2="78" y2="14" gradientUnits="userSpaceOnUse">
+                <linearGradient
+                  id="about-arrow-tail"
+                  x1="0"
+                  y1="14"
+                  x2="78"
+                  y2="14"
+                  gradientUnits="userSpaceOnUse"
+                >
                   <stop stopColor="#f2c39d" stopOpacity="0" />
                   <stop offset="1" stopColor="#e8ae7e" />
                 </linearGradient>
               </defs>
-              <path d="M2 14H79" stroke="url(#about-arrow-tail)" strokeWidth="4" strokeLinecap="round" />
-              <path d="M68 4L80 14L68 24" stroke="#e8ae7e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M2 14H79"
+                stroke="url(#about-arrow-tail)"
+                strokeWidth="4"
+                strokeLinecap="round"
+              />
+              <path
+                d="M68 4L80 14L68 24"
+                stroke="#e8ae7e"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </div>
           <span>Mumbai, India</span>
@@ -187,20 +209,21 @@ export default function AboutUs() {
           {/* <figcaption>Illustrated collaboration · fictional people</figcaption> */}
         </figure>
         <div>
-          <p className="about-label">01 / Part of something wider</p>
+          <p className="about-label">A part of Esperer Group</p>
           <h2 id="continuum-title">
             Advancing the full continuum of cancer care.
           </h2>
           <p>
-            Esperer Group brings together cancer-nutrition science, oncology
-            research, and AI health technology. Salt Lick is the
-            early-risk-assessment part of that continuum.
+            Esperer Group brings together patented cancer-nutrition science,
+            oncology research and AI health technology, united by one purpose:
+            better outcomes across the full continuum of cancer care. Salt Lick
+            is where that continuum begins: long before a diagnosis.
           </p>
-          <div className="about-disciplines">
+          {/* <div className="about-disciplines">
             <span>Nutrition science</span>
             <span>Oncology research</span>
             <span>AI health technology</span>
-          </div>
+          </div> */}
           <a
             className="about-link"
             href="https://www.espererworld.com/"
@@ -219,12 +242,12 @@ export default function AboutUs() {
         aria-label="Mission and vision"
       >
         <div className="about-purpose-intro" data-about-reveal>
-          <p className="about-label">03 / What moves us forward</p>
+          {/* <p className="about-label">03 / What moves us forward</p> */}
           {/* <span>Purpose, made clear.</span> */}
         </div>
         <div className="about-purpose-grid">
           <article className="about-mission" data-about-reveal>
-            <span className="about-purpose-index">01 — Mission</span>
+            <span className="about-purpose-index">Mission</span>
             <h2>
               To make early cancer risk assessment accessible to every person,
               in every community.
@@ -236,7 +259,7 @@ export default function AboutUs() {
             </div>
           </article>
           <article className="about-vision" data-about-reveal>
-            <span className="about-purpose-index">02 — Vision</span>
+            <span className="about-purpose-index">Vision</span>
             <h2>
               A world where cancer risk is found long before it becomes a
               diagnosis.
@@ -255,7 +278,7 @@ export default function AboutUs() {
         aria-labelledby="values-title"
       >
         <div className="about-values-intro" data-about-reveal>
-          <p className="about-label">04 / The way we work</p>
+          <p className="about-label">What guides us</p>
           <h2 id="values-title">Our values.</h2>
           <span className="about-values-rule" aria-hidden="true" />
         </div>
@@ -275,7 +298,7 @@ export default function AboutUs() {
         <div className="about-wrap">
           <div className="about-section-heading" data-about-reveal>
             <div>
-              <p className="about-label">05 / Looking ahead</p>
+              <p className="about-label">Our Path</p>
               <h2 id="roadmap-title">
                 From the first centre
                 <br />
@@ -301,7 +324,7 @@ export default function AboutUs() {
               </figcaption> */}
             </figure>
             <div className="about-milestones">
-              {roadmap.map(([name, copy, status], i) => (
+              {roadmap.map(([name, copy], i) => (
                 <div
                   className={
                     "about-milestone " + (active === i ? "selected" : "")
@@ -321,7 +344,7 @@ export default function AboutUs() {
                   </h3>
                   <div id={"milestone-panel-" + i} hidden={active !== i}>
                     <p>{copy}</p>
-                    <span className="about-milestone-status">{status}</span>
+                    {/* <span className="about-milestone-status">{status}</span> */}
                   </div>
                 </div>
               ))}
@@ -336,7 +359,7 @@ export default function AboutUs() {
       >
         <div className="about-section-heading" data-about-reveal>
           <div>
-            <p className="about-label">06 / People with purpose</p>
+            <p className="about-label">Leadership</p>
             <h2 id="about-leaders-title">
               Meet the people
               <br />
@@ -377,7 +400,7 @@ export default function AboutUs() {
           <span />
           <span />
         </div>
-        <p className="about-label">07 / The next chapter starts together</p>
+        {/* <p className="about-label">07 / The next chapter starts together</p> */}
         <h2 id="about-closing-title">
           Join us in reducing
           <br />
@@ -399,5 +422,3 @@ export default function AboutUs() {
     </div>
   );
 }
-
-
