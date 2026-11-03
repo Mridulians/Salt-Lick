@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import origin from "../../assets/about-human-hero-official-logo.webp";
-import science from "../../assets/about-science-official-logo.webp";
+// import science from "../../assets/about-science-official-logo.webp";
 import centre from "../../assets/about-centre-official-logo.webp";
 import portrait from "../../assets/team-portrait-placeholder.svg";
+import EspererLogo from "../../assets/espererGroup_logo.png"
 import "./AboutUs.css";
 import AboutEcosystem from "./AboutEcosystem";
 
@@ -200,7 +201,7 @@ export default function AboutUs() {
       >
         <figure className="about-science-art" data-about-parallax>
           <img
-            src={science}
+            src={EspererLogo}
             width="1536"
             height="1024"
             loading="lazy"
