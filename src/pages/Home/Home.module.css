@@ -1849,7 +1849,8 @@
     max-width: 165px;
   }
   .home-medtech .partner-top > .icon {
-    width: 23px;
+    /* width: 23px; */
+    width: 40px;
   }
   .home-medtech .partner-card > p:not(.eyebrow) {
     font-size: 11px;
@@ -1909,7 +1910,8 @@
     line-height: 1.12;
   }
   .home-medtech .hero-copy .eyebrow {
-    font-size: 8px;
+    /* font-size: 8px; */
+    font-size: 12px;
     letter-spacing: 0.15em;
     gap: 7px;
   }
@@ -1917,7 +1919,8 @@
     width: 13px;
   }
   .home-medtech .hero-copy .lead {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 16px;
     line-height: 1.8;
     margin-top: 20px;
     max-width: 470px;
@@ -2032,27 +2035,32 @@
     margin-block: 19px 12px;
   }
   .home-medtech .association-brand .eyebrow {
-    font-size: 8px;
+    /* font-size: 8px; */
+    font-size: 12px;
   }
   .home-medtech .parent-note {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .home-medtech .association-copy h2 {
     font-size: 29px;
   }
   .home-medtech .association-copy > p {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 16px;
     line-height: 1.85;
     margin-top: 15px;
   }
   .home-medtech .section-heading .eyebrow {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .home-medtech .section-heading h2 {
     margin-top: 14px;
   }
   .home-medtech .section-heading > p:last-child:not(.eyebrow) {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 16px;
     margin-top: 18px;
   }
   .home-medtech .timeline-panel {
@@ -2067,7 +2075,8 @@
     display: block;
   }
   .home-medtech .timeline-mobile-title {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
     color: #365872;
     font-weight: 600;
     line-height: 1.5;
@@ -2077,7 +2086,8 @@
     padding-bottom: 20px;
   }
   .home-medtech .timeline-mobile-title > span {
-    font-size: 8px;
+    /* font-size: 8px; */
+    font-size: 12px;
     white-space: nowrap;
     color: #8496a6;
     font-weight: 400;
@@ -2094,7 +2104,7 @@
   }
   .home-medtech .mobile-window > h3 {
     font:
-      600 8px/1.5 Inter,
+      600 12px/1.5 Inter,
       sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -2130,7 +2140,8 @@
     font-weight: 600;
   }
   .home-medtech .mobile-stop > span {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
     line-height: 1.5;
     color: #6a7f92;
   }
@@ -2140,7 +2151,7 @@
     background: #e7ecf1;
     color: #64778a;
     font:
-      600 8px/1.5 Inter,
+      600 12px/1.5 Inter,
       sans-serif;
     margin-block: 5px;
   }
@@ -2153,7 +2164,7 @@
     background: #d7a57f;
   }
   .home-medtech .mobile-boundary {
-    font-size: 9px;
+    font-size: 12px;
     color: #9b6c49;
     text-align: center;
     padding: 13px 0;
@@ -2161,7 +2172,7 @@
     margin-block: 12px;
   }
   .home-medtech .timeline-mobile-end {
-    font-size: 8px;
+    font-size: 12px;
     color: #8496a6;
     padding-top: 17px;
     padding-bottom: 7px;
@@ -2180,7 +2191,8 @@
     margin-top: 10px;
   }
   .home-medtech .comparison-card p {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 14px;
     margin-top: 11px;
   }
   .home-medtech .card-index {
@@ -2197,11 +2209,13 @@
     font-size: 31px;
   }
   .home-medtech .burden-heading > p {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 16px;
     line-height: 1.85;
   }
   .home-medtech .burden .eyebrow {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .home-medtech .stats {
     grid-template-columns: 1fr 1fr;
@@ -2221,10 +2235,11 @@
     font-size: 37px;
   }
   .home-medtech .stats p {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
   }
   .home-medtech .burden .source-note {
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.7;
     margin-top: 25px;
     padding-top: 16px;
@@ -2237,10 +2252,12 @@
     font-size: 31px;
   }
   .home-medtech .advantage-copy .eyebrow {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .home-medtech .advantage-copy > p:not(.eyebrow) {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 16px;
     margin-top: 18px;
   }
   .home-medtech .advantage-copy .emphasis {
@@ -2254,16 +2271,19 @@
     box-shadow: 5px 5px 0 #f0f5f9;
   }
   .home-medtech .chart-top > span {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 14px;
   }
   .home-medtech .bar-row strong {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
   }
   .home-medtech .bar-row > div:first-child > span {
     font-size: 20px;
   }
   .home-medtech .stage-chart > .source-note {
-    font-size: 8px;
+    /* font-size: 8px; */
+    font-size: 10px;
   }
   .home-medtech .signals-section .section {
     padding-block: 50px;
@@ -2273,7 +2293,8 @@
     gap: 19px;
   }
   .home-medtech .signals-heading .eyebrow {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .home-medtech .signals-heading h2 {
     font-size: 31px;
@@ -2282,7 +2303,8 @@
     padding-top: 0;
   }
   .home-medtech .signals-heading > div:last-child p {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 16px;
   }
   .home-medtech .signals-heading .text-link {
     margin-top: 14px;
@@ -2294,11 +2316,12 @@
   .home-medtech .diagram-labels {
     display: flex;
     padding-bottom: 14px;
-    font-size: 7px;
+    /* font-size: 7px; */
+    font-size: 10px;
   }
-  .home-medtech .diagram-labels > span:nth-child(n + 2) {
+  /* .home-medtech .diagram-labels > span:nth-child(n + 2) {
     display: none;
-  }
+  } */
   .home-medtech .signal-flow {
     grid-template-columns: 1fr;
     gap: 0;
@@ -2311,7 +2334,8 @@
     gap: 8px;
   }
   .home-medtech .signal-input {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
     gap: 7px;
     padding: 8px 7px;
     min-height: 45px;
@@ -2360,7 +2384,8 @@
     font-size: 16px;
   }
   .home-medtech .processor-area > p {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
     margin-top: 19px;
   }
   .home-medtech .report-area {
@@ -2370,6 +2395,7 @@
     display: flex;
     align-items: center;
     gap: 23px;
+    flex-direction: column;
   }
   .home-medtech .report-area:before {
     content: "";
@@ -2394,7 +2420,8 @@
     transform: rotate(2deg);
   }
   .home-medtech .risk-report > p {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
     margin-top: 10px;
   }
   .home-medtech .risk-report > p strong {
@@ -2414,13 +2441,16 @@
   .home-medtech .report-assessment {
     margin-top: 12px;
     padding-top: 10px;
-    font-size: 8px;
+    /* font-size: 8px; */
+    font-size: 12px;
   }
   .home-medtech .report-next {
-    max-width: 90px;
-    font-size: 8px;
+    /* max-width: 90px; */
+    /* font-size: 8px; */
+    font-size: 12px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-direction: row;
     align-items: flex-start;
     margin-top: 0;
     gap: 9px;
@@ -2437,7 +2467,8 @@
     padding: 16px 0 18px;
   }
   .home-medtech .active-signal-label {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
   }
   .home-medtech .active-signal-copy {
     font-size: 10px;
@@ -2467,7 +2498,8 @@
     margin-top: 9px;
   }
   .home-medtech .screening-card p {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
     line-height: 1.75;
     margin-top: 8px;
   }
@@ -2478,12 +2510,14 @@
     padding-top: 15px;
   }
   .home-medtech .section-bottom > p {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
     max-width: 145px;
     line-height: 1.6;
   }
   .home-medtech .section-bottom > .text-link {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
     min-height: 28px;
     gap: 15px;
     white-space: nowrap;
@@ -2497,13 +2531,15 @@
     padding-block: 0;
   }
   .home-medtech .centres-copy .eyebrow {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .home-medtech .centres-copy h2 {
     font-size: 31px;
   }
   .home-medtech .centres-copy > p:not(.eyebrow) {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 16px;
     margin-top: 18px;
   }
   .home-medtech .centres-copy > .button {
@@ -2543,10 +2579,13 @@
     max-height: 61px;
   }
   .home-medtech .partner-card:first-child .partner-top > img {
-    max-height: 60px;
+    /* max-height: 60px; */
+    max-width: 200px;
+    max-height: 100px;
   }
   .home-medtech .partner-card > .eyebrow {
-    font-size: 8px;
+    /* font-size: 8px; */
+    font-size: 10px;
   }
   .home-medtech .partner-card > h3 {
     font-size: 18px;
@@ -2554,12 +2593,14 @@
     margin-top: 10px;
   }
   .home-medtech .partner-card > p:not(.eyebrow) {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 14px;
     margin-top: 15px;
     margin-bottom: 17px;
   }
   .home-medtech .partner-card > .text-link {
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: 12px;
     gap: 20px;
   }
   .home-medtech .impact-grid {
@@ -2581,7 +2622,8 @@
     font-size: 18px;
   }
   .home-medtech .impact-card p {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 14px;
   }
   .home-medtech .final-cta {
     padding-block: 58px 64px;
@@ -2593,7 +2635,8 @@
     font-size: 33px;
   }
   .home-medtech .final-cta > p {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 14px;
     margin-top: 21px;
   }
   .home-medtech .final-cta > .button {

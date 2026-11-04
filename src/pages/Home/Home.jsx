@@ -593,9 +593,9 @@ function SignalSection() {
         </div>
         <div className={homeClassName("signal-board")} id="signals-detail">
           <div className={homeClassName("diagram-labels")}>
-            <span>01 / THE SIGNALS</span>
-            <span>02 / CONNECTED INTELLIGENCE</span>
-            <span>03 / A CLEAR NEXT STEP</span>
+            <span>THE SIGNALS</span>
+            <span>CONNECTED INTELLIGENCE</span>
+            <span>A CLEAR NEXT STEP</span>
           </div>
           <div className={homeClassName("signal-flow")}>
             <svg
