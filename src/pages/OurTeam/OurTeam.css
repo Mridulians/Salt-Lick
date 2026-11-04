@@ -449,6 +449,7 @@
 .team-page .team-leadership {
   padding: 76px 40px;
   border-top: 0;
+  border-bottom: 1px solid #d5d9e0;
   background: #fff;
   color: #15171c;
 }
@@ -468,7 +469,23 @@
 .team-leadership .team-leader-row:nth-child(even) {
   grid-template-columns: minmax(0, 1fr) 340px;
 }
-.team-leadership .team-leader-row:nth-child(even) .team-leader-portrait { order: 2; }
+.team-leadership .team-leader-row:nth-child(even) > :first-child { order: 2; }
+.team-page .team-mentor { background: #f6f7f9; }
+.team-page .team-mentor .team-mentor-title {
+  margin: 12px 0 14px;
+  color: #15171c;
+  font: 700 clamp(30px, 3.6vw, 44px)/1.1 "Team Profile Display", Rockwell, Georgia, serif;
+  letter-spacing: normal;
+}
+.team-leadership .team-leader-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  /* object-position: center top; */
+  border-radius: 16px;
+}
 .team-leadership .team-leader-portrait {
   position: relative;
   display: grid;
@@ -513,7 +530,7 @@
 .team-leadership .team-leader-eyebrow {
   margin: 0;
   color: #0f7a74;
-  font: 600 12.5px/1 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+  font: 600 14px/1 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
@@ -531,14 +548,39 @@
   font: 400 18px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
 }
 .team-leadership .team-leader-bio {
-  max-width: 66ch;
+  max-width: 62ch;
   margin: 0 0 12px;
-  padding: 14px 16px;
-  border: 1px dashed #c3c8d1;
-  border-radius: 8px;
-  background: #f6f7f9;
-  color: #8a909c;
+  color: #15171c;
+  font: 400 16.5px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+}
+.team-leadership .team-leader-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 16px;
+}
+.team-leadership .team-leader-tags span {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #e7f3f2;
+  color: #0f7a74;
+  font: 600 16px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+}
+.team-leadership .team-leader-footprint {
+  margin-bottom: 12px;
+  padding: 4px 0 4px 14px;
+  border-left: 3px solid #ee8a1f;
+  color: #5d6472;
   font: 400 15px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+}
+.team-leadership .team-leader-footprint strong {
+  display: block;
+  color: #15171c;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 .team-leadership .team-leader-link {
   display: inline-block;
@@ -548,18 +590,18 @@
   border-radius: 0;
   background: transparent;
   color: #123f8f;
-  font: 600 15px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
+  font: 600 16px/1.55 "Team Profile Body", "Segoe UI", system-ui, sans-serif;
   opacity: 1;
-  cursor: default;
   text-align: left;
 }
-@media (max-width: 760px) {
-  .team-page .team-leadership { padding: 48px 20px; }
+.team-leadership .team-leader-link:disabled { cursor: default; }
+.team-leadership a.team-leader-link:hover { text-decoration: underline; }
+@media (max-width: 860px) {
+  .team-page .team-leadership { padding-inline: 20px; }
   .team-leadership .team-leader-row,
   .team-leadership .team-leader-row:nth-child(even) {
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .team-leadership .team-leader-row:nth-child(even) .team-leader-portrait { order: 0; }
-  .team-leadership .team-leader-portrait { max-width: 340px; }
+  .team-leadership .team-leader-row:nth-child(even) > :first-child { order: 0; }
 }

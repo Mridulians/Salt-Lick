@@ -1,34 +1,94 @@
 import esperer from "../../assets/espererGroup_logo.png";
 import health from "../../assets/healtLogo.png";
 import eioms from "../../assets/EIOMS_logo.png";
+import Raktim from "../../assets/Raktim.jpeg";
+import Rupam from "../../assets/Rupam.jpeg"
+import Himanshu from "../../assets/Himanshu.jpg";
+import Shashi from "../../assets/Shashi-Sinha.jpg";
 import "./OurTeam.css";
 
 const leaders = [
   {
     name: "Dr. Raktim Chattopadhyay",
     title: "Founder",
-    role: "Founder, Salt Lick Healthcare",
-    biography:
-      "Biography: professional background, expertise and vision for Salt Lick (to be supplied).",
-    initials: "RC",
+    role: "Founder, Salt Lick · Founder and CEO, Esperer Group",
+    biography: [
+      "Dr. Raktim Chattopadhyay is a researcher and entrepreneur with more than two decades of experience in cancer nutrition, integrative care and evidence-based therapeutic strategy.",
+      "As Founder and CEO of Esperer Group, he has built an integrated oncology ecosystem spanning Esperer Nutrition, Esperer BioResearch and Health Voitho Technologies, including a dedicated cancer nutrition research centre in Hyderabad.",
+      "He is the architect of precision molecular nutrition frameworks that bring biosensitivity insights into clinical practice. His pioneering work, including the DiNI Axis hypothesis, has shaped clinically validated nutrition platforms that improve outcomes across treatment, recovery and survivorship.",
+      "With Salt Lick, he takes that vision upstream, to the years before cancer begins.",
+    ],
+    tags: [
+      "Cancer nutrition",
+      "Translational healthcare",
+      "Precision molecular nutrition",
+    ],
+    detailLabel: "Leadership footprint",
+    detail: "Founder and CEO, Esperer Group, including Esperer Nutrition, Esperer BioResearch and Health Voitho Technologies",
+    image: Raktim,
+    linkedinUrl: "https://www.linkedin.com/in/dr-raktim-chattopadhyay-phd-0730b448",
   },
   {
     name: "Mr. Himanshu Dave",
     title: "CEO and Co-Founder",
     role: "Chief Executive Officer and Co-Founder",
-    biography:
-      "Biography: professional background, expertise and role in leading Salt Lick (to be supplied).",
-    initials: "HD",
+    biography: [
+      "Himanshu Dave is a strategic healthcare leader with more than 35 years of experience across pharmaceuticals and public health systems.",
+      "His leadership footprint spans Wockhardt, Astellas and the Fairfax Financial Holdings Foundation. Throughout, he has designed scalable healthcare delivery models that bring private-sector innovation together with public health priorities.",
+      "He led the creation of India's largest rural free-dialysis network, expanding access to life-saving care for nearly one-third of the country's population.",
+      "At Salt Lick, he leads the mission to make early cancer risk assessment available to entire populations.",
+    ],
+    tags: [
+      "Pharmaceutical and healthcare leadership",
+      "Public health delivery",
+      "Social impact and access strategy",
+    ],
+    detailLabel: "Leadership footprint",
+    detail: "Wockhardt · Astellas · Fairfax Financial Holdings (Foundation)",
+    image: Himanshu,
+    linkedinUrl: "https://www.linkedin.com/in/himanshudave",
   },
   {
     name: "Mr. Rupam Chattopadhyay",
     title: "Chief Technical Officer",
     role: "Chief Technical Officer",
-    biography:
-      "Biography: technology background and leadership of the Salt Lick platform (to be supplied).",
-    initials: "RC",
+    biography: [
+      "Rupam Chattopadhyay leads the technology behind Salt Lick. A health-tech entrepreneur and AI strategist, he is focused on building intelligent healthcare systems that make quality care accessible, affordable and available to every community.",
+      "He has been instrumental in conceptualising and developing AI-powered diagnostic platforms for early disease detection, predictive risk assessment and integrated patient care, bringing together artificial intelligence, medical devices, cloud platforms and evidence-driven clinical workflows.",
+      "Before health-tech, he built a career in enterprise consulting and digital transformation, leading large-scale technology programmes for global organisations. Today he brings clinicians, researchers, industry and policymakers together to turn breakthrough technology into scalable, clinically relevant care.",
+    ],
+    tags: [
+      "AI in healthcare",
+      "Digital health platforms",
+      "Digital transformation",
+    ],
+    detailLabel: "Leadership footprint",
+    detail: "Enterprise consulting and digital transformation for global organisations",
+    image: Rupam,
+    linkedinUrl: "https://www.linkedin.com/in/rupam-chattopadhyay-cspo",
   },
 ];
+
+const mentor = {
+  name: "Mr. Shashi Sinha",
+  title: "Mentor",
+  role: "Former Chairman and CEO, IPG Mediabrands India",
+  biography: [
+    "Shashi Sinha has spent nearly four decades shaping India's media and advertising industry. An engineer from IIT Kanpur and a management graduate of IIM Bangalore, he began his career in consumer goods before moving into advertising.",
+    "In the early 1990s he founded Lodestar, India's first specialised media planning and buying agency, putting data, research and accountability at the heart of media decisions. He went on to lead IPG Mediabrands India as Chairman and CEO until July 2026, building it into the country's second-largest media agency group, managing around 20% of India's media spend.",
+    "He has helped set the standards the industry runs on: as Immediate Past Chairman of the Broadcast Audience Research Council (BARC), Past President of The Ad Club Bombay, Past Chairman of the Media Research Users Council and the Audit Bureau of Circulations, and through key roles at ASCI and AAAI.",
+    "As mentor to Salt Lick, he brings unmatched experience in building trusted institutions and communicating with millions.",
+  ],
+  tags: [
+    "Brand and media strategy",
+    "Industry governance",
+    "Institution building",
+  ],
+  detailLabel: "Honours",
+  detail: "AAAI Lifetime Achievement Award (2023) · IAA India Chapter Hall of Fame (2022) · Distinguished Alumnus Award, IIT Kanpur and IIM Bangalore",
+  image: Shashi,
+};
+
 const partners = [
   {
     name: "Esperer Group",
@@ -173,9 +233,82 @@ function LeadershipGraphic() {
   );
 }
 
+function Profile({ profile, headingId, NameHeading = "h2" }) {
+  return (
+    <article className="team-leader-row" aria-labelledby={headingId}>
+      {profile.image ? (
+        <img
+          className="team-leader-photo"
+          src={profile.image}
+          alt={profile.name}
+          width="560"
+          height="700"
+          loading="lazy"
+        />
+      ) : (
+        <div
+          className="team-leader-portrait"
+          role="img"
+          aria-label={`Portrait placeholder for ${profile.name}`}
+        >
+          <span className="team-leader-initials" aria-hidden="true">
+            {profile.initials}
+          </span>
+          <span className="team-leader-portrait-label" aria-hidden="true">
+            Portrait photo
+          </span>
+        </div>
+      )}
+      <div className="team-leader-copy">
+        <p className="team-leader-eyebrow">{profile.title}</p>
+        <NameHeading className="team-leader-name" id={headingId}>
+          {profile.name}
+        </NameHeading>
+        <p className="team-leader-role">{profile.role}</p>
+        {profile.biography.map((paragraph) => (
+          <p className="team-leader-bio" key={paragraph}>
+            {paragraph}
+          </p>
+        ))}
+        <div className="team-leader-tags">
+          {profile.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+        <div className="team-leader-footprint">
+          <strong>{profile.detailLabel}</strong>
+          {profile.detail}
+        </div>
+        {profile.linkedinUrl ? (
+          <a
+            className="team-leader-link"
+            href={profile.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View LinkedIn profile for ${profile.name} (opens in a new tab)`}
+          >
+            View LinkedIn profile <span aria-hidden="true">↗</span>
+          </a>
+        ) : (
+          <button
+            className="team-leader-link"
+            type="button"
+            disabled
+            title="LinkedIn profile link to be supplied"
+            aria-label={`${profile.name} — LinkedIn profile link to be supplied`}
+          >
+            View LinkedIn profile <span aria-hidden="true">↗</span>
+          </button>
+        )}
+      </div>
+    </article>
+  );
+}
+
 export default function OurTeam() {
   return (
     <div className="team-page">
+      
       <section
         className="team-hero team-container"
         aria-labelledby="team-title"
@@ -204,42 +337,19 @@ export default function OurTeam() {
       >
         <div className="team-leaders">
           {leaders.map((leader, index) => (
-            <article
-              className="team-leader-row"
-              key={leader.name}
-              aria-labelledby={`team-leader-${index}`}
-            >
-              <div
-                className="team-leader-portrait"
-                role="img"
-                aria-label={`Portrait placeholder for ${leader.name}`}
-              >
-                <span className="team-leader-initials" aria-hidden="true">
-                  {leader.initials}
-                </span>
-                <span className="team-leader-portrait-label" aria-hidden="true">
-                  Portrait photo
-                </span>
-              </div>
-              <div className="team-leader-copy">
-                <p className="team-leader-eyebrow">{leader.title}</p>
-                <h2 className="team-leader-name" id={`team-leader-${index}`}>
-                  {leader.name}
-                </h2>
-                <p className="team-leader-role">{leader.role}</p>
-                <p className="team-leader-bio">{leader.biography}</p>
-                <button
-                  className="team-leader-link"
-                  type="button"
-                  disabled
-                  title="LinkedIn profile link to be supplied"
-                  aria-label={`${leader.name} — LinkedIn profile link to be supplied`}
-                >
-                  View LinkedIn profile <span aria-hidden="true">↗</span>
-                </button>
-              </div>
-            </article>
+            <Profile key={leader.name} profile={leader} headingId={`team-leader-${index}`} />
           ))}
+        </div>
+      </section>
+
+      <section
+        className="team-leadership team-mentor"
+        id="mentor"
+        aria-labelledby="mentor-title"
+      >
+        <div className="team-leaders">
+          <h2 className="team-mentor-title" id="mentor-title">Mentor</h2>
+          <Profile profile={mentor} headingId="team-mentor-name" NameHeading="h3" />
         </div>
       </section>
 

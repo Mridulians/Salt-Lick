@@ -42,7 +42,7 @@
   gap: 25px;
   margin-top: 25px;
   padding: 10px 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--about-ink);
 }
@@ -530,7 +530,8 @@
 }
 .about-leader-portrait img {
   width: 100%;
-  max-height: 250px;
+  /* max-height: 250px; */
+  max-height: 400px;
   object-fit: cover;
   object-position: center 28%;
   transition: transform 0.5s;
@@ -550,10 +551,11 @@
 .about-leader-grid h3 {
   font-size: 21px;
   margin-top: 22px;
+  font-weight: 700;
 }
 .about-leader-grid p {
   /* font-size: 12px; */
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 8px;
 }
 .about-closing {

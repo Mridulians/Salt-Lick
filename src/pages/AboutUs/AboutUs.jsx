@@ -2,8 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import origin from "../../assets/about-human-hero-official-logo.webp";
 // import science from "../../assets/about-science-official-logo.webp";
 import centre from "../../assets/about-centre-official-logo.webp";
-import portrait from "../../assets/team-portrait-placeholder.svg";
+// import portrait from "../../assets/team-portrait-placeholder.svg";
 import EspererLogo from "../../assets/espererGroup_logo.png"
+import Raktim from "../../assets/Raktim.jpeg"
+import Rupam from "../../assets/Rupam.jpeg"
+import Himanshu from "../../assets/Himanshu.jpg"
 import "./AboutUs.css";
 import AboutEcosystem from "./AboutEcosystem";
 
@@ -40,9 +43,9 @@ const roadmap = [
   ],
 ];
 const leaders = [
-  ["Dr. Raktim Chattopadhyay", "Founder"],
-  ["Mr. Himanshu Dave", "CEO and Co-Founder"],
-  ["Mr. Rupam Chattopadhyay", "Chief Technical Officer"],
+  ["Dr. Raktim Chattopadhyay", "Founder", Raktim],
+  ["Mr. Himanshu Dave", "CEO and Co-Founder", Himanshu],
+  ["Mr. Rupam Chattopadhyay", "Chief Technical Officer", Rupam],
 ];
 
 function ValueIcon({ type }) {
@@ -372,17 +375,17 @@ export default function AboutUs() {
           </a>
         </div>
         <div className="about-leader-grid">
-          {leaders.map(([name, role]) => (
+          {leaders.map(([name, role, image]) => (
             <article key={name} data-about-reveal>
               <div className="about-leader-portrait">
                 <img
-                  src={portrait}
+                  src={image}
                   width="400"
                   height="440"
                   loading="lazy"
                   alt={"Placeholder illustration, not a portrait of " + name}
                 />
-                <span>Portrait to be supplied</span>
+                {/* <span>Portrait to be supplied</span> */}
               </div>
               <h3>{name}</h3>
               <p>{role}</p>
