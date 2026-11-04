@@ -2645,15 +2645,17 @@
     padding: 13px 20px;
   }
 }
+
+
 @media (max-width: 360px) {
   .home-medtech .hero-copy h1 {
     font-size: 40px;
   }
-  .home-medtech .hero-copy .eyebrow {
+  /* .home-medtech .hero-copy .eyebrow {
     font-size: 7px;
-  }
+  } */
   .home-medtech .hero-copy .button {
-    font-size: 9px;
+    /* font-size: 9px; */
     padding-inline: 11px;
     gap: 12px;
   }
