@@ -5,6 +5,8 @@ import Raktim from "../../assets/Raktim.jpeg";
 import Rupam from "../../assets/Rupam.jpeg"
 import Himanshu from "../../assets/Himanshu.jpg";
 import Shashi from "../../assets/Shashi-Sinha.jpg";
+import teamCollaboration from "../../assets/team-collaboration-hero.webp";
+import saltLickLogo from "../../assets/saltlick-logo.png";
 import "./OurTeam.css";
 
 const leaders = [
@@ -110,128 +112,90 @@ const partners = [
   },
 ];
 
-function LeadershipGraphic() {
+function LeadershipIllustration() {
   return (
-    <div
-      className="team-graphic"
-      role="img"
-      aria-label="Animated illustration connecting oncology science, healthcare leadership, and technology"
-    >
-      <svg viewBox="0 0 520 440" aria-hidden="true">
-        <circle cx="260" cy="220" r="180" fill="#f8fbfd" />
-
-        <g className="team-orbit">
-          <ellipse
-            cx="260"
-            cy="220"
-            rx="200"
-            ry="143"
-            fill="none"
-            stroke="#101d32"
-          />
-          <circle cx="460" cy="220" r="7" fill="#eac09c" />
-          <circle cx="60" cy="220" r="5" fill="#8dafc7" />
-        </g>
-        <path
-          className="team-signal"
-          d="M260 80L100 300H420Z"
+    <div className="team-hero-art">
+      <div className="team-hero-scene">
+        <img
+          className="team-hero-painting"
+          src={teamCollaboration}
+          width="1402"
+          height="1122"
+          fetchPriority="high"
+          alt="Conceptual watercolor illustration of clinicians, a researcher and a technology specialist collaborating around a shared tablet."
+        />
+        <img
+          className="team-hero-art-logo"
+          src={saltLickLogo}
+          alt=""
+          aria-hidden="true"
+          width="1149"
+          height="1369"
+        />
+        <svg
+          className="team-hero-art-motion"
+          viewBox="0 0 1402 1122"
           fill="none"
-          stroke="#101d32"
-          strokeWidth="2"
-          strokeDasharray="5 9"
-        />
-        <circle
-          cx="260"
-          cy="220"
-          r="73"
-          fill="#fff"
-          stroke="#f2c39d"
-          strokeWidth="2"
-        />
-        <path
-          d="M230 220h60m-30-30v60"
-          stroke="#f2c39d"
-          strokeWidth="7"
-          strokeLinecap="round"
-        />
-
-        <g className="team-node team-node-one">
-          <rect
-            x="202"
-            y="26"
-            width="116"
-            height="104"
-            rx="26"
-            fill="#101d32"
-            stroke="#101d32"
-          />
-          <path
-            d="M240 48c0 22 40 22 40 44m0-44c0 22-40 22-40 44m4-35h32m-32 25h32"
-            fill="none"
-            stroke="#fff"
-            strokeWidth="2.5"
-          />
-        </g>
-
-        <g className="team-node team-node-two">
-          <rect
-            x="38"
-            y="252"
-            width="124"
-            height="104"
-            rx="26"
-            fill="#f2c39d"
-            stroke="#f2c39d"
-          />
-          <circle
-            cx="100"
-            cy="280"
-            r="12"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2.5"
-          />
-          <path
-            d="M75 322v-9c0-23 50-23 50 0v9"
-            fill="none"
-            stroke="#000"
-            strokeWidth="2.5"
-          />
-        </g>
-
-        <g className="team-node team-node-three">
-          <rect
-            x="358"
-            y="252"
-            width="124"
-            height="104"
-            rx="26"
-            fill="#101d32"
-            stroke="#101d32"
-          />
-          <rect
-            x="401"
-            y="277"
-            width="38"
-            height="38"
-            rx="7"
-            fill="none"
-            stroke="#fff"
-            strokeWidth="2.5"
-          />
-          <path
-            d="M411 267v10m18-10v10m-18 38v10m18-10v10m-38-38h10m-10 18h10m38-18h10m-10 18h10"
-            stroke="#fff"
-            strokeWidth="2.5"
-          />
-        </g>
-      </svg>
-      <span className="team-graphic-label science">Oncology science</span>
-      <span className="team-graphic-label leadership">Healthcare</span>
-      <span className="team-graphic-label technology">Technology</span>
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <clipPath id="team-display-surface">
+              <path d="M1087 490L1374 452L1343 761L1056 743Z" />
+            </clipPath>
+          </defs>
+          <g clipPath="url(#team-display-surface)">
+            <path
+              className="team-display-reflection"
+              d="M1040 470L1400 422"
+              stroke="#accbdf"
+              strokeWidth="32"
+              strokeOpacity=".26"
+            />
+            <g className="team-display-paths" strokeWidth="7" strokeLinecap="round">
+              <path
+                className="team-display-flow"
+                d="M1074 645C1110 617 1198 648 1214 568"
+                pathLength="100"
+                stroke="#e4f5ff"
+              />
+              <path
+                className="team-display-flow team-display-flow-two"
+                d="M1074 645C1110 617 1162 630 1195 622C1250 617 1255 550 1314 531"
+                pathLength="100"
+                stroke="#ffe0ba"
+              />
+              <path
+                className="team-display-flow team-display-flow-three"
+                d="M1074 645C1110 617 1162 630 1195 622C1244 594 1285 584 1332 595"
+                pathLength="100"
+                stroke="#ffe0ba"
+              />
+              <path
+                className="team-display-flow team-display-flow-four"
+                d="M1074 645C1110 617 1162 630 1195 622C1244 621 1259 662 1325 665"
+                pathLength="100"
+                stroke="#ffe0ba"
+              />
+              <path
+                className="team-display-flow team-display-flow-five"
+                d="M1074 645C1131 616 1174 636 1195 682"
+                pathLength="100"
+                stroke="#e4f5ff"
+              />
+            </g>
+            <g className="team-display-nodes" fill="#ffe0ba">
+              <circle className="team-display-node" cx="1314" cy="531" r="10" />
+              <circle className="team-display-node team-display-node-two" cx="1332" cy="595" r="10" />
+              <circle className="team-display-node team-display-node-three" cx="1325" cy="665" r="10" />
+            </g>
+          </g>
+        </svg>
+      </div>
     </div>
   );
 }
+
 
 function Profile({ profile, headingId, NameHeading = "h2" }) {
   return (
@@ -327,7 +291,7 @@ export default function OurTeam() {
             Meet our leadership <span aria-hidden="true">↓</span>
           </a> */}
         </div>
-        <LeadershipGraphic />
+        <LeadershipIllustration />
       </section>
 
       <section

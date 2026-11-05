@@ -59,7 +59,8 @@ p {
 h1,
 h2,
 h3 {
-  font-family: Manrope, sans-serif;
+  font-family: Manrope, sans-serif !important;
+  /* font-family: "How Wireframe Display", Rockwell, Georgia, serif; */
 }
 
 h1 {

@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import campus from "../../assets/partner-campus-official-logo.webp";
 import "./PartnerWithUs.css";
 
+const web3FormsKey = import.meta.env.VITE_WEB3FORMS_KEY?.trim();
+
 const interests = [
   "Bringing Salt Lick screening to my country or region.",
   "A Salt Lick Centre in my region.",
@@ -12,16 +14,80 @@ const interests = [
 
 export default function PartnerWithUs() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
+  const requestInFlight = useRef(false);
+  const errorNotice = useRef(null);
   const confirmation = useRef(null);
   useEffect(() => {
     if (submitted) confirmation.current?.focus();
-  }, [submitted]);
-  const submit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
+    else if (submissionError) errorNotice.current?.focus();
+  }, [submitted, submissionError]);
+
+  const submit = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (requestInFlight.current || !form.reportValidity()) return;
+
+    const messageField = form.elements.namedItem("message");
+    if (!messageField.value.trim()) {
+      messageField.setCustomValidity("Please enter your message.");
+      messageField.reportValidity();
+      return;
+    }
+    if (!web3FormsKey) {
+      setSubmissionError("Enquiries are temporarily unavailable. Please try again later.");
+      return;
+    }
+
+    const formData = new FormData(form);
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 20000);
+    requestInFlight.current = true;
+    setSubmitting(true);
+    setSubmissionError("");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        signal: controller.signal,
+        body: JSON.stringify({
+          ...Object.fromEntries(formData),
+          access_key: web3FormsKey,
+          subject: "Salt Lick Healthcare — Partnership enquiry",
+          from_name: "Salt Lick Healthcare website",
+          botcheck: formData.has("botcheck"),
+        }),
+      });
+      const result = await response.json().catch(() => null);
+      if (response.ok && result?.success === true) {
+        setSubmitted(true);
+      } else if (response.status === 429) {
+        setSubmissionError("Too many attempts. Please wait a while before trying again.");
+      } else if (response.status >= 500) {
+        setSubmissionError("Our enquiry service is temporarily unavailable. Please try again shortly.");
+      } else {
+        setSubmissionError("We couldn't confirm your submission. Please try again in a moment.");
+      }
+    } catch (error) {
+      setSubmissionError(
+        error.name === "AbortError"
+          ? "Your request took too long. Please check your connection and try again."
+          : "We couldn't reach our enquiry service. Please try again shortly.",
+      );
+    } finally {
+      window.clearTimeout(timeout);
+      requestInFlight.current = false;
+      setSubmitting(false);
+    }
   };
   return (
     <div className="partner-page">
+      
       <section
         className="partner-hero partner-wrap"
         aria-labelledby="partner-title"
@@ -36,7 +102,9 @@ export default function PartnerWithUs() {
             <em>together.</em>
           </h1>
           <p>
-            We work with governments, health ministries and healthcare institutions worldwide. Tell us about your goals and our team will respond within two working days.
+            We work with governments, health ministries and healthcare
+            institutions worldwide. Tell us about your goals and our team will
+            respond within two working days.
           </p>
           {/* <a className="button blue" href="#partnership-enquiry">
             Start a conversation <span aria-hidden="true">↓</span>
@@ -60,6 +128,7 @@ export default function PartnerWithUs() {
           <div className="partner-campus-edge" aria-hidden="true" />
         </div>
       </section>
+
       <section
         className="partner-enquiry partner-wrap"
         id="partnership-enquiry"
@@ -81,16 +150,12 @@ export default function PartnerWithUs() {
               <h2 id="enquiry-title">Successfully submitted.</h2>
               {/* <p>Your demo enquiry is complete.</p> */}
               <div className="partner-success-preview">
-                <span>Confirmation preview</span>
+                <span>Enquiry received</span>
                 <p>
                   Thank you. A member of our team will be in touch within two
                   working days.
                 </p>
               </div>
-              <p className="partner-demo-note">
-                This is a demonstration only. No information has been sent or
-                stored, and no team response will be triggered.
-              </p>
               <button
                 className="button blue"
                 onClick={() => setSubmitted(false)}
@@ -117,7 +182,16 @@ export default function PartnerWithUs() {
                 onSubmit={submit}
                 className="partner-form"
                 autoComplete="on"
+                aria-busy={submitting}
               >
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="partner-botcheck"
+                  tabIndex="-1"
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
                 <p className="partner-required-note">
                   Fields marked * are required.
                 </p>
@@ -235,6 +309,7 @@ export default function PartnerWithUs() {
                     rows="5"
                     placeholder="Tell us about your goals, region, or proposed collaboration."
                     aria-describedby="partner-message-hint"
+                    onInput={(event) => event.currentTarget.setCustomValidity("")}
                   />
                   <small id="partner-message-hint">
                     Please don't include patient information or medical records.
@@ -242,8 +317,19 @@ export default function PartnerWithUs() {
                 </div>
                 <div className="partner-form-bottom partner-full">
                   {/* <p>Demo only — no information leaves this page.</p> */}
-                  <button className="button blue" type="submit">
-                    Submit enquiry <span aria-hidden="true">↗</span>
+                  {submissionError && (
+                    <p
+                      className="partner-submit-error"
+                      role="alert"
+                      tabIndex="-1"
+                      ref={errorNotice}
+                    >
+                      {submissionError}
+                    </p>
+                  )}
+                  <button className="button blue" type="submit" disabled={submitting}>
+                    {submitting ? "Sending enquiry…" : "Submit enquiry"}
+                    <span aria-hidden="true">{submitting ? "…" : "↗"}</span>
                   </button>
                 </div>
               </form>

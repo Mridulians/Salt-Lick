@@ -108,25 +108,30 @@ const systems = [
 function PlaceDrawing({ type }) {
   return (
     <svg viewBox="0 0 200 130" aria-hidden="true" fill="none">
-      <path d="M8 117H192" stroke="#c6dbe8" strokeWidth="2" />
+
+      <path d="M8 117H192" stroke="#15171c" strokeWidth="2" />
       {type === "district" && (
         <>
           <path
             d="M35 117V46h130v71"
             fill="#edf5fa"
-            stroke="#9fbfd4"
+            // fill="#15171c"
+            // stroke="#9fbfd4"
+            stroke="#15171c"
             strokeWidth="2"
           />
           <path
             d="M25 46l75-27 75 27"
-            fill="#f7e1ce"
-            stroke="#e4bb99"
+            // fill="#f7e1ce"
+            fill="#f2c39d"
+            // stroke="#e4bb99"
+            stroke="#15171c"
             strokeWidth="2"
           />
-          <path d="M88 117V83h24v34" fill="#fff" stroke="#9fbfd4" />
+          <path d="M88 117V83h24v34" fill="#fff" stroke="#15171c" strokeWidth="2" />
           <path
             d="M52 64h20m56 0h20M100 34v15m-7-7h14"
-            stroke="#8aacc2"
+            stroke="#15171c"
             strokeWidth="3"
           />
         </>
@@ -135,20 +140,20 @@ function PlaceDrawing({ type }) {
         <>
           <path
             d="M27 117V52h146v65"
-            fill="#f7e6d7"
-            stroke="#d9b99f"
+            fill="#f2c39d"
+            stroke="#15171c"
             strokeWidth="2"
           />
           <path
             d="M18 52l82-32 82 32H18Z"
             fill="#e7f1f8"
-            stroke="#9fbfd4"
+            stroke="#15171c"
             strokeWidth="2"
           />
           {[42, 78, 114, 150].map((x) => (
-            <path key={x} d={`M${x} 61v45`} stroke="#fff" strokeWidth="12" />
+            <path key={x} d={`M${x} 61v45`} stroke="#15171c" strokeWidth="4" />
           ))}
-          <path d="M21 109h158" stroke="#9fbfd4" strokeWidth="3" />
+          <path d="M21 109h158" stroke="#15171c" strokeWidth="3" />
         </>
       )}
       {type === "city" && (
@@ -156,24 +161,24 @@ function PlaceDrawing({ type }) {
           <path
             d="M25 117V53h48V18h69v99"
             fill="#e6f0f7"
-            stroke="#9fbfd4"
+            stroke="#15171c"
             strokeWidth="2"
           />
           <path
             d="M142 69h33v48"
-            fill="#f5dfca"
-            stroke="#dfbd9f"
+            fill="#f2c39d"
+            stroke="#15171c"
             strokeWidth="2"
           />
           {[37, 58, 79].map((y) => (
             <path
               key={y}
               d={`M87 ${y}h13m15 0h13`}
-              stroke="#abc8dc"
+              stroke="#15171c"
               strokeWidth="6"
             />
           ))}
-          <path d="M102 117V98h15v19" fill="#fff" stroke="#9fbfd4" />
+          <path d="M102 117V98h15v19" fill="#fff" stroke="#15171c" />
         </>
       )}
       {type === "community" && (
@@ -181,10 +186,10 @@ function PlaceDrawing({ type }) {
           <path
             d="M65 117V53l35-24 35 24v64"
             fill="#eaf3f8"
-            stroke="#a4c2d5"
+            stroke="#15171c"
             strokeWidth="2"
           />
-          <path d="M85 117V81h30v36" fill="#f9e3cf" stroke="#debc9e" />
+          <path d="M85 117V81h30v36" fill="#f2c39d" stroke="#15171c" />
           {[35, 165].map((x) => (
             <g key={x}>
               <path d={`M${x - 12} 117v-19q12-17 24 0v19`} fill="#c2d9e8" />

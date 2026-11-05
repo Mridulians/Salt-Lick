@@ -19,10 +19,12 @@
   margin: 0 0 22px;
 }
 .centres-page h2 {
-  font-size: clamp(32px, 3.4vw, 48px);
-  line-height: 1.17;
+  /* font-size: clamp(32px, 3.4vw, 48px); */
+  /* line-height: 1.17; */
   letter-spacing: -0.04em;
-  color: var(--centres-ink);
+  /* color: var(--centres-ink); */
+  color: #15171c;
+    font: 700 clamp(30px, 3.6vw, 44px) / 1.1 "How Wireframe Display", Rockwell, Georgia, serif;
 }
 .centres-page p {
   font-size: 16px;
@@ -346,7 +348,7 @@
 }
 .centres-location-grid h3 {
   font-size: 21px;
-  color: #345a75;
+  color: #15171c;
   margin-top: 10px;
 }
 .centres-location-grid p {
@@ -680,7 +682,8 @@
   font-weight: 600;
 }
 .centres-rollout p {
-  font-size: 14px;
+  /* font-size: 14px; */
+  font-size: 16px;
   margin-top: 15px;
 }
 .centres-pilot-action {

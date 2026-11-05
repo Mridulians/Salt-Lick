@@ -19,7 +19,7 @@
   margin: 0;
 }
 .page :where(h1, h2, h3) {
-  font-family: Manrope, Arial, sans-serif;
+  /* font-family: Manrope, Arial, sans-serif; */
   color: var(--navy);
   font-weight: 700;
 }
@@ -617,6 +617,7 @@
   position: relative;
   background: linear-gradient(145deg, #fff, #f2f7fa60);
   min-height: 153px;
+  text-align: center;
 }
 .cancer-grid > div:nth-child(2n) {
   background: linear-gradient(145deg, #fff, #fcf3ec80);
@@ -1096,6 +1097,7 @@
     margin-bottom: 17px;
   }
 }
+
 @media (max-width: 720px) {
   .section {
     padding-block: 56px;
@@ -1110,10 +1112,11 @@
     font-size: 18px;
   }
   .page p {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 16px;
   }
   .label {
-    font-size: 9px !important;
+    font-size: 12px !important;
   }
   .hero {
     grid-template-columns: 1fr;
@@ -1130,12 +1133,12 @@
     margin-top: 18px;
   }
   .hero-copy > .label {
-    font-size: 8px !important;
+    font-size: 12px !important;
   }
   .hero-copy .hero-intro {
     margin-top: 21px;
     max-width: 500px;
-    font-size: 13px !important;
+    font-size: 16px !important;
   }
   .hero-copy > .button {
     margin-top: 23px;
@@ -1238,7 +1241,8 @@
     margin-top: 10px;
   }
   .evidence-copy > p {
-    font-size: 11px;
+    /* font-size: 11px; */
+    font-size: 12px;
     line-height: 1.8;
     margin-top: 12px;
   }
@@ -1267,7 +1271,8 @@
     gap: 35px;
   }
   .clinician-intro .label {
-    font-size: 9px !important;
+    /* font-size: 9px !important; */
+    font-size: 12px !important;
   }
   .clinician-intro h2 {
     font-size: 31px;
@@ -1295,6 +1300,7 @@
   }
   .clinician-intro p:not(.label) {
     margin-top: 20px;
+    font-size: 16px;
   }
   .table-scroll {
     margin-top: 29px;
@@ -1336,7 +1342,8 @@
     overflow-wrap: break-word;
   }
   .comparison-cell h4 {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 14px;
     line-height: 1.2;
   }
   .clinicians .approval {
@@ -1362,13 +1369,17 @@
   .cancer-grid > div {
     min-height: 143px;
     padding: 20px 13px;
+    text-align: center;
   }
   .cancer-grid .icon {
-    width: 34px;
-    height: 34px;
+    /* width: 34px; */
+    width: 45px;
+    /* height: 34px; */
+    height: 45px;
   }
   .cancer-grid h3 {
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: 14px;
     margin-top: 25px;
   }
   .nature {
@@ -1399,7 +1410,8 @@
     margin-top: 14px;
   }
   .nature-copy > p:not(.label) {
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: 16px;
     margin-top: 20px;
     max-width: none;
   }
@@ -2368,7 +2380,8 @@
   .timeline-controls button {
     flex: 1;
     padding: 12px 8px;
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .timeline {
     padding: 22px 20px 25px;
@@ -2380,11 +2393,11 @@
     right: 20px;
   }
   .timeline-top {
-    font-size: 11px;
+    font-size: 12px;
     gap: 20px;
   }
   .timeline-top small {
-    font-size: 8px;
+    font-size: 10px;
     white-space: nowrap;
   }
   .timeline-windows {
@@ -2395,9 +2408,13 @@
     border-right: 1px solid #f2c39d4d;
     border-radius: 4px;
     padding: 14px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .timeline-windows > span + span {
+    display: none;
+  }
+
+  .signal-inputs button > span {
     display: none;
   }
   .timeline-stages {
@@ -2458,7 +2475,7 @@
     left: auto;
     position: static;
     width: fit-content;
-    font-size: 10px;
+    font-size: 12px;
     padding: 7px 10px;
     margin-bottom: 13px;
   }
@@ -2487,7 +2504,8 @@
   }
   .mobile-treatment {
     display: block;
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
     line-height: 1.5;
     color: #accbdf;
     margin-top: 6px;
@@ -2542,10 +2560,10 @@
   .board-heading {
     padding-block: 18px;
     gap: 15px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .board-caption {
-    font-size: 8px;
+    font-size: 10px;
     max-width: 94px;
     line-height: 1.6;
     gap: 6px;
@@ -2565,7 +2583,7 @@
     border-radius: 7px;
   }
   .folio-frame > span {
-    font-size: 8px;
+    font-size: 10px;
     top: 20px;
     left: 15px;
     letter-spacing: 0.03em;
@@ -2645,7 +2663,8 @@
     height: 18px;
   }
   .signal-inputs button > strong {
-    font-size: 9px;
+    /* font-size: 9px; */
+    font-size: 12px;
   }
   .signal-inputs button > b {
     font-size: 13px;

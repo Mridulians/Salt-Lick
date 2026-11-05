@@ -19,7 +19,7 @@
   margin: 0 0 22px;
 }
 .partner-page h2 {
-  font-family: Manrope, Arial, sans-serif;
+  /* font-family: Manrope, Arial, sans-serif; */
   color: var(--navy);
   font-weight: 700;
   font-size: clamp(44px, 5vw, 70px);
@@ -42,7 +42,7 @@
   /* font-size: clamp(43px, 4.4vw, 63px);
   line-height: 1.12; */
 
-  font-family: Manrope, Arial, sans-serif;
+  /* font-family: Manrope, Arial, sans-serif; */
   color: var(--navy);
   font-weight: 700;
   font-size: clamp(44px, 5vw, 70px);
@@ -170,7 +170,7 @@
   display: flex;
   align-items: baseline;
   gap: 5px;
-  color: #3e657f;
+  color: #15171c;
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -192,7 +192,7 @@
   background: #fbfdfe;
   border-radius: 5px;
   padding: 13px 14px;
-  color: #315872;
+  color: #15171c;
   font:
     14px/1.6 Inter,
     sans-serif;
@@ -267,7 +267,7 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.13em;
-  color: #879faf;
+  color: #15171c;
   margin-bottom: 15px;
 }
 .partner-contact-block h3 {
@@ -460,6 +460,10 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  .partner-page .partner-label {
+    font-size: 12px;
+  }
   .partner-field input,
   .partner-field select,
   .partner-field textarea {
@@ -488,3 +492,20 @@
     animation: none;
   }
 }
+
+
+/* Feedback for the partnership enquiry submission. */
+.partner-form .partner-botcheck { display: none; }
+.partner-page .partner-form-bottom .partner-submit-error {
+  width: 100%;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #e6c3b3;
+  border-radius: 5px;
+  background: #fff5ef;
+  color: #913c24;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.partner-submit-error:focus { outline: 2px solid #913c24; outline-offset: 3px; }
+.partner-form-bottom .button:disabled { opacity: .7; cursor: wait; }

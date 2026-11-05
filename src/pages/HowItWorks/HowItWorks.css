@@ -19,10 +19,16 @@
   margin: 0 0 22px;
 }
 .how-page h2 {
-  font-size: clamp(32px, 3.4vw, 48px);
+  /* font-size: clamp(32px, 3.4vw, 48px); */
   line-height: 1.17;
   letter-spacing: -0.04em;
-  color: var(--how-ink);
+  /* color: var(--how-ink); */
+  color: #15171c;
+  font:
+    700 clamp(30px, 3.6vw, 44px) / 1.1 "How Wireframe Display",
+    Rockwell,
+    Georgia,
+    serif;
 }
 .how-page h3 {
   color: var(--how-ink);
@@ -511,7 +517,7 @@
   border-top: 1px solid #e0e9f0;
   font-size: 14px;
   line-height: 1.8;
-  color: #5b788d;
+  color: #15171c;
 }
 .how-signal-list span {
   font-size: 9px;
@@ -1341,7 +1347,8 @@
   }
   .how-final-ribbon {
     gap: 12px;
-    font-size: 8px;
+    /* font-size: 8px; */
+    font-size: 10px;
   }
 }
 
@@ -1404,7 +1411,7 @@
   margin: 12px 0 14px;
   color: #15171c;
   font:
-    700 clamp(30px, 3.6vw, 44px)/1.1 "How Wireframe Display",
+    700 clamp(28px, 3.6vw, 44px)/1.1 "How Wireframe Display",
     Rockwell,
     Georgia,
     serif;
@@ -1764,12 +1771,16 @@
   }
   .how-technology-partners {
     gap: 16px 24px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
   }
   .how-technology-partner {
     gap: 10px;
+    flex-direction: column-reverse;
   }
   .how-technology-partner img {
-    height: 48px;
+    /* height: 48px; */
+    height: 60px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
