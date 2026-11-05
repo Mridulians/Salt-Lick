@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import parsePhoneNumber from "libphonenumber-js/max";
+import isEmail from "validator/es/lib/isEmail";
 import campus from "../../assets/partner-campus-official-logo.webp";
 import "./PartnerWithUs.css";
 
@@ -12,10 +14,30 @@ const interests = [
   "Something else.",
 ];
 
+function getEmailError(value) {
+  const email = value.trim();
+  if (!email) return "Please enter your email address.";
+  return isEmail(email, { allow_utf8_local_part: false })
+    ? ""
+    : "Enter a valid email address, for example name@company.com.";
+}
+
+function getPhoneError(value) {
+  const phone = value.trim();
+  if (!phone) return "";
+  const parsed = phone.startsWith("+")
+    ? parsePhoneNumber(phone, { extract: false })
+    : undefined;
+  return parsed?.isValid()
+    ? ""
+    : "Enter a valid phone number with + and its country code.";
+}
+
 export default function PartnerWithUs() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submissionError, setSubmissionError] = useState("");
+  const [contactErrors, setContactErrors] = useState({ email: "", phone: "" });
   const requestInFlight = useRef(false);
   const errorNotice = useRef(null);
   const confirmation = useRef(null);
@@ -24,10 +46,32 @@ export default function PartnerWithUs() {
     else if (submissionError) errorNotice.current?.focus();
   }, [submitted, submissionError]);
 
+  const validateContactField = (field) => {
+    field.setCustomValidity("");
+    const error = field.name === "email"
+      ? getEmailError(field.value)
+      : getPhoneError(field.value);
+    const message = error || field.validationMessage;
+    field.setCustomValidity(message);
+    setContactErrors((previous) => ({ ...previous, [field.name]: message }));
+    return !message;
+  };
+
+  const clearContactError = (event) => {
+    const field = event.currentTarget;
+    field.setCustomValidity("");
+    setContactErrors((previous) => ({ ...previous, [field.name]: "" }));
+  };
+
   const submit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    if (requestInFlight.current || !form.reportValidity()) return;
+    if (requestInFlight.current) return;
+    const emailField = form.elements.namedItem("email");
+    const phoneField = form.elements.namedItem("phone");
+    const emailValid = validateContactField(emailField);
+    const phoneValid = validateContactField(phoneField);
+    if (!form.reportValidity() || !emailValid || !phoneValid) return;
 
     const messageField = form.elements.namedItem("message");
     if (!messageField.value.trim()) {
@@ -41,6 +85,8 @@ export default function PartnerWithUs() {
     }
 
     const formData = new FormData(form);
+    formData.set("email", emailField.value.trim());
+    formData.set("phone", phoneField.value.trim());
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 20000);
     requestInFlight.current = true;
@@ -282,7 +328,17 @@ export default function PartnerWithUs() {
                     required
                     maxLength="254"
                     placeholder="you@organisation.com"
+                    aria-invalid={Boolean(contactErrors.email)}
+                    aria-describedby={contactErrors.email ? "partner-email-error" : undefined}
+                    onBlur={(event) => validateContactField(event.currentTarget)}
+                    onInvalid={(event) => validateContactField(event.currentTarget)}
+                    onInput={clearContactError}
                   />
+                  {contactErrors.email && (
+                    <small className="partner-field-error" id="partner-email-error" role="alert">
+                      {contactErrors.email}
+                    </small>
+                  )}
                 </div>
                 <div className="partner-field">
                   <label htmlFor="partner-phone">
@@ -295,7 +351,22 @@ export default function PartnerWithUs() {
                     autoComplete="tel"
                     maxLength="40"
                     placeholder="Include country code"
+                    aria-invalid={Boolean(contactErrors.phone)}
+                    aria-describedby={contactErrors.phone
+                      ? "partner-phone-hint partner-phone-error"
+                      : "partner-phone-hint"}
+                    onBlur={(event) => validateContactField(event.currentTarget)}
+                    onInvalid={(event) => validateContactField(event.currentTarget)}
+                    onInput={clearContactError}
                   />
+                  <small className="partner-contact-hint" id="partner-phone-hint">
+                    Include + and country code, for example +91 98765 43210.
+                  </small>
+                  {contactErrors.phone && (
+                    <small className="partner-field-error" id="partner-phone-error" role="alert">
+                      {contactErrors.phone}
+                    </small>
+                  )}
                 </div>
                 <div className="partner-field partner-full">
                   <label htmlFor="partner-message">

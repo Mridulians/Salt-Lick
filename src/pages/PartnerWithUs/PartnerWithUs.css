@@ -509,3 +509,20 @@
 }
 .partner-submit-error:focus { outline: 2px solid #913c24; outline-offset: 3px; }
 .partner-form-bottom .button:disabled { opacity: .7; cursor: wait; }
+
+
+/* Contact details are validated before an enquiry is sent. */
+.partner-field input[aria-invalid="true"] {
+  border-color: #a63b26;
+  background: #fff8f5;
+}
+.partner-field .partner-field-error {
+  color: #913c24;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.partner-field .partner-contact-hint {
+  color: #526b7d;
+  font-size: 12px;
+  line-height: 1.5;
+}
